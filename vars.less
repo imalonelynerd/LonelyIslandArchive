@@ -1,30 +1,7 @@
-/*:root {
-  --col1: #54478c;
-  --col2: #2c699a;
-  --col3: #048ba8;
-  --col4: #0db39e;
-  --col5: #16db93;
-  --col6: #83e377;
-  --col7: #b9e769;
-  --col8: #efea5a;
-  --col9: #f1c453;
-  --col10: #f29e4c;
-  --col11: #f25f4c;
-  --col12: #f24c4c;
-
-  --fade1: #54478c80;
-  --fade2: #2c699a80;
-  --fade3: #048ba880;
-  --fade4: #0db39e80;
-  --fade5: #16db9380;
-  --fade6: #83e37780;
-  --fade7: #b9e76980;
-  --fade8: #efea5a80;
-  --fade9: #f1c45380;
-  --fade10: #f29e4c80;
-  --fade11: #f25f4c80;
-  --fade12: #f24c4c80;
-}*/
+@font-face {
+  font-family: "Valera Round";
+  src: url("VarelaRound-Regular.ttf");
+}
 
 :root[data-theme="theme-light"] {
   --background: white;
@@ -46,14 +23,6 @@
   --image-filter: 2;
 }
 
-/*.panelfunc(@cc, @cb, @img) {
-  background: linear-gradient(@cb, @cb), url(@img) center no-repeat;
-  background-size: cover;
-  code {
-    background: @cc;
-  }
-}*/
-
 .panelfunc(@cc, @img) {
   background: linear-gradient(var(--gradient-color), var(--gradient-color)), url(@img) center no-repeat;
   background-size: cover;
@@ -61,54 +30,6 @@
     background: @cc;
   }
 }
-
-/*#landing {
-  .panelfunc(#0086DE, #0086DE80, "im/landing.jpg");
-}
-
-#theme {
-  .panelfunc(#748CAB, #748CAB80, "im/theme.jpg");
-}
-
-#yuno {
-  .panelfunc(#00AEE4, #00AEE480, "im/yuno.jpg");
-}
-
-#nextcloud {
-  .panelfunc(#2095E9, #2095E980, "im/nextcloud.jpg");
-}
-
-#send {
-  .panelfunc(#87E2FF, #87E2FF80, "im/send.jpg");
-}
-
-#bitwarden {
-  .panelfunc(#175DDC, #175DDC80, "im/bitwarden.jpg");
-}
-
-#collabora {
-  .panelfunc(#6B5FEB, #6B5FEB80, "im/collabora.jpg");
-}
-
-#talisman {
-  .panelfunc(#0066FF, #0066FF80, "im/talisman.jpg");
-}
-
-#github {
-  .panelfunc(#2F363D, #2F363D80, "im/github.jpg");
-}
-
-#mastodon {
-  .panelfunc(#6364FF, #6364FF80, "im/mastodon.jpg");
-}
-
-#crousbloug {
-  .panelfunc(#E10512, #E1051280, "im/crousbloug.jpg");
-}
-
-#gallery {
-  .panelfunc(#00B1D4, #00B1D480, "im/gallery.jpg");
-}*/
 
 #landing {
   .panelfunc(#0086DE, "im/landing.jpg");
@@ -158,6 +79,14 @@
   .panelfunc(#00B1D4, "im/gallery.jpg");
 }
 
+#mail {
+  .panelfunc(#00B2FF, "im/mail.jpg");
+}
+
+#gitlab {
+  .panelfunc(#FF4F32, "im/gitlab.jpg");
+}
+
 @keyframes Hewwo {
   0% {
     transform: translateY(50%);
@@ -169,3 +98,87 @@
     transform: translateY(0);
   }
 }
+
+/*:root {
+  --col1: #54478c;
+  --col2: #2c699a;
+  --col3: #048ba8;
+  --col4: #0db39e;
+  --col5: #16db93;
+  --col6: #83e377;
+  --col7: #b9e769;
+  --col8: #efea5a;
+  --col9: #f1c453;
+  --col10: #f29e4c;
+  --col11: #f25f4c;
+  --col12: #f24c4c;
+
+  --fade1: #54478c80;
+  --fade2: #2c699a80;
+  --fade3: #048ba880;
+  --fade4: #0db39e80;
+  --fade5: #16db9380;
+  --fade6: #83e37780;
+  --fade7: #b9e76980;
+  --fade8: #efea5a80;
+  --fade9: #f1c45380;
+  --fade10: #f29e4c80;
+  --fade11: #f25f4c80;
+  --fade12: #f24c4c80;
+}*/
+
+/*.panelfunc(@cc, @cb, @img) {
+  background: linear-gradient(@cb, @cb), url(@img) center no-repeat;
+  background-size: cover;
+  code {
+    background: @cc;
+  }
+}*/
+
+/*#landing {
+  .panelfunc(#0086DE, #0086DE80, "im/landing.jpg");
+}
+
+#theme {
+  .panelfunc(#748CAB, #748CAB80, "im/theme.jpg");
+}
+
+#yuno {
+  .panelfunc(#00AEE4, #00AEE480, "im/yuno.jpg");
+}
+
+#nextcloud {
+  .panelfunc(#2095E9, #2095E980, "im/nextcloud.jpg");
+}
+
+#send {
+  .panelfunc(#87E2FF, #87E2FF80, "im/send.jpg");
+}
+
+#bitwarden {
+  .panelfunc(#175DDC, #175DDC80, "im/bitwarden.jpg");
+}
+
+#collabora {
+  .panelfunc(#6B5FEB, #6B5FEB80, "im/collabora.jpg");
+}
+
+#talisman {
+  .panelfunc(#0066FF, #0066FF80, "im/talisman.jpg");
+}
+
+#github {
+  .panelfunc(#2F363D, #2F363D80, "im/github.jpg");
+}
+
+#mastodon {
+  .panelfunc(#6364FF, #6364FF80, "im/mastodon.jpg");
+}
+
+#crousbloug {
+  .panelfunc(#E10512, #E1051280, "im/crousbloug.jpg");
+}
+
+#gallery {
+  .panelfunc(#00B1D4, #00B1D480, "im/gallery.jpg");
+}*/
