@@ -1,9 +1,9 @@
 {
-  "icon": "im/ic/bitwarden.png",
-  "title": "Vaultwarden",
-  "desc": "Securely store your passwords <b>(private)</b>",
-  "code": "vault.imalonelynerd.fr",
-  "link": "https://vault.imalonelynerd.fr",
-  "color": "#2e95b4",
-  "bg": "im/send.jpg"
+  "icon": "im/ic/send.png",
+  "title": "Send",
+  "desc": "Send data to anyone ! <b>(private)</b>",
+  "code": "send.imalonelynerd.fr",
+  "link": "https://send.imalonelynerd.fr",
+  "color": "#2095E9",
+  "bg": "im/nextcloud.jpg"
 }
