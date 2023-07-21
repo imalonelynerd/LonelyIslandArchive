@@ -1,0 +1,9 @@
+{
+  "icon": "im/ic/github.png",
+  "title": "GitHub",
+  "desc": "My GitHub",
+  "code": "github.com/lonelynerd",
+  "link": "https://github.com/lonelynerd",
+  "color": "#2F363D",
+  "bg": "im/github.jpg"
+}

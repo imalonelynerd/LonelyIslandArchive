@@ -1,0 +1,9 @@
+{
+  "icon": "im/ic/mastodon.png",
+  "title": "Mastodon",
+  "desc": "My Mastodon account",
+  "code": "mastodon.social/@imalonelynerd",
+  "link": "https://mastodon.social/@imalonelynerd",
+  "color": "#6364FF",
+  "bg": "im/mastodon.jpg"
+}
