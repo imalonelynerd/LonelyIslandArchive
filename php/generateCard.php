@@ -19,7 +19,7 @@ function generateCard($folder)
     }
 
     foreach ($files as $f) {
-        if (preg_match("/([a-zA-Z]*\.json)$/mi", $f) === 1) {
+        if (preg_match("/([a-zA-Z0-9]*\.json)$/mi", $f) === 1) {
             $cnt = file_get_contents($folder."/".$f);
             if ($cnt === false) {
                 return 1;

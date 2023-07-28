@@ -1,0 +1,9 @@
+{
+  "icon": "im/ic/alltube.png",
+  "title": "AllTube",
+  "desc": "A frontend for yt-download",
+  "code": "down.imalonelynerd.fr",
+  "link": "https://down.imalonelynerd.fr/",
+  "color": "#FF002E",
+  "bg": "im/alltube.jpg"
+}
