@@ -1,9 +1,0 @@
-{
-  "icon": "im/ic/yuno.png",
-  "title": "YunoHost Page",
-  "desc": "Access the YunoHost interface",
-  "code": "imalonelynerd.fr/yunohost",
-  "link": "https://imalonelynerd.fr/yunohost/sso/",
-  "color": "#00AEE4",
-  "bg": "im/yuno.jpg"
-}

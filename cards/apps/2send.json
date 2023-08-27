@@ -1,9 +1,0 @@
-{
-  "icon": "im/ic/send.png",
-  "title": "Send",
-  "desc": "Send data to anyone ! <b>(private)</b>",
-  "code": "send.imalonelynerd.fr",
-  "link": "https://send.imalonelynerd.fr",
-  "color": "#2095E9",
-  "bg": "im/send.jpg"
-}

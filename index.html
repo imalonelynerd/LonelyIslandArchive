@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="icon" href="img/fav.png">
+    <meta name="description" content="A small, free hosting service ran by a kitty">
+    <meta property="og:title" content="blahaj.land">
+    <meta property="og:description" content="A small, free hosting service ran by a kitty">
+    <meta charset="UTF-8">
+    <title>Blahaj Land</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/landing.css"/>
+</head>
+<body>
+<div id="navbar">
+    <script>if (screen.orientation.type === "landscape-primary") {
+        $("#navbar").load("parts/navbar.html");
+    } else {
+        $("#navbar").load("parts/mnavbar.html");
+    }</script>
+</div>
+<div id="main">
+    <img id="icon" src="img/icon-dark.png">
+    <div>
+        <h1>Lonely Island</h1>
+        <p>Welcome back...</p>
+    </div>
+</div>
+
+<div class="list" id="next">
+    <h2>Nextcloud apps</h2>
+    <div class="smalllist">
+        <a href="https://files.imalonelynerd.fr/apps/files/">
+            <img src="img/icons/files.png">
+            <h2>Files<span>.../apps/files/</span></h2>
+        </a>
+        <a href="https://files.imalonelynerd.fr/apps/calendar/">
+            <img src="img/icons/calendar.png">
+            <h2>Calendar<span>.../apps/calendar/</span></h2>
+        </a>
+        <a href="https://files.imalonelynerd.fr/apps/deck/">
+            <img src="img/icons/deck.png">
+            <h2>Deck<span>.../apps/deck/</span></h2>
+        </a>
+        <a href="https://files.imalonelynerd.fr/apps/nextpod/">
+            <img src="img/icons/podcast.png">
+            <h2>NextPod<span>.../apps/nextpod/</span></h2>
+        </a>
+        <a href="https://files.imalonelynerd.fr/apps/tasks/">
+            <img src="img/icons/tasks.png">
+            <h2>Tasks<span>.../apps/tasks/</span></h2>
+        </a>
+        <a href="https://files.imalonelynerd.fr/apps/news/">
+            <img src="img/icons/news.png">
+            <h2>News<span>.../apps/news/</span></h2>
+        </a>
+    </div>
+</div>
+
+<div class="list" id="yuno">
+    <h2>Yunohost apps</h2>
+    <div class="biglist">
+        <a href="http://files.imalonelynerd.fr">
+            <div>
+                <img src="img/icons/nextcloud.png">
+                <h2>Files</h2>
+            </div>
+            <p>A small personal cloud <b>(private)</b></p>
+            <code>files.imalonelynerd.fr</code>
+        </a>
+        <a href="http://send.imalonelynerd.fr">
+            <div>
+                <img src="img/icons/send.png">
+                <h2>Send</h2>
+            </div>
+            <p>Send data to anyone ! <b>(private)</b></p>
+            <code>send.imalonelynerd.fr</code>
+        </a>
+        <a href="http://mail.imalonelynerd.fr">
+            <div>
+                <img src="img/icons/mail.png">
+                <h2>Roundcube</h2>
+            </div>
+            <p>Internal (for now) email system <b>(private)</b></p>
+            <code>mail.imalonelynerd.fr</code>
+        </a>
+    </div>
+</div>
+
+<div class="list" id="webapps">
+    <h2>Webapps</h2>
+    <div class="biglist">
+        <a href="http://imalonelynerd.fr/landing">
+            <div>
+                <img src="img/icons/landing.png">
+                <h2>Landing page</h2>
+            </div>
+            <p>The very page you're on right now</p>
+            <code>imalonelynerd.fr/landing</code>
+        </a>
+        <a href="http://imalonelynerd.fr/talisman">
+            <div>
+                <img src="img/icons/talisman.png">
+                <h2>Talisman</h2>
+            </div>
+            <p>A YuGiOh! companion app</p>
+            <code>imalonelynerd.fr/talisman</code>
+        </a>
+        <a>
+            <div>
+                <img src="img/icons/gallery.png">
+                <h2>Gallery</h2>
+            </div>
+            <p>Coming soon...</p>
+            <code>...</code>
+        </a>
+        <a>
+            <div>
+                <img src="img/icons/pasta.png">
+                <h2>YouTube Pasta</h2>
+            </div>
+            <p>Coming soon...</p>
+            <code>...</code>
+        </a>
+    </div>
+</div>
+
+<div class="list" id="projects">
+    <h2>Projects / Contributions</h2>
+    <div class="biglist">
+        <a href="https://github.com/lonelynerd/Frisk">
+            <div>
+                <img src="img/icons/frisk.png">
+                <h2>Frisk</h2>
+            </div>
+            <p>A self-hostable online gallery</p>
+            <code>github.com/lonelynerd/Frisk</code>
+        </a>
+        <a href="https://github.com/lonelynerd/Talisman">
+            <div>
+                <img src="img/icons/talisman.png">
+                <h2>Talisman</h2>
+            </div>
+            <p>A YuGiOh! companion app</p>
+            <code>github.com/lonelynerd/Talisman</code>
+        </a>
+        <a href="http://github.com/LunarRat-Dev-Team">
+            <div>
+                <img src="img/icons/lunarrat.png">
+                <h2>Lunar Rat</h2>
+            </div>
+            <p>A Windows 9X styled distro</p>
+            <code>github.com/LunarRat-Dev-Team</code>
+        </a>
+        <a href="https://blahaj.land">
+            <div>
+                <img src="img/icons/blahaj.png">
+                <h2>blahaj.land</h2>
+            </div>
+            <p>I made this website !</p>
+            <code>blahaj.land</code>
+        </a>
+        <a href="https://getcryst.al">
+            <div>
+                <img src="img/icons/crystal.png">
+                <h2>Crystal Linux</h2>
+            </div>
+            <p>I made some wallpapers !</p>
+            <code>getcryst.al</code>
+        </a>
+    </div>
+</div>
+
+<div class="list" id="contact">
+    <h2>Let's get in touch !</h2>
+    <div class="smalllist">
+        <a onclick="copyText('imalonelynerd')">
+            <img src="img/icons/discord.png">
+            <h2>imalonelynerd<span>#0</span></h2>
+        </a>
+        <a href="mailto:imalonelynerd@gmail.com">
+            <img src="img/icons/mail.png">
+            <h2>imalonelynerd<span>@gmail.com</span></h2>
+        </a>
+        <a href="https://github.com/lonelynerd">
+            <img src="img/icons/github.png">
+            <h2><span>github.com/</span>lonelynerd</h2>
+        </a>
+        <a rel="me" href="https://mastodon.social/@imalonelynerd">
+            <img src="img/icons/mastodon.png">
+            <h2>@imalonelynerd<span>@mastodon.social</span></h2>
+        </a>
+        <a onclick="copyText('@imalonelynerd:matrix.org')">
+            <img src="img/icons/matrix.png">
+            <h2>@imalonelynerd<span>:matrix.org</span></h2>
+        </a>
+    </div>
+</div>
+
+<div class="list" id="misc">
+    <h2>Miscellaneous</h2>
+    <div class="biglist">
+        <a href="https://imalonelynerd.fr/yunohost">
+            <div>
+                <img src="img/icons/yuno.png">
+                <h2>Yunohost page</h2>
+            </div>
+            <p>Access the Yunohost interface</p>
+            <code>imalonelynerd.fr/yunohost</code>
+        </a>
+        <a href="https://sean.imalonelynerd.fr/">
+            <div>
+                <img src="img/icons/misc.png">
+                <h2>hehe...</h2>
+            </div>
+            <code>sean.imalonelynerd.fr</code>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>©️ <b>2023 <a href="https://github.com/lonelynerd">Nerd</a></b></p>
+    <p>⋅</p>
+    <p> Some rights reserved</p>
+    <p>⋅</p>
+    <p>🇷🇴 ❤️ 🇩🇪 ❤️ 🇫🇷</p>
+</footer>
+</body>
+</html>

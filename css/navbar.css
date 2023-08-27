@@ -1,0 +1,200 @@
+@media only screen and (orientation: landscape) {
+    #navbar {
+        padding: 0 16px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #links > a {
+        margin: 0;
+        padding: 16px 24px;
+        border-radius: 999px;
+        font-size: 1em;
+        font-weight: bold;
+        background: var(--bg2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.25s;
+    }
+
+    #links > a:hover {
+        filter: var(--effect);
+    }
+
+    #links > a[expandable] {
+        max-width: 200px;
+        transition: all 0.25s;
+    }
+
+    #links > a[expandable]:hover {
+        max-width: 150px;
+        transition: all 0.25s;
+    }
+
+    #links > a:not(:last-of-type) {
+        margin-right: 8px;
+    }
+
+    #links > a > img {
+        height: 1.25em;
+    }
+
+    #links > a > p {
+        margin: 0;
+        padding: 0;
+        text-overflow: fade;
+        text-wrap: none;
+        max-width: 0;
+        overflow: hidden;
+        transition: all 0.25s;
+    }
+
+    #links > a:hover > p {
+        max-width: 999px;
+        margin: 0 0 0 12px;
+        transition: all 0.25s;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #00000080;
+        padding: 48px;
+        display: none;
+        z-index: 10;
+        /*animation: fadein ease-out 0.25s;*/
+    }
+
+    .menu > div {
+        background: var(--bg1);
+        border-radius: 32px;
+        width: fit-content;
+        height: fit-content;
+        padding: 24px;
+        float: right;
+        animation: slidein ease-out 0.25s;
+    }
+
+    .menu > div > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 16px 24px;
+        background: none;
+        animation: all 0.25s;
+        cursor: pointer;
+    }
+
+    .menu > div > a:hover {
+        background: var(--bg2);
+        filter: var(--effect);
+    }
+
+    .menu > div > a > img {
+        height: 32px;
+        margin-right: 16px;
+    }
+
+    .menu > div > a > p {
+        margin: 0;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #navbar {
+        padding: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navbar > a:not([image]) {
+        margin: 0;
+        padding: 1.25vh;
+        border-radius: 999px;
+        background: var(--bg2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.25s;
+    }
+
+    #navbar > a:active {
+        filter: var(--effect);
+    }
+
+    #navbar > a > img {
+        height: 3vh;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #00000080;
+        padding: 1vh;
+        display: none;
+        z-index: 10;
+    }
+
+    .menu > div {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2vh;
+        background: var(--bg1);
+        border-radius: 2vh 2vh 0 0;
+        height: fit-content;
+        animation: mslidein ease-out 0.25s;
+    }
+
+    .menu > div > a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 2vh 3vh;
+        background: none;
+        animation: all 0.25s;
+        cursor: pointer;
+    }
+
+    .menu > div > a:active {
+        background: var(--bg2);
+        filter: var(--effect);
+    }
+
+    .menu > div > a > img {
+        height: 2vh;
+        margin-right: 1vh;
+    }
+
+    .menu > div > a > p {
+        font-size: 2vh;
+        margin: 0;
+        font-weight: bold;
+    }
+}

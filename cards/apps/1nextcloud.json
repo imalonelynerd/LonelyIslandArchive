@@ -1,9 +1,0 @@
-{
-  "icon": "im/ic/nextcloud.png",
-  "title": "Nextcloud",
-  "desc": "A smol personal cloud <b>(private)</b>",
-  "code": "files.imalonelynerd.fr",
-  "link": "https://files.imalonelynerd.fr",
-  "color": "#2095E9",
-  "bg": "im/nextcloud.jpg"
-}

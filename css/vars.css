@@ -1,0 +1,23 @@
+:root[data-theme="theme-light"] {
+    --bg1: #b9cbff;
+    --bg2: #e2edff;
+    --bg3: #d9e2fe;
+    --button1: #142a50;
+    --button2: #1b5dff;
+    --text: #1E1D2F;
+    --code: #00000020;
+    --gradient: linear-gradient(180deg, #415DFF 100%, #1E1D2F 100%);
+    --effect: brightness(90%);
+}
+
+:root[data-theme="theme-dark"] {
+    --bg1: #000d28;
+    --bg2: #001748;
+    --bg3: #004397;
+    --button1: #538bfe;
+    --button2: #377aff;
+    --text: white;
+    --code: #FFFFFF20;
+    --gradient: linear-gradient(180deg, #BFC9FF 100%, #7287FE 100%);;
+    --effect: brightness(150%)
+}

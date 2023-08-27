@@ -1,0 +1,223 @@
+@media only screen and (orientation: landscape) {
+    #main {
+        width: 100%;
+        text-align: center;
+    }
+
+    #main > h1 {
+        color: var(--gradient);
+    }
+
+    #main > * {
+        margin: 16px 0;
+    }
+
+    #main > img {
+        height: 256px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list > h2 {
+        margin: 0 0 32px;
+    }
+
+    .smalllist {
+        width: 90%;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+    }
+
+    .smalllist > a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /*start ?*/
+        align-items: center;
+        padding: 12px;
+        background: var(--bg2);;
+        border-radius: 999px;
+        text-align: center;
+    }
+
+    .smalllist > a > img {
+        height: 32px;
+        margin-right: 16px;
+    }
+
+    .smalllist > a > h2 {
+        font-weight: normal;
+        font-size: 1.25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .smalllist > a > h2 > span {
+        font-size: 0.5em;
+        opacity: 50%;
+    }
+
+    .biglist {
+        width: 90%;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+    }
+
+    .biglist > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /*start ?*/
+        align-items: center;
+        padding: 48px 24px;
+        background: var(--bg2);;
+        border-radius: 32px;
+        text-align: center;
+    }
+
+    .biglist > a > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /*start ?*/
+        align-items: center;
+    }
+
+    .biglist > a > div > img {
+        height: 48px;
+        margin-right: 16px;
+    }
+
+    a:not(#navbar *){
+        transition: all 0.25s ease-out;
+        cursor: pointer;
+    }
+
+    a:not(#navbar *):hover {
+        filter: var(--effect);
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #main {
+        width: 100%;
+        text-align: center;
+    }
+
+    #main > h1 {
+        color: var(--gradient);
+    }
+
+    #main > * {
+        margin: 16px 0;
+    }
+
+    #main > img {
+        height: 15vh;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list > h2 {
+        margin: 0 0 2vh;
+    }
+
+    .smalllist {
+        width: 90%;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 1vh;
+    }
+
+    .smalllist > a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /*start ?*/
+        align-items: center;
+        padding: 1vh;
+        background: var(--bg2);;
+        border-radius: 3vh;
+        text-align: center;
+    }
+
+    .smalllist > a > img {
+        height: 2.5vh;
+        margin-right: 1.5vh;
+    }
+
+    .smalllist > a > h2 {
+        font-weight: normal;
+        font-size: 1.125em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .smalllist > a > h2 > span {
+        font-size: 0.5em;
+        opacity: 50%;
+    }
+
+    .biglist {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .biglist > *:not(:last-of-type) {
+        margin-bottom: 1vh;
+    }
+
+    .biglist > a {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /*start ?*/
+        align-items: center;
+        padding: 3vh 2vh;
+        background: var(--bg2);;
+        border-radius: 3vh;
+        text-align: center;
+    }
+
+    .biglist > a > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /*start ?*/
+        align-items: center;
+    }
+
+    .biglist > a > div > img {
+        height: 4vh;
+    }
+
+    .biglist > a > div > h2 {
+        margin: 1vh 0 0 0;
+    }
+
+    a:not(#navbar *){
+        transition: all 0.25s ease-out;
+        cursor: pointer;
+    }
+
+    a:not(#navbar *):active {
+        filter: var(--effect);
+    }
+}

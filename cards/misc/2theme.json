@@ -1,9 +1,0 @@
-{
-  "icon": "im/ic/theme.png",
-  "title": "Theme",
-  "desc": "Change the theme of this page",
-  "code": "dark <==> light",
-  "exec": "themeSwitch()",
-  "color": "#748CAB",
-  "bg": "im/theme.jpg"
-}

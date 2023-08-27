@@ -1,9 +1,0 @@
-{
-  "icon": "im/ic/mail.png",
-  "title": "Roundcube",
-  "desc": "Internal (for now) email system <b>(private)</b>",
-  "code": "mail.imalonelynerd.fr",
-  "link": "https://mail.imalonelynerd.fr",
-  "color": "#00B2FF",
-  "bg": "im/mail.jpg"
-}
