@@ -42,7 +42,7 @@ function showMenu() {
 
   a:hover {
     max-width: 150px;
-    filter: brightness(150%);
+    filter: var(--effect);
   }
 
   a > img {
@@ -90,5 +90,6 @@ function showMenu() {
 
 .important {
   background: var(--bg3) !important;
+  color: var(--text2) !important;
 }
 </style>

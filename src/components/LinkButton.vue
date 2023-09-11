@@ -32,7 +32,7 @@ a {
 
 a:hover {
   max-width: 150px;
-  filter: brightness(150%);
+  filter: var(--effect);
 }
 
 a > img {

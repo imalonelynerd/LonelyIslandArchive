@@ -70,7 +70,7 @@ const linksMenu = ref({
 </script>
 
 <template>
-  <div>
+  <div class="mobile-navbar-container">
     <HiddenMenu :menuOptions="linksMenu" menuId="links" id="links"/>
     <HiddenMenu :menuOptions="themeMenu" menuId="mtheme" id="mtheme"/>
     <MenuButton buttonId="links" imgLink="/images/icons/top/list.png" shownTitle=""/>
@@ -81,12 +81,12 @@ const linksMenu = ref({
 <style scoped>
 
 @media only screen and (orientation: landscape) {
-  div {
+  .mobile-navbar-container {
     display: none !important;
   }
 }
 
-div {
+.mobile-navbar-container {
   padding: 2vh;
   display: flex;
   flex-direction: row;

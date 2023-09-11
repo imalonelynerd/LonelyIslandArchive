@@ -1,23 +1,23 @@
 :root[data-theme="theme-light"] {
-    --bg1: #fdfbfe;
-    --bg2: #e2e9f8;
-    --bg3: #004397;
-    --text: #1E1D2F;
+    --bg1: #ffffff;
+    --bg2: #f1eeff;
+    --bg3: #ffaa2c;
+    --text: #202020;
     --text2: white;
     --code: #00000020;
-    --gradient: linear-gradient(180deg, #415DFF 100%, #1E1D2F 100%);
     --effect: brightness(90%);
+    --bg-effect: brightness(100%);
 }
 
 :root[data-theme="theme-dark"] {
-    --bg1: #171b25;
-    --bg2: #262d3c;
-    --bg3: #6F9EFF;
+    --bg1: #161321;
+    --bg2: #27233f;
+    --bg3: #E7A382;
     --text: white;
-    --text2: #1E1D2F;
+    --text2: #202020;
     --code: #FFFFFF20;
-    --gradient: linear-gradient(180deg, #BFC9FF 100%, #7287FE 100%);;
-    --effect: brightness(150%)
+    --effect: brightness(125%);
+    --bg-effect: brightness(50%);
 }
 
 @keyframes slidein {

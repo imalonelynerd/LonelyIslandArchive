@@ -12,10 +12,6 @@ body {
     transition: all 0.25s;
 }
 
-body > div > div:not(:first-child) {
-    margin: 64px 0;
-}
-
 a {
     color: inherit !important;
     text-decoration: none !important;
@@ -38,12 +34,18 @@ a:hover {
     filter: var(--effect);
 }
 
+@media only screen and (orientation: landscape) {
+    body > div > div:not(.navbar-container, .mobile-navbar-container) {
+        margin: 64px 0;
+    }
+}
+
 @media only screen and (orientation: portrait) {
     html {
         font-size: 3vw;
     }
 
-    body > div > div:not(#navbar) {
+    body > div > div:not(.navbar-container, .mobile-navbar-container)  {
         margin: 3vh 0;
     }
 }

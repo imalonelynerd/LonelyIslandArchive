@@ -31,7 +31,7 @@ defineProps([
 
   a:hover {
     background: var(--bg1);
-    filter: brightness(150%);
+    filter: var(--effect);
   }
 
   a > img {

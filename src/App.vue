@@ -4,8 +4,14 @@ import MobileNavbar from "@/components/MobileNavbar.vue";
 import Title from "@/components/Title.vue";
 import CellCluster from "@/components/CellCluster.vue";
 import {ref} from "vue";
-import "@/assets/js/randomEffects"
 import CustomFooter from "@/components/CustomFooter.vue";
+import Background from "@/components/Background.vue";
+
+function copyText(text){
+  navigator.clipboard.writeText(text);
+  alert("Copied successfully !");
+  return true;
+}
 
 document.querySelector('html').dataset.theme = `theme-dark`;
 
@@ -189,7 +195,7 @@ const contact = ref(
     {
       links: [
         {
-          onclick: function () {
+          onc: function () {
             copyText('imalonelynerd')
           },
           img: "images/icons/discord.png",
@@ -215,7 +221,7 @@ const contact = ref(
           span: "@mastodon.social"
         },
         {
-          onclick: function () {
+          onc: function () {
             copyText('@imalonelynerd:matrix.org')
           },
           img: "images/icons/matrix.png",
@@ -260,6 +266,7 @@ const misc = ref(
   <CellCluster shownTitle="Let's get in touch !" id="contact" listType="SmallList" :cellList="contact"/>
   <CellCluster shownTitle="Miscellaneous" id="misc" listType="SmallList" :cellList="misc"/>
   <CustomFooter/>
+  <Background />
 </template>
 
 <style scoped>

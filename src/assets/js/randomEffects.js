@@ -1,4 +1,5 @@
 function copyText(text){
-    navigator.clipboard.writeText(text);
+    alert(text);
+    //navigator.clipboard.writeText(text);
     return true;
 }

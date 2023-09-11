@@ -27,6 +27,7 @@ function hideMenu() {
 
 @media only screen and (orientation: landscape) {
   .menu-container {
+    margin: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -51,6 +52,7 @@ function hideMenu() {
 
 @media only screen and (orientation: portrait) {
   .menu-container {
+    margin: 0;
     position: fixed;
     top: 0;
     left: 0;
