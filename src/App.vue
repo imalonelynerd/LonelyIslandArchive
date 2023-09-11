@@ -7,7 +7,7 @@ import {ref} from "vue";
 import CustomFooter from "@/components/CustomFooter.vue";
 import Background from "@/components/Background.vue";
 
-function copyText(text){
+function copyText(text) {
   navigator.clipboard.writeText(text);
   alert("Copied successfully !");
   return true;
@@ -15,122 +15,118 @@ function copyText(text){
 
 document.querySelector('html').dataset.theme = `theme-dark`;
 
-const nextcloud = ref(
+const nextcloud = ref({
+  links: [
     {
-      links: [
-        {
-          href: "https://files.imalonelynerd.fr/apps/files/",
-          img: "images/icons/files.png",
-          title: "Files",
-          span: ".../apps/files/"
-        },
-        {
-          href: "https://files.imalonelynerd.fr/apps/calendar/",
-          img: "images/icons/calendar.png",
-          title: "Calendar",
-          span: ".../apps/calendar/"
-        },
-        {
-          href: "https://files.imalonelynerd.fr/apps/music/",
-          img: "images/icons/music.png",
-          title: "Music",
-          span: ".../apps/music/"
-        },
-        {
-          href: "https://files.imalonelynerd.fr/apps/deck/",
-          img: "images/icons/deck.png",
-          title: "Deck",
-          span: ".../apps/deck/"
-        },
-        {
-          href: "https://files.imalonelynerd.fr/apps/nextpod/",
-          img: "images/icons/podcast.png",
-          title: "NextPod",
-          span: ".../apps/nextpod/"
-        },
-        {
-          href: "https://files.imalonelynerd.fr/apps/tasks/",
-          img: "images/icons/tasks.png",
-          title: "Tasks",
-          span: ".../apps/tasks/"
-        },
-        {
-          href: "https://files.imalonelynerd.fr/apps/news/",
-          img: "images/icons/news.png",
-          title: "News",
-          span: ".../apps/news/"
-        }
-      ]
+      href: "https://files.imalonelynerd.fr/apps/files/",
+      img: "images/icons/files.png",
+      title: "Files",
+      span: ".../apps/files/"
+    },
+    {
+      href: "https://files.imalonelynerd.fr/apps/calendar/",
+      img: "images/icons/calendar.png",
+      title: "Calendar",
+      span: ".../apps/calendar/"
+    },
+    {
+      href: "https://files.imalonelynerd.fr/apps/music/",
+      img: "images/icons/music.png",
+      title: "Music",
+      span: ".../apps/music/"
+    },
+    {
+      href: "https://files.imalonelynerd.fr/apps/deck/",
+      img: "images/icons/deck.png",
+      title: "Deck",
+      span: ".../apps/deck/"
+    },
+    {
+      href: "https://files.imalonelynerd.fr/apps/nextpod/",
+      img: "images/icons/podcast.png",
+      title: "NextPod",
+      span: ".../apps/nextpod/"
+    },
+    {
+      href: "https://files.imalonelynerd.fr/apps/tasks/",
+      img: "images/icons/tasks.png",
+      title: "Tasks",
+      span: ".../apps/tasks/"
+    },
+    {
+      href: "https://files.imalonelynerd.fr/apps/news/",
+      img: "images/icons/news.png",
+      title: "News",
+      span: ".../apps/news/"
     }
-)
+  ]
+})
 
 const yuno = ref({
-      links: [
-        {
-          href: "https://files.imalonelynerd.fr/",
-          img: "images/icons/nextcloud.png",
-          title: "Nextcloud",
-          desc: "A small personal cloud <b>(private)</b>",
-          code: "files.imalonelynerd.fr"
-        },
-        {
-          href: "http://send.imalonelynerd.fr",
-          img: "images/icons/send.png",
-          title: "Send",
-          desc: "Send data to anyone ! <b>(private)</b>",
-          code: "send.imalonelynerd.fr"
-        },
-        {
-          href: "http://mail.imalonelynerd.fr",
-          img: "images/icons/mail.png",
-          title: "Roundcube",
-          desc: "Internal (for now) email system <b>(private)</b>",
-          code: "mail.imalonelynerd.fr"
-        }
-      ]
+  links: [
+    {
+      href: "https://files.imalonelynerd.fr/",
+      img: "images/icons/nextcloud.png",
+      title: "Nextcloud",
+      desc: "A small personal cloud <b>(private)</b>",
+      code: "files.imalonelynerd.fr"
+    },
+    {
+      href: "https://send.imalonelynerd.fr",
+      img: "images/icons/send.png",
+      title: "Send",
+      desc: "Send data to anyone ! <b>(private)</b>",
+      code: "send.imalonelynerd.fr"
+    },
+    {
+      href: "https://mail.imalonelynerd.fr",
+      img: "images/icons/mail.png",
+      title: "Roundcube",
+      desc: "Internal (for now) email system <b>(private)</b>",
+      code: "mail.imalonelynerd.fr"
     }
-);
+  ]
+});
 
 const webapps = ref({
-      links: [
-        {
-          href: "http://imalonelynerd.fr/landing/",
-          img: "images/icons/landing.png",
-          title: "Landing page",
-          desc: "The very page you're on right now",
-          code: "imalonelynerd.fr/landing"
-        },
-        {
-          href: "http://imalonelynerd.fr/talisman",
-          img: "images/icons/talisman.png",
-          title: "Talisman",
-          desc: "A YuGiOh! companion app",
-          code: "imalonelynerd.fr/talisman"
-        },
-        {
-          href: "http://imalonelynerd.fr/edt",
-          img: "images/icons/calendar.png",
-          title: "Timetable",
-          desc: "An uni timetable, powered by SAGBOT",
-          code: "imalonelynerd.fr/edt"
-        },
-        {
-          href: "",
-          img: "images/icons/gallery.png",
-          title: "Gallery",
-          desc: "Coming soon...",
-          code: "..."
-        },
-        {
-          href: "",
-          img: "images/icons/pasta.png",
-          title: "YouTube Pasta",
-          desc: "Coming soon...",
-          code: "..."
-        }
-      ]
+  links: [
+    {
+      href: "https://imalonelynerd.fr/landing/",
+      img: "images/icons/landing.png",
+      title: "Landing page",
+      desc: "The very page you're on right now",
+      code: "imalonelynerd.fr/landing"
+    },
+    {
+      href: "https://imalonelynerd.fr/talisman",
+      img: "images/icons/talisman.png",
+      title: "Talisman",
+      desc: "A YuGiOh! companion app",
+      code: "imalonelynerd.fr/talisman"
+    },
+    {
+      href: "https://imalonelynerd.fr/edt",
+      img: "images/icons/calendar.png",
+      title: "Timetable",
+      desc: "An uni timetable, powered by SAGBOT",
+      code: "imalonelynerd.fr/edt"
+    },
+    {
+      href: "",
+      img: "images/icons/gallery.png",
+      title: "Gallery",
+      desc: "Coming soon...",
+      code: "..."
+    },
+    {
+      href: "",
+      img: "images/icons/pasta.png",
+      title: "YouTube Pasta",
+      desc: "Coming soon...",
+      code: "..."
     }
-);
+  ]
+});
 
 const projects = ref({
   links: [
@@ -156,7 +152,7 @@ const projects = ref({
       code: "github.com/lonelynerd/DeathCount"
     },
     {
-      href: "http://github.com/LunarRat-Dev-Team",
+      href: "https://github.com/LunarRat-Dev-Team",
       img: "images/icons/lunarrat.png",
       title: "Lunar Rat",
       desc: "A Windows 9X styled distro",
@@ -191,65 +187,61 @@ const contrib = ref({
   ]
 });
 
-const contact = ref(
+const contact = ref({
+  links: [
     {
-      links: [
-        {
-          onc: function () {
-            copyText('imalonelynerd')
-          },
-          img: "images/icons/discord.png",
-          title: "imalonelynerd",
-          span: "#0"
-        },
-        {
-          href: "mailto:imalonelynerd@gmail.com",
-          img: "images/icons/mail.png",
-          title: "imalonelynerd",
-          span: "@gmail.com"
-        },
-        {
-          href: "https://github.com/lonelynerd/",
-          img: "images/icons/github.png",
-          title: "lonelynerd",
-          span: ".github.io"
-        },
-        {
-          href: "https://mastodon.social/@imalonelynerd/",
-          img: "images/icons/mastodon.png",
-          title: "@imalonelynerd",
-          span: "@mastodon.social"
-        },
-        {
-          onc: function () {
-            copyText('@imalonelynerd:matrix.org')
-          },
-          img: "images/icons/matrix.png",
-          title: "@imalonelynerd",
-          span: ":matrix.org"
-        }
-      ]
+      onc: function () {
+        copyText('imalonelynerd')
+      },
+      img: "images/icons/discord.png",
+      title: "imalonelynerd",
+      span: "#0"
+    },
+    {
+      href: "mailto:imalonelynerd@gmail.com",
+      img: "images/icons/mail.png",
+      title: "imalonelynerd",
+      span: "@gmail.com"
+    },
+    {
+      href: "https://github.com/lonelynerd/",
+      img: "images/icons/github.png",
+      title: "lonelynerd",
+      span: ".github.io"
+    },
+    {
+      href: "https://mastodon.social/@imalonelynerd/",
+      img: "images/icons/mastodon.png",
+      title: "@imalonelynerd",
+      span: "@mastodon.social"
+    },
+    {
+      onc: function () {
+        copyText('@imalonelynerd:matrix.org')
+      },
+      img: "images/icons/matrix.png",
+      title: "@imalonelynerd",
+      span: ":matrix.org"
     }
-)
+  ]
+});
 
-const misc = ref(
+const misc = ref({
+  links: [
     {
-      links: [
-        {
-          href: "https://imalonelynerd.fr/yunohost",
-          img: "images/icons/yuno.png",
-          title: "Yunohost page",
-          span: ""
-        },
-        {
-          href: "https://sean.imalonelynerd.fr/",
-          img: "images/icons/misc.png",
-          title: "hehe...",
-          span: ""
-        }
-      ]
+      href: "https://imalonelynerd.fr/yunohost",
+      img: "images/icons/yuno.png",
+      title: "Yunohost page",
+      span: ""
+    },
+    {
+      href: "https://sean.imalonelynerd.fr/",
+      img: "images/icons/misc.png",
+      title: "hehe...",
+      span: ""
     }
-);
+  ]
+});
 
 
 </script>
@@ -266,7 +258,7 @@ const misc = ref(
   <CellCluster shownTitle="Let's get in touch !" id="contact" listType="SmallList" :cellList="contact"/>
   <CellCluster shownTitle="Miscellaneous" id="misc" listType="SmallList" :cellList="misc"/>
   <CustomFooter/>
-  <Background />
+  <Background/>
 </template>
 
 <style scoped>

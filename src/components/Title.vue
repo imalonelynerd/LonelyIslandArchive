@@ -4,7 +4,7 @@
 
 <template>
   <div class="title-cluster">
-    <img id="icon" src="images/icon-dark.png">
+    <img id="icon" src="/images/icon-dark.png">
     <div>
       <h1>Lonely Island</h1>
       <p>Welcome back...</p>
@@ -17,10 +17,6 @@
   .title-cluster {
     width: 100%;
     text-align: center;
-  }
-
-  .title-cluster > h1 {
-    color: var(--gradient);
   }
 
   .title-cluster > * {
@@ -36,10 +32,6 @@
   .title-cluster {
     width: 100%;
     text-align: center;
-  }
-
-  .title-cluster > h1 {
-    color: var(--gradient);
   }
 
   .title-cluster > * {
