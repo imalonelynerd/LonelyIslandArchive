@@ -19,3 +19,33 @@
     --gradient: linear-gradient(180deg, #BFC9FF 100%, #7287FE 100%);;
     --effect: brightness(150%)
 }
+
+@keyframes slidein {
+    from {
+        transform: translateX(30%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes mslidein {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes Hewwo {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
