@@ -28,7 +28,7 @@
     .bg {
       margin: 0 !important;
       filter: var(--bg-effect);
-      background: url('/images/bg.png') center center no-repeat;
+      background: url('/images/bg2.png') center center no-repeat;
       background-size: cover;
       z-index: -5;
       position: absolute;
@@ -36,8 +36,8 @@
       left: 0;
       right: 0;
       width: 100vw;
-      height: 39vh;
-      border-radius: 0 0 5vh 5vh;
+      height: 40vh;
+      border-radius: 0;
     }
   }
 </style>
