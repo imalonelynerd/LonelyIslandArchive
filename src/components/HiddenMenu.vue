@@ -2,7 +2,7 @@
 import MenuOption from "@/components/MenuOption.vue";
 
 const props = defineProps(
-    ['menuOptions',"menuId"]
+    ['menuOptions', "menuId"]
 )
 
 const options = props.menuOptions.menuButtons;
@@ -37,14 +37,16 @@ function hideMenu() {
     padding: 48px;
     display: none;
     z-index: 10;
+    backdrop-filter: blur(10px);
+    animation: blurbg ease-out 0.25s;
   }
 
   .menu-container > div {
-    background: var(--bg1);
-    border-radius: 32px;
+    background: var(--bg);
+    border-radius: 24px;
     width: fit-content;
     height: fit-content;
-    padding: 24px;
+    padding: 16px;
     float: right;
     animation: slidein ease-out 0.25s;
   }
@@ -62,6 +64,8 @@ function hideMenu() {
     padding: 1vh;
     display: none;
     z-index: 10;
+    backdrop-filter: blur(10px);
+    animation: blurbg ease-out 0.25s;
   }
 
   .menu-container > div {
@@ -70,7 +74,7 @@ function hideMenu() {
     left: 0;
     right: 0;
     padding: 2vh;
-    background: var(--bg1);
+    background: var(--bg);
     border-radius: 2vh 2vh 0 0;
     height: fit-content;
     animation: mslidein ease-out 0.25s;

@@ -4,7 +4,7 @@
 
 <template>
   <div class="title-cluster">
-    <img id="icon" src="/images/icon-dark.png">
+    <img id="icon" src="/images/icon.png">
     <div>
       <h1>Lonely Island</h1>
       <p>Welcome back...</p>
@@ -17,6 +17,7 @@
   .title-cluster {
     width: 100%;
     text-align: center;
+    margin: 32px 0;
   }
 
   .title-cluster > * {
@@ -24,7 +25,8 @@
   }
 
   .title-cluster > img {
-    height: 256px;
+    height: 224px;
+    filter: var(--icon-imp);
   }
 }
 
@@ -32,6 +34,7 @@
   .title-cluster {
     width: 100%;
     text-align: center;
+    margin: 0 0 3vh;
   }
 
   .title-cluster > * {
@@ -40,6 +43,7 @@
 
   .title-cluster > img {
     height: 15vh;
+    filter: var(--icon-imp);
   }
 }
 </style>

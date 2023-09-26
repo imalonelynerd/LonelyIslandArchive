@@ -28,7 +28,7 @@ const cellListVar = props.cellList.links;
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .big-cell > a {
@@ -36,9 +36,9 @@ const cellListVar = props.cellList.links;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 48px 24px;
-    background: var(--bg2);;
-    border-radius: 32px;
+    padding: 32px 0;
+    background: var(--widget);;
+    border-radius: 24px;
     text-align: center;
   }
 
@@ -50,8 +50,13 @@ const cellListVar = props.cellList.links;
   }
 
   .big-cell > a > div > img {
-    height: 48px;
+    height: 40px;
     margin-right: 16px;
+    filter: var(--icon);
+  }
+
+  .big-cell > a > div > h2 {
+    font-size: 1.15em;
   }
 }
 
@@ -61,21 +66,20 @@ const cellListVar = props.cellList.links;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
   }
 
   .big-cell > *:not(:last-of-type) {
-    margin-bottom: 1vh;
+    margin-bottom: 1.5vh;
   }
 
   .big-cell > a {
-    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center; /*start ?*/
     align-items: center;
-    padding: 3vh 2vh;
-    background: var(--bg2);;
+    padding: 3vh 0;
+    background: var(--widget);;
     border-radius: 3vh;
     text-align: center;
   }
@@ -89,6 +93,7 @@ const cellListVar = props.cellList.links;
 
   .big-cell > a > div > img {
     height: 4vh;
+    filter: var(--icon);
   }
 
   .big-cell > a > div > h2 {

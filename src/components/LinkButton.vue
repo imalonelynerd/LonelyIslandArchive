@@ -21,7 +21,7 @@ a {
   border-radius: 999px;
   font-size: 1em;
   font-weight: bold;
-  background: var(--bg2);
+  background: var(--widget);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,12 +37,14 @@ a:hover {
 
 a > img {
   height: 1.25em;
+  filter: var(--icon);
 }
 
 a > p {
   margin: 0;
   padding: 0;
   text-overflow: fade;
+  white-space: nowrap;
   text-wrap: none;
   max-width: 0;
   overflow: hidden;

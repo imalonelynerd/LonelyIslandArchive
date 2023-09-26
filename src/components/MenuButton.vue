@@ -31,7 +31,7 @@ function showMenu() {
     border-radius: 999px;
     font-size: 1em;
     font-weight: bold;
-    background: var(--bg2);
+    background: var(--widget);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +47,7 @@ function showMenu() {
 
   a > img {
     height: 1.25em;
+    filter: var(--icon-imp);
   }
 
   a > p {
@@ -69,9 +70,9 @@ function showMenu() {
 @media only screen and (orientation: portrait) {
   a {
     margin: 0;
-    padding: 1.25vh;
+    padding: 1.5vh;
     border-radius: 999px;
-    background: var(--bg2);
+    background: var(--widget);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,11 +86,12 @@ function showMenu() {
 
   a > img {
     height: 3vh;
+    filter: var(--icon-imp);
   }
 }
 
 .important {
-  background: var(--bg3) !important;
+  background: var(--important) !important;
   color: var(--text2) !important;
 }
 </style>

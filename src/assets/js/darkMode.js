@@ -1,18 +1,13 @@
 export function switchTheme(theme) {
-    switch (theme) {
-        case "system":
-            const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            switchTheme(isOsDark ? "dark" : "light");
-            break;
-        case "light":
-            document.getElementById("icon").src = 'images/icon-light.png';
-            document.querySelector('html').dataset.theme = `theme-light`;
-            break;
-        default:
-            document.getElementById("icon").src = "images/icon-dark.png";
-            document.querySelector('html').dataset.theme = `theme-dark`;
-            break;
+    if (theme === "system") {
+        const isOsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        switchTheme(isOsDark ? "night" : "day");
+        return;
     }
+    document.querySelector('html').dataset.theme = `theme-${theme}`;
+    /*document.getElementById("bg")
+        .setAttribute(
+            "style",
+            `background : linear-gradient(180deg,#0000,var(--bg)),url('/images/${theme}.jpg') center center no-repeat`);*/
     document.getElementById("theme").style.display = "none";
-    return true;
 }

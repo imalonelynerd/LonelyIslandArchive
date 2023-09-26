@@ -24,7 +24,7 @@ const cellListVar = props.cellList.links;
     display: grid !important;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 32px;
+    gap: 24px;
   }
 
   .small-cell > a {
@@ -32,20 +32,21 @@ const cellListVar = props.cellList.links;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px;
-    background: var(--bg2);;
-    border-radius: 999px;
+    padding: 12px 0;
+    background: var(--widget);;
+    border-radius: 24px;
     text-align: center;
   }
 
   .small-cell > a > img {
     height: 32px;
-    margin-right: 16px;
+    margin-right: 24px;
+    filter: var(--icon);
   }
 
   .small-cell > a > h2 {
+    font-size: 1.1em;
     font-weight: normal;
-    font-size: 1.25em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,6 +55,7 @@ const cellListVar = props.cellList.links;
 
   .small-cell > a > h2 > span {
     font-size: 0.5em;
+    font-weight: normal;
     opacity: 50%;
   }
 }
@@ -64,7 +66,7 @@ const cellListVar = props.cellList.links;
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 1vh;
+    gap: 1.5vh;
   }
 
   .small-cell > a {
@@ -72,15 +74,16 @@ const cellListVar = props.cellList.links;
     flex-direction: row;
     justify-content: center; /*start ?*/
     align-items: center;
-    padding: 1vh;
-    background: var(--bg2);;
+    padding: 1vh 0;
+    background: var(--widget);;
     border-radius: 3vh;
     text-align: center;
   }
 
   .small-cell > a > img {
     height: 2.5vh;
-    margin-right: 1.5vh;
+    margin-right: 2.5vh;
+    filter: var(--icon);
   }
 
   .small-cell > a > h2 {

@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: var(--bg1);;
+    background: var(--bg);;
     font-family: Inter, sans-serif;
     color: var(--text);
     animation: Hewwo ease-out 0.75s;
@@ -34,18 +34,8 @@ a:hover {
     filter: var(--effect);
 }
 
-@media only screen and (orientation: landscape) {
-    body > div > div:not(.navbar-container, .mobile-navbar-container) {
-        margin: 64px 0;
-    }
-}
-
 @media only screen and (orientation: portrait) {
     html {
         font-size: 3vw;
-    }
-
-    body > div > div:not(.navbar-container, .mobile-navbar-container)  {
-        margin: 3vh 0;
     }
 }

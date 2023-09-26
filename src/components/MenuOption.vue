@@ -3,15 +3,20 @@ defineProps([
   "onClick",
   "imgLink",
   "shownTitle",
-  "hrefLink"
+  "hrefLink",
+  "routerLink"
 ])
 </script>
 
 <template>
-  <a @click="onClick" :href="hrefLink">
+  <a @click="onClick" :href="hrefLink" v-if="hrefLink !== 'route'">
     <img :src="imgLink" :alt="imgLink">
     <p>{{ shownTitle }}</p>
   </a>
+  <router-link :to="routerLink" v-if="hrefLink === 'route'">
+    <img :src="imgLink" :alt="imgLink">
+    <p>{{ shownTitle }}</p>
+  </router-link>
 </template>
 
 <style scoped>
@@ -23,20 +28,21 @@ defineProps([
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    padding: 16px 24px;
+    padding: 16px 32px;
     background: none;
     animation: all 0.25s;
     cursor: pointer;
   }
 
   a:hover {
-    background: var(--bg1);
+    background: var(--bg);
     filter: var(--effect);
   }
 
   a > img {
     height: 32px;
     margin-right: 16px;
+    filter: var(--icon);
   }
 
   a > p {
@@ -60,13 +66,14 @@ defineProps([
   }
 
   a:active {
-    background: var(--bg1);
+    background: var(--bg);
     filter: var(--effect);
   }
 
   a > img {
     height: 2vh;
     margin-right: 1vh;
+    filter: var(--icon);
   }
 
   a > p {

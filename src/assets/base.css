@@ -1,28 +1,58 @@
-:root[data-theme="theme-light"] {
-    --bg1: #ffffff;
-    --bg2: #f1eeff;
-    --bg3: #ffaa2c;
+:root[data-theme="theme-day"] {
+    --bg: #ffffff;
+    --bg-img: url('/images/day.jpg');
+    --widget: #f1eeff;
+    --icon: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(4229%) hue-rotate(173deg) brightness(92%) contrast(101%);
+    --icon-imp: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(8%) hue-rotate(323deg) brightness(97%) contrast(89%);
+    --important: #ffaa2c;
     --text: #202020;
-    --text2: white;
+    --text2: #202020;
     --code: #00000020;
     --effect: brightness(90%);
-    --bg-effect: brightness(100%);
 }
 
-:root[data-theme="theme-dark"] {
-    --bg1: #161321;
-    --bg2: #27233f;
-    --bg3: #E7A382;
+:root[data-theme="theme-dawn"] {
+    --bg: #161321;
+    --bg-img: url('/images/dawn.jpg');
+    --widget: #27233f;
+    --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --important: #FF5263;
     --text: white;
-    --text2: #202020;
+    --text2: white;
     --code: #FFFFFF20;
     --effect: brightness(125%);
-    --bg-effect: brightness(50%);
+}
+
+:root[data-theme="theme-night"] {
+    --bg: #000814;
+    --bg-img: url('/images/night.jpg');
+    --widget: #000e1e;
+    --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --important: #003566;
+    --text: white;
+    --text2: white;
+    --code: #FFFFFF20;
+    --effect: brightness(125%);
+}
+
+:root[data-theme="theme-comet"] {
+    --bg: #0c2121;
+    --bg-img: url('/images/comet.jpg');
+    --widget: #004346;
+    --icon: brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(5811%) hue-rotate(125deg) brightness(95%) contrast(93%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
+    --important: #09bc8a;
+    --text: white;
+    --text2: white;
+    --code: #FFFFFF20;
+    --effect: brightness(125%);
 }
 
 @keyframes slidein {
     from {
-        transform: translateX(30%);
+        transform: translateX(60%);
     }
 
     to {
@@ -42,10 +72,19 @@
 
 @keyframes Hewwo {
     from {
-        transform: translateY(100%);
+        filter: blur(10px);
     }
 
     to {
-        transform: translateY(0%);
+        filter: blur(0);
+    }
+}
+
+@keyframes blurbg {
+    from {
+        backdrop-filter: blur(0);
+    }
+    to {
+        backdrop-filter: blur(10px);
     }
 }

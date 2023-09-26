@@ -26,6 +26,7 @@ const cellListVar = props.cellList
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 64px 0;
   }
 
   .cell-list > h2 {
@@ -39,6 +40,7 @@ const cellListVar = props.cellList
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 3vh 0;
   }
 
   .cell-list > h2 {
