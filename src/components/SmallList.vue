@@ -36,6 +36,12 @@ const cellListVar = props.cellList.links;
     background: var(--widget);;
     border-radius: 24px;
     text-align: center;
+    filter: var(--shadow);
+    transition: all 0.25s;
+  }
+
+  .small-cell > a:hover {
+    filter: var(--effect);
   }
 
   .small-cell > a > img {
@@ -78,6 +84,7 @@ const cellListVar = props.cellList.links;
     background: var(--widget);;
     border-radius: 3vh;
     text-align: center;
+    filter: var(--shadow);
   }
 
   .small-cell > a > img {

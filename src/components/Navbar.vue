@@ -6,6 +6,7 @@ import {ref} from "vue";
 import {switchTheme} from "@/assets/js/darkMode"
 import RouterButton from "@/components/RouterButton.vue";
 import {currentPage} from "@/assets/js/switchPath";
+import nestedPath from "@/assets/json/nestedPath.json"
 
 defineProps([
   "alignRight"
@@ -18,35 +19,35 @@ const themeMenu = ref({
           onClick: function () {
             switchTheme('day')
           },
-          imgLink: "/landing/icons/theme/day.png",
+          imgLink: `${nestedPath.path}icons/theme/day.png`,
           shownTitle: "Day",
         },
         {
           onClick: function () {
             switchTheme('dawn')
           },
-          imgLink: "/landing/icons/theme/dawn.png",
+          imgLink: `${nestedPath.path}icons/theme/dawn.png`,
           shownTitle: "Dawn"
         },
         {
           onClick: function () {
             switchTheme('night')
           },
-          imgLink: "/landing/icons/theme/night.png",
+          imgLink: `${nestedPath.path}icons/theme/night.png`,
           shownTitle: "Night"
         },
         {
           onClick: function () {
             switchTheme('comet')
           },
-          imgLink: "/landing/icons/theme/comet.png",
+          imgLink: `${nestedPath.path}icons/theme/comet.png`,
           shownTitle: "Asteroid"
         },
         {
           onClick: function () {
             switchTheme('system')
           },
-          imgLink: "/landing/icons/theme/system.png",
+          imgLink: `${nestedPath.path}icons/theme/system.png`,
           shownTitle: "System"
         }
       ]
@@ -58,21 +59,21 @@ const themeMenu = ref({
   <div class="navbar-container" :class="{ 'align-right' : alignRight }">
     <div class="navbar">
       <div v-if="currentPage($route) === 'HOME'">
-        <RouterButton hrefLink="/private" imgLink="/landing/icons/top/private.png" shownTitle="Private"/>
-        <LinkButton hrefLink="#me" imgLink="/landing/icons/top/me.png" shownTitle="About me"/>
-        <LinkButton hrefLink="#contact" imgLink="/landing/icons/top/contact.png" shownTitle="Contacts"/>
-        <LinkButton hrefLink="#projects" imgLink="/landing/icons/top/projects.png" shownTitle="Projects"/>
-        <LinkButton hrefLink="#contrib" imgLink="/landing/icons/top/public.png" shownTitle="Contributions"/>
+        <RouterButton hrefLink="/landing/private" :imgLink="nestedPath.path + 'icons/top/private.png'" shownTitle="Private"/>
+        <LinkButton hrefLink="#me" :imgLink="nestedPath.path + 'icons/top/me.png'" shownTitle="About me"/>
+        <LinkButton hrefLink="#contact" :imgLink="nestedPath.path + 'icons/top/contact.png'" shownTitle="Contacts"/>
+        <LinkButton hrefLink="#projects" :imgLink="nestedPath.path + 'icons/top/projects.png'" shownTitle="Projects"/>
+        <LinkButton hrefLink="#contrib" :imgLink="nestedPath.path + 'icons/top/public.png'" shownTitle="Contributions"/>
       </div>
       <div v-if="currentPage($route) === 'PRIVATE'">
-        <RouterButton hrefLink="/" imgLink="/landing/icons/top/public.png" shownTitle="Public"/>
-        <LinkButton href-link="#next" img-link="/landing/icons/top/nextcloud.png" shown-title="Nextcloud"/>
-        <LinkButton href-link="#yuno" img-link="/landing/icons/top/yuno.png" shown-title="YunoHost"/>
-        <LinkButton href-link="#webapps" img-link="/landing/icons/top/webapps.png" shown-title="Webapps"/>
-        <LinkButton href-link="#misc" img-link="/landing/icons/top/misc.png" shown-title="Miscellaneous"/>
+        <RouterButton hrefLink="/landing" :imgLink="nestedPath.path + 'icons/top/public.png'" shownTitle="Public"/>
+        <LinkButton href-link="#next" :imgLink="nestedPath.path + 'icons/top/nextcloud.png'" shown-title="Nextcloud"/>
+        <LinkButton href-link="#yuno" :imgLink="nestedPath.path + 'icons/top/yuno.png'" shown-title="YunoHost"/>
+        <LinkButton href-link="#webapps" :imgLink="nestedPath.path + 'icons/top/webapps.png'" shown-title="Webapps"/>
+        <LinkButton href-link="#misc" :imgLink="nestedPath.path + 'icons/top/misc.png'" shown-title="Miscellaneous"/>
 
       </div>
-      <MenuButton buttonId="theme" imgLink="/landing/icons/top/theme.png" shownTitle="Theme" :isImportant="true"/>
+      <MenuButton buttonId="theme" :imgLink="nestedPath.path + 'icons/top/theme.png'" shownTitle="Theme" :isImportant="true"/>
     </div>
   </div>
   <HiddenMenu :menuOptions="themeMenu" menuId="theme" id="theme"/>

@@ -4,6 +4,7 @@ import HiddenMenu from "@/components/HiddenMenu.vue";
 import {ref} from "vue";
 import {switchTheme} from "@/assets/js/darkMode";
 import {currentPage} from "@/assets/js/switchPath";
+import nestedPath from "@/assets/json/nestedPath.json";
 
 const themeMenu = ref({
   menuButtons:
@@ -12,35 +13,35 @@ const themeMenu = ref({
           onClick: function () {
             switchTheme('day')
           },
-          imgLink: "/landing/icons/theme/day.png",
+          imgLink: `${nestedPath.path}icons/theme/day.png`,
           shownTitle: "Day",
         },
         {
           onClick: function () {
             switchTheme('dawn')
           },
-          imgLink: "/landing/icons/theme/dawn.png",
+          imgLink: `${nestedPath.path}icons/theme/dawn.png`,
           shownTitle: "Dawn"
         },
         {
           onClick: function () {
             switchTheme('night')
           },
-          imgLink: "/landing/icons/theme/night.png",
+          imgLink: `${nestedPath.path}icons/theme/night.png`,
           shownTitle: "Night"
         },
         {
           onClick: function () {
             switchTheme('comet')
           },
-          imgLink: "/landing/icons/theme/comet.png",
+          imgLink: `${nestedPath.path}icons/theme/comet.png`,
           shownTitle: "Asteroid"
         },
         {
           onClick: function () {
             switchTheme('system')
           },
-          imgLink: "/landing/icons/theme/system.png",
+          imgLink: `${nestedPath.path}icons/theme/system.png`,
           shownTitle: "System"
         }
       ]
@@ -50,29 +51,29 @@ const publicMenu = ref({
   menuButtons:
       [
         {
-          routerLink: "/private",
+          routerLink: "/landing/private",
           hrefLink: "route",
-          imgLink: "/landing/icons/top/private.png",
+          imgLink: `${nestedPath.path}icons/top/private.png`,
           shownTitle: "Switch to Private",
         },
         {
           hrefLink: "#contact",
-          imgLink: "/landing/icons/top/contact.png",
+          imgLink: `${nestedPath.path}icons/top/contact.png`,
           shownTitle: "Contacts",
         },
         {
           hrefLink: "#me",
-          imgLink: "/landing/icons/top/me.png",
+          imgLink: `${nestedPath.path}icons/top/me.png`,
           shownTitle: "About me",
         },
         {
           hrefLink: "#projects",
-          imgLink: "/landing/icons/top/projects.png",
+          imgLink: `${nestedPath.path}icons/top/projects.png`,
           shownTitle: "Projects",
         },
         {
           hrefLink: "#contrib",
-          imgLink: "/landing/icons/top/public.png",
+          imgLink: `${nestedPath.path}icons/top/public.png`,
           shownTitle: "Contributions",
         }
       ]
@@ -83,29 +84,29 @@ const privateMenu = ref({
   menuButtons:
       [
         {
-          routerLink: "/",
+          routerLink: "/landing",
           hrefLink: "route",
-          imgLink: "/landing/icons/top/public.png",
+          imgLink: `${nestedPath.path}icons/top/public.png`,
           shownTitle: "Switch to Public",
         },
         {
           hrefLink: "#next",
-          imgLink: "/landing/icons/top/nextcloud.png",
+          imgLink: `${nestedPath.path}icons/top/nextcloud.png`,
           shownTitle: "Nextcloud Apps",
         },
         {
           hrefLink: "#yuno",
-          imgLink: "/landing/icons/top/yuno.png",
+          imgLink: `${nestedPath.path}icons/top/yuno.png`,
           shownTitle: "YunoHost Apps",
         },
         {
           hrefLink: "#webapps",
-          imgLink: "/landing/icons/top/webapps.png",
+          imgLink: `${nestedPath.path}icons/top/webapps.png`,
           shownTitle: "Webapps",
         },
         {
           hrefLink: "#misc",
-          imgLink: "/landing/icons/top/misc.png",
+          imgLink: `${nestedPath.path}icons/top/misc.png`,
           shownTitle: "Miscellaneous",
         },
 
@@ -119,8 +120,8 @@ const privateMenu = ref({
     <HiddenMenu :menuOptions="publicMenu" menuId="links" id="links" v-if="currentPage($route) === 'HOME'"/>
     <HiddenMenu :menuOptions="privateMenu" menuId="links" id="links" v-if="currentPage($route) === 'PRIVATE'"/>
     <HiddenMenu :menuOptions="themeMenu" menuId="mtheme" id="mtheme"/>
-    <MenuButton buttonId="links" imgLink="/landing/icons/top/list.png" shownTitle=""/>
-    <MenuButton buttonId="mtheme" imgLink="/landing/icons/top/theme.png" shownTitle="" :isImportant="true"/>
+    <MenuButton buttonId="links" :imgLink="nestedPath.path + 'icons/top/list.png'" shownTitle=""/>
+    <MenuButton buttonId="mtheme" :imgLink="nestedPath.path + 'icons/top/theme.png'" shownTitle="" :isImportant="true"/>
   </div>
 </template>
 

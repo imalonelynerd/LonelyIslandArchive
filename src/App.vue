@@ -8,8 +8,18 @@ import PublicComponements from "@/views/PublicComponements.vue";
 import PrivateComponements from "@/views/PrivateComponements.vue";
 import {currentPage} from "@/assets/js/switchPath";
 
-
-document.querySelector('html').dataset.theme = `theme-dawn`;
+{
+  let time = new Date().getHours();
+  if (time > 1 && time <= 7) {
+    document.querySelector('html').dataset.theme = `theme-comet`;
+  } else if (time > 7 && time <= 14) {
+    document.querySelector('html').dataset.theme = `theme-day`;
+  } else if (time > 14 && time <= 19) {
+    document.querySelector('html').dataset.theme = `theme-dawn`;
+  } else {
+    document.querySelector('html').dataset.theme = `theme-night`;
+  }
+}
 </script>
 
 <template>

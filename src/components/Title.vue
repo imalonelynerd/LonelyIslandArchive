@@ -4,7 +4,7 @@
 
 <template>
   <div class="title-cluster">
-    <img id="icon" src="/images/icon.png">
+    <img id="icon" src="/images/icon-alt.png">
     <div>
       <h1>Lonely Island</h1>
       <p>Welcome back...</p>

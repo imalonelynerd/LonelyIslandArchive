@@ -40,6 +40,12 @@ const cellListVar = props.cellList.links;
     background: var(--widget);;
     border-radius: 24px;
     text-align: center;
+    filter: var(--shadow);
+    transition: all 0.25s;
+  }
+
+  .big-cell > a:hover {
+    filter: var(--effect);
   }
 
   .big-cell > a > div {
@@ -82,6 +88,7 @@ const cellListVar = props.cellList.links;
     background: var(--widget);;
     border-radius: 3vh;
     text-align: center;
+    filter: var(--shadow);
   }
 
   .big-cell > a > div {

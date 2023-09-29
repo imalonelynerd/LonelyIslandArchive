@@ -28,6 +28,7 @@ a {
   cursor: pointer;
   max-width: 200px;
   transition: all 0.25s;
+  filter: var(--shadow);
 }
 
 a:hover {

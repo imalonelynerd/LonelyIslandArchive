@@ -38,6 +38,7 @@ function showMenu() {
     cursor: pointer;
     max-width: 200px;
     transition: all 0.25s;
+    filter: var(--shadow);
   }
 
   a:hover {
@@ -78,6 +79,7 @@ function showMenu() {
     justify-content: center;
     cursor: pointer;
     transition: all 0.25s;
+    filter: var(--shadow);
   }
 
   a:active {

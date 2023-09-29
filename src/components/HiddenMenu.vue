@@ -49,6 +49,7 @@ function hideMenu() {
     padding: 16px;
     float: right;
     animation: slidein ease-out 0.25s;
+    filter: var(--shadow);
   }
 }
 
@@ -78,6 +79,7 @@ function hideMenu() {
     border-radius: 2vh 2vh 0 0;
     height: fit-content;
     animation: mslidein ease-out 0.25s;
+    filter: var(--shadow);
   }
 }
 </style>
