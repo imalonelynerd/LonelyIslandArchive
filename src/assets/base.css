@@ -96,12 +96,15 @@
     }
 }
 
-@keyframes blurbg {
+@keyframes HewwoRoot {
     from {
-        backdrop-filter: blur(0);
+        opacity: 0;
+        filter: blur(10px);
     }
+
     to {
-        backdrop-filter: blur(10px);
+        opacity: 1;
+        filter: blur(0);
     }
 }
 
@@ -114,5 +117,14 @@
     to {
         transform: translateY(0%);
         filter: blur(0);
+    }
+}
+
+@keyframes blurbg {
+    from {
+        backdrop-filter: blur(0);
+    }
+    to {
+        backdrop-filter: blur(10px);
     }
 }

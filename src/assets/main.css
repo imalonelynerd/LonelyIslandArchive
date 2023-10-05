@@ -8,7 +8,7 @@ body {
     background: var(--bg);;
     font-family: Inter, sans-serif;
     color: var(--text);
-    animation: Hewwo ease-out 0.75s;
+    animation: HewwoRoot ease-out 0.75s;
     transition: all 0.25s;
 }
 
