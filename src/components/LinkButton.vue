@@ -28,7 +28,7 @@ a {
   cursor: pointer;
   max-width: 200px;
   transition: all 0.25s;
-  filter: var(--shadow);
+
 }
 
 a:hover {
@@ -56,5 +56,13 @@ a:hover > p {
   max-width: 999px;
   margin: 0 0 0 12px;
   transition: all 0.25s;
+}
+
+a.important {
+  background: var(--important);
+}
+
+a.important > img {
+  filter: var(--icon-imp)
 }
 </style>

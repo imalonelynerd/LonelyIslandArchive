@@ -1,6 +1,7 @@
 <script setup>
 import SmallList from "@/components/SmallList.vue";
 import BigList from "@/components/BigList.vue";
+import ImageList from "@/components/ImageList.vue";
 
 const props = defineProps([
   "shownTitle",
@@ -15,7 +16,8 @@ const cellListVar = props.cellList
   <div class="cell-list">
     <h2>{{ shownTitle }}</h2>
     <SmallList v-if="listType === 'SmallList'" :cellList="cellListVar"/>
-    <BigList v-if="listType !== 'SmallList'" :cellList="cellListVar"/>
+    <BigList v-if="listType === 'BigList'" :cellList="cellListVar"/>
+    <ImageList v-if="listType === 'ImageList'" :cellList="cellListVar"/>
   </div>
 </template>
 
@@ -40,7 +42,7 @@ const cellListVar = props.cellList
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3vh 0;
+    margin: 6vh 0;
   }
 
   .cell-list > h2 {

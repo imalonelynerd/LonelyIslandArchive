@@ -32,11 +32,10 @@ const cellListVar = props.cellList.links;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px 0;
+    padding: 12px 6px;
     background: var(--widget);;
     border-radius: 24px;
     text-align: center;
-    filter: var(--shadow);
     transition: all 0.25s;
   }
 
@@ -80,11 +79,11 @@ const cellListVar = props.cellList.links;
     flex-direction: row;
     justify-content: center; /*start ?*/
     align-items: center;
-    padding: 1vh 0;
+    padding: 1vh 0.5vh;
     background: var(--widget);;
     border-radius: 3vh;
     text-align: center;
-    filter: var(--shadow);
+    transition: all 0.25s;
   }
 
   .small-cell > a > img {
@@ -105,6 +104,10 @@ const cellListVar = props.cellList.links;
   .small-cell > a > h2 > span {
     font-size: 0.5em;
     opacity: 50%;
+  }
+
+  .small-cell > a:active {
+    filter: var(--effect);
   }
 }
 </style>

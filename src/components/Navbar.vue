@@ -71,6 +71,7 @@ const themeMenu = ref({
         <LinkButton href-link="#yuno" :imgLink="nestedPath.path + 'icons/top/yuno.png'" shown-title="YunoHost"/>
         <LinkButton href-link="#webapps" :imgLink="nestedPath.path + 'icons/top/webapps.png'" shown-title="Webapps"/>
         <LinkButton href-link="#misc" :imgLink="nestedPath.path + 'icons/top/misc.png'" shown-title="Miscellaneous"/>
+        <LinkButton href-link="https://imalonelynerd.fr/yunohost/sso/" :imgLink="nestedPath.path + 'icons/top/login.png'" shown-title="Log in" is-important="true"/>
 
       </div>
       <MenuButton buttonId="theme" :imgLink="nestedPath.path + 'icons/top/theme.png'" shownTitle="Theme" :isImportant="true"/>
@@ -98,7 +99,7 @@ const themeMenu = ref({
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: Hewwo 0.25s;
+  animation: HewwoBar 0.25s;
 }
 
 .align-right {

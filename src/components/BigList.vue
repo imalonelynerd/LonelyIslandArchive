@@ -1,8 +1,7 @@
 <script setup>
 
 const props = defineProps([
-  "cellList",
-  "cellType"
+  "cellList"
 ])
 
 const cellListVar = props.cellList.links;
@@ -36,16 +35,23 @@ const cellListVar = props.cellList.links;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px 0;
+    padding: 32px 16px;
     background: var(--widget);;
     border-radius: 24px;
     text-align: center;
-    filter: var(--shadow);
     transition: all 0.25s;
   }
 
   .big-cell > a:hover {
     filter: var(--effect);
+  }
+
+  .big-cell > a > * {
+    margin: 0;
+  }
+
+  .big-cell > a > *:not(:last-child) {
+    margin-bottom: 16px;
   }
 
   .big-cell > a > div {
@@ -57,12 +63,13 @@ const cellListVar = props.cellList.links;
 
   .big-cell > a > div > img {
     height: 40px;
-    margin-right: 16px;
+    margin: 0 16px 0 0;
     filter: var(--icon);
   }
 
   .big-cell > a > div > h2 {
     font-size: 1.15em;
+    margin: 0;
   }
 }
 
@@ -84,11 +91,11 @@ const cellListVar = props.cellList.links;
     flex-direction: column;
     justify-content: center; /*start ?*/
     align-items: center;
-    padding: 3vh 0;
+    padding: 3vh 1vh;
     background: var(--widget);;
     border-radius: 3vh;
     text-align: center;
-    filter: var(--shadow);
+    transition: all 0.25s;
   }
 
   .big-cell > a > div {
@@ -98,6 +105,14 @@ const cellListVar = props.cellList.links;
     align-items: center;
   }
 
+  .big-cell > a > * {
+    margin: 0;
+  }
+
+  .big-cell > a > *:not(:last-child) {
+    margin-bottom: 1.5vh;
+  }
+
   .big-cell > a > div > img {
     height: 4vh;
     filter: var(--icon);
@@ -105,6 +120,10 @@ const cellListVar = props.cellList.links;
 
   .big-cell > a > div > h2 {
     margin: 1vh 0 0 0;
+  }
+
+  .big-cell > a:active {
+    filter: var(--effect);
   }
 }
 </style>

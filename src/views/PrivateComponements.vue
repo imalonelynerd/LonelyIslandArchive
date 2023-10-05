@@ -73,6 +73,13 @@ const yuno = ref({
       title: "Roundcube",
       desc: "Internal (for now) email system <b>(private)</b>",
       code: "mail.imalonelynerd.fr"
+    },
+    {
+      href: "https://imalonelynerd.fr/speed",
+      img: `${nestedPath.path}icons/speed.png`,
+      title: "LibreSpeed",
+      desc: "A lightweight connection speed tester",
+      code: "imalonelynerd.fr/speed"
     }
   ]
 });
@@ -114,8 +121,14 @@ const misc = ref({
       href: "https://imalonelynerd.fr/yunohost",
       img: `${nestedPath.path}icons/yuno.png`,
       title: "Yunohost page",
-      span: ""
+      span: "(private)"
     },
+    {
+      href: "https://imalonelynerd.fr/yunohost/admin/",
+      img: `${nestedPath.path}icons/yuno.png`,
+      title: "Admin page",
+      span: "(private)"
+    }
   ]
 });
 </script>

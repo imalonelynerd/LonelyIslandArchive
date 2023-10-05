@@ -84,6 +84,11 @@ const privateMenu = ref({
   menuButtons:
       [
         {
+          hrefLink: "https://imalonelynerd.fr/yunohost/sso/",
+          imgLink: `${nestedPath.path}icons/top/login.png`,
+          shownTitle: "Log in",
+        },
+        {
           routerLink: "/landing",
           hrefLink: "route",
           imgLink: `${nestedPath.path}icons/top/public.png`,
@@ -108,8 +113,7 @@ const privateMenu = ref({
           hrefLink: "#misc",
           imgLink: `${nestedPath.path}icons/top/misc.png`,
           shownTitle: "Miscellaneous",
-        },
-
+        }
       ]
 })
 
