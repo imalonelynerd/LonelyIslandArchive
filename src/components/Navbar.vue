@@ -59,14 +59,14 @@ const themeMenu = ref({
   <div class="navbar-container" :class="{ 'align-right' : alignRight }">
     <div class="navbar">
       <div v-if="currentPage($route) === 'HOME'">
-        <RouterButton hrefLink="/landing/private" :imgLink="nestedPath.path + 'icons/top/private.png'" shownTitle="Private"/>
+        <RouterButton :hrefLink="nestedPath.path + 'private'" :imgLink="nestedPath.path + 'icons/top/private.png'" shownTitle="Private"/>
         <LinkButton hrefLink="#me" :imgLink="nestedPath.path + 'icons/top/me.png'" shownTitle="About me"/>
         <LinkButton hrefLink="#contact" :imgLink="nestedPath.path + 'icons/top/contact.png'" shownTitle="Contacts"/>
         <LinkButton hrefLink="#projects" :imgLink="nestedPath.path + 'icons/top/projects.png'" shownTitle="Projects"/>
         <LinkButton hrefLink="#contrib" :imgLink="nestedPath.path + 'icons/top/public.png'" shownTitle="Contributions"/>
       </div>
       <div v-if="currentPage($route) === 'PRIVATE'">
-        <RouterButton hrefLink="/landing" :imgLink="nestedPath.path + 'icons/top/public.png'" shownTitle="Public"/>
+        <RouterButton :hrefLink="nestedPath.path" :imgLink="nestedPath.path + 'icons/top/public.png'" shownTitle="Public"/>
         <LinkButton href-link="#next" :imgLink="nestedPath.path + 'icons/top/nextcloud.png'" shown-title="Nextcloud"/>
         <LinkButton href-link="#yuno" :imgLink="nestedPath.path + 'icons/top/yuno.png'" shown-title="YunoHost"/>
         <LinkButton href-link="#webapps" :imgLink="nestedPath.path + 'icons/top/webapps.png'" shown-title="Webapps"/>

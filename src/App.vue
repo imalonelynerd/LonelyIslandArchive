@@ -7,26 +7,12 @@ import Background from "@/components/Background.vue";
 import PublicComponements from "@/views/PublicComponements.vue";
 import PrivateComponements from "@/views/PrivateComponements.vue";
 import {currentPage} from "@/assets/js/switchPath";
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import nestedPath from "@/assets/json/nestedPath.json"
 
-function getURLValues() {
-  let search = window.location.search.replace(/^\?/, '').replace(/\+/g, ' ');
-  let values = {};
-  if (search.length) {
-    let part, parts = search.split('&');
-    for (let i = 0, iLen = parts.length; i < iLen; i++) {
-      part = parts[i].split('=');
-      values[part[0]] = window.decodeURIComponent(part[1]);
-    }
-  }
-  return values;
-}
-
 {
-  let val = getURLValues();
   let router = useRouter();
-  if (val.hasOwnProperty("goto") && val.goto === "private") {
+  if (useRoute().query.goto === "private") {
     router.push(`${nestedPath.path}private`);
   } else {
     router.push(nestedPath.path);
@@ -52,8 +38,7 @@ function getURLValues() {
   <MobileNavbar/>
   <Title/>
   <Background/>
-  <PublicComponements v-if="currentPage($route) === 'HOME' "/>
-  <PrivateComponements v-if="currentPage($route) === 'PRIVATE'"/>
+  <router-view></router-view>
   <CustomFooter/>
 </template>
 

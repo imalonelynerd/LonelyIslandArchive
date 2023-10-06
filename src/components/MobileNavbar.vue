@@ -51,7 +51,7 @@ const publicMenu = ref({
   menuButtons:
       [
         {
-          routerLink: "/landing/private",
+          routerLink: `${nestedPath.path}private`,
           hrefLink: "route",
           imgLink: `${nestedPath.path}icons/top/private.png`,
           shownTitle: "Switch to Private",
@@ -89,7 +89,7 @@ const privateMenu = ref({
           shownTitle: "Log in",
         },
         {
-          routerLink: "/landing",
+          routerLink: nestedPath.path,
           hrefLink: "route",
           imgLink: `${nestedPath.path}icons/top/public.png`,
           shownTitle: "Switch to Public",
