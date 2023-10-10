@@ -27,7 +27,7 @@ defineProps([
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-radius: 999px;
+    border-radius: 16px;
     padding: 16px 32px;
     background: none;
     animation: all 0.25s;

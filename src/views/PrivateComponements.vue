@@ -1,9 +1,10 @@
 <script setup>
 
-import CellCluster from "@/components/CellCluster.vue";
+import CellCluster from "@/components/cellClusters/CellCluster.vue";
 import nestedPath from "@/assets/json/nestedPath.json"
 
 import {ref} from "vue";
+import PrivateTitle from "@/components/Titles/PrivateTitle.vue";
 
 const nextcloud = ref({
   links: [
@@ -102,14 +103,14 @@ const webapps = ref({
     {
       href: "https://imalonelynerd.fr/edt",
       img: `${nestedPath.path}icons/calendar.png`,
-      title: "Timetable",
-      desc: "An uni timetable, powered by SAGBOT",
+      title: "EventHorizon",
+      desc: "A timetable for university",
       code: "imalonelynerd.fr/edt"
     },
     {
       href: "https://heroes.imalonelynerd.fr/",
       img: `${nestedPath.path}icons/prettyheroes.png`,
-      title: "Pretty Heroes",
+      title: "PrettyHeroes",
       desc: "A simple About Me page generator",
       code: "heroes.imalonelynerd.fr"
     }
@@ -134,6 +135,7 @@ const misc = ref({
 </script>
 
 <template>
+  <PrivateTitle />
   <CellCluster shownTitle="Nextcloud apps" listType="SmallList" :cellList="nextcloud" id="next"/>
   <CellCluster shownTitle="YunoHost apps" id="yuno" listType="BigList" :cellList="yuno"/>
   <CellCluster shownTitle="Webapps" id="webapps" listType="BigList" :cellList="webapps"/>
@@ -141,7 +143,15 @@ const misc = ref({
 </template>
 
 <style scoped>
-* {
-  animation: Hewwo 0.75s;
+@media screen and (orientation: landscape) {
+  * {
+    animation: Hewwo ease-out 0.75s;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  * {
+    animation: HewwoMobile ease-out 0.75s;
+  }
 }
 </style>

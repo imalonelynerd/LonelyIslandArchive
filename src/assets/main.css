@@ -1,15 +1,36 @@
 @import "base.css";
+@import "animations.css";
 
-html {
-    scroll-behavior: smooth;
+@media only screen and (orientation: portrait) {
+    html {
+        font-size: 3vw;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        animation: HewwoMobile ease-out 0.75s;
+    }
 }
 
+@media only screen and (orientation: landscape) {
+    html {
+        font-size: 0.9em;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        animation: HewwoRoot ease-out 0.75s;
+    }
+}
+
+
 body {
-    background: var(--bg);;
+    background: var(--bg);
     font-family: Inter, sans-serif;
     color: var(--text);
-    animation: HewwoRoot ease-out 0.75s;
     transition: all 0.25s;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -19,23 +40,13 @@ a {
     cursor: pointer;
 }
 
-
-h1 {
-    margin: 0;
-}
-
 code {
-    padding: 8px 16px !important;
-    border-radius: 999px !important;
-    background: var(--code) !important;
+    padding: 1em 1.5em !important;
+    border-radius: 3em !important;
+    background: var(--bg) !important;
+    font-size: 0.95em;
 }
 
 a:hover {
     filter: var(--effect);
-}
-
-@media only screen and (orientation: portrait) {
-    html {
-        font-size: 3vw;
-    }
 }

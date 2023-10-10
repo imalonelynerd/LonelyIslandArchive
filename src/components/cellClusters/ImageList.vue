@@ -31,49 +31,50 @@ const cellListVar = props.cellList.links;
   .im-cell > a {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    padding: 0 0 32px;
-    background: var(--widget);;
-    border-radius: 24px;
+    padding: 0 0 24px;
+    background: var(--widget);
+    border-radius: 16px;
     text-align: center;
     transition: all 0.25s;
+    gap: 16px;
+    box-shadow: var(--shadow);
   }
 
   .im-cell > a:hover {
+    /*border-radius: 64px;*/
     filter: var(--effect);
   }
 
   .im-cell > a > img {
     height: fit-content;
     width: 100%;
-    border-radius: 24px;
+    border-radius: 16px 16px 0 0;
+    transition: all 0.25s;
   }
 
-  .im-cell > a > h2 {
-    font-size: 1.15em;
-  }
-
-  .im-cell > a > * {
+  .im-cell > *, .im-cell > a > * {
     margin: 0;
   }
 
-  .im-cell > a > *:not(:last-child){
-    margin-bottom: 16px;
+  .im-cell > a > *:not(img) {
+    padding: 0 32px;
+  }
+
+  .im-cell > a > h2 {
+    font-size: 1.20em;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .im-cell {
-    width: 90%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-  }
-
-  .im-cell > *:not(:last-of-type) {
-    margin-bottom: 1.5vh;
+    gap: 2vh;
   }
 
   .im-cell > a {
@@ -82,28 +83,27 @@ const cellListVar = props.cellList.links;
     justify-content: space-between; /*start ?*/
     align-items: center;
     padding: 0 0 3vh;
-    background: var(--widget);;
-    border-radius: 3vh;
+    background: var(--widget);
+    border-radius: 2vh;
     text-align: center;
     transition: all 0.25s;
-  }
-
-  .im-cell > a > img {
-    height: fit-content;
-    width: 100%;
-    border-radius: 3vh;
-  }
-
-  .im-cell > a > h2 {
-    margin: 1vh 0 0 0;
+    gap: 1vh;
+    box-shadow: var(--shadow);
   }
 
   .im-cell > a > * {
     margin: 0;
   }
 
-  .im-cell > a > *:not(:last-child){
-    margin-bottom: 1.5vh;
+  .im-cell > a > img {
+    height: fit-content;
+    width: 100%;
+    border-radius: 2vh 2vh 0 0;
+    margin-bottom: 1.5vh !important;
+  }
+
+  .im-cell > a > h2 {
+    margin: 1vh 0 0 0;
   }
 
   .im-cell > a:active {

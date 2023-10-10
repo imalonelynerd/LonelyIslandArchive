@@ -33,25 +33,24 @@ const cellListVar = props.cellList.links;
   .big-cell > a {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    padding: 32px 16px;
-    background: var(--widget);;
-    border-radius: 24px;
+    padding: 24px 16px;
+    background: var(--widget);
+    border-radius: 16px;
     text-align: center;
     transition: all 0.25s;
+    gap: 16px;
+    box-shadow: var(--shadow);
   }
 
   .big-cell > a:hover {
+    /*border-radius: 64px;*/
     filter: var(--effect);
   }
 
   .big-cell > a > * {
     margin: 0;
-  }
-
-  .big-cell > a > *:not(:last-child) {
-    margin-bottom: 16px;
   }
 
   .big-cell > a > div {
@@ -75,7 +74,7 @@ const cellListVar = props.cellList.links;
 
 @media only screen and (orientation: portrait) {
   .big-cell {
-    width: 90%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,34 +82,32 @@ const cellListVar = props.cellList.links;
   }
 
   .big-cell > *:not(:last-of-type) {
-    margin-bottom: 1.5vh;
+    margin-bottom: 2vh;
   }
 
   .big-cell > a {
     display: flex;
     flex-direction: column;
-    justify-content: center; /*start ?*/
+    justify-content: center;
     align-items: center;
     padding: 3vh 1vh;
-    background: var(--widget);;
-    border-radius: 3vh;
+    background: var(--widget);
+    border-radius: 2vh;
     text-align: center;
     transition: all 0.25s;
+    gap: 1.5vh;
+    box-shadow: var(--shadow);
   }
 
   .big-cell > a > div {
     display: flex;
     flex-direction: column;
-    justify-content: center; /*start ?*/
+    justify-content: center;
     align-items: center;
   }
 
   .big-cell > a > * {
     margin: 0;
-  }
-
-  .big-cell > a > *:not(:last-child) {
-    margin-bottom: 1.5vh;
   }
 
   .big-cell > a > div > img {

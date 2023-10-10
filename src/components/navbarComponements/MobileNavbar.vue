@@ -1,10 +1,11 @@
 <script setup>
-import MenuButton from "@/components/MenuButton.vue";
-import HiddenMenu from "@/components/HiddenMenu.vue";
+import MenuButton from "@/components/navbarComponements/MenuButton.vue";
+import HiddenMenu from "@/components/navbarComponements/HiddenMenu.vue";
 import {ref} from "vue";
-import {switchTheme} from "@/assets/js/darkMode";
+import {switchTheme} from "@/assets/js/themeMgmt";
 import {currentPage} from "@/assets/js/switchPath";
 import nestedPath from "@/assets/json/nestedPath.json";
+import {showMenuUnusual} from "@/assets/js/menuUtils";
 
 const themeMenu = ref({
   menuButtons:
@@ -39,10 +40,30 @@ const themeMenu = ref({
         },
         {
           onClick: function () {
+            showMenuUnusual("mtheme2");
+          },
+          imgLink: `${nestedPath.path}icons/top/misc.png`,
+          shownTitle: "Others"
+        }
+      ]
+})
+
+const themeMenu2 = ref({
+  menuButtons:
+      [
+        {
+          onClick: function () {
             switchTheme('system')
           },
           imgLink: `${nestedPath.path}icons/theme/system.png`,
-          shownTitle: "System"
+          shownTitle: "System",
+        },
+        {
+          onClick: function () {
+            switchTheme('time')
+          },
+          imgLink: `${nestedPath.path}icons/theme/time.png`,
+          shownTitle: "Based on time"
         }
       ]
 })
@@ -51,20 +72,14 @@ const publicMenu = ref({
   menuButtons:
       [
         {
-          routerLink: `${nestedPath.path}private`,
-          hrefLink: "route",
-          imgLink: `${nestedPath.path}icons/top/private.png`,
-          shownTitle: "Switch to Private",
+          hrefLink: "#me",
+          imgLink: `${nestedPath.path}icons/top/me.png`,
+          shownTitle: "About me",
         },
         {
           hrefLink: "#contact",
           imgLink: `${nestedPath.path}icons/top/contact.png`,
           shownTitle: "Contacts",
-        },
-        {
-          hrefLink: "#me",
-          imgLink: `${nestedPath.path}icons/top/me.png`,
-          shownTitle: "About me",
         },
         {
           hrefLink: "#projects",
@@ -79,21 +94,9 @@ const publicMenu = ref({
       ]
 })
 
-
 const privateMenu = ref({
   menuButtons:
       [
-        {
-          hrefLink: "https://imalonelynerd.fr/yunohost/sso/",
-          imgLink: `${nestedPath.path}icons/top/login.png`,
-          shownTitle: "Log in",
-        },
-        {
-          routerLink: nestedPath.path,
-          hrefLink: "route",
-          imgLink: `${nestedPath.path}icons/top/public.png`,
-          shownTitle: "Switch to Public",
-        },
         {
           hrefLink: "#next",
           imgLink: `${nestedPath.path}icons/top/nextcloud.png`,
@@ -120,10 +123,12 @@ const privateMenu = ref({
 </script>
 
 <template>
+  <HiddenMenu :menuOptions="publicMenu" menuId="links" id="links" v-if="currentPage($route) === 'HOME'"/>
+  <HiddenMenu :menuOptions="privateMenu" menuId="links" id="links" v-if="currentPage($route) === 'PRIVATE'"/>
+  <HiddenMenu :menuOptions="themeMenu" menuId="mtheme" id="mtheme"/>
+  <HiddenMenu :menu-options="themeMenu2" menu-id="mtheme2" id="mtheme2"/>
+
   <div class="mobile-navbar-container">
-    <HiddenMenu :menuOptions="publicMenu" menuId="links" id="links" v-if="currentPage($route) === 'HOME'"/>
-    <HiddenMenu :menuOptions="privateMenu" menuId="links" id="links" v-if="currentPage($route) === 'PRIVATE'"/>
-    <HiddenMenu :menuOptions="themeMenu" menuId="mtheme" id="mtheme"/>
     <MenuButton buttonId="links" :imgLink="nestedPath.path + 'icons/top/list.png'" shownTitle=""/>
     <MenuButton buttonId="mtheme" :imgLink="nestedPath.path + 'icons/top/theme.png'" shownTitle="" :isImportant="true"/>
   </div>
@@ -138,10 +143,15 @@ const privateMenu = ref({
 }
 
 .mobile-navbar-container {
-  padding: 2vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 3vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  animation: HewwoBar ease-out 0.75s;
 }
 </style>

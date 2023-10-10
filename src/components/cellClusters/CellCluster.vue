@@ -1,7 +1,8 @@
 <script setup>
-import SmallList from "@/components/SmallList.vue";
-import BigList from "@/components/BigList.vue";
-import ImageList from "@/components/ImageList.vue";
+import SmallList from "@/components/cellClusters/SmallList.vue";
+import BigList from "@/components/cellClusters/BigList.vue";
+import ImageList from "@/components/cellClusters/ImageList.vue";
+import BlockList from "@/components/cellClusters/BlockList.vue";
 
 const props = defineProps([
   "shownTitle",
@@ -18,6 +19,8 @@ const cellListVar = props.cellList
     <SmallList v-if="listType === 'SmallList'" :cellList="cellListVar"/>
     <BigList v-if="listType === 'BigList'" :cellList="cellListVar"/>
     <ImageList v-if="listType === 'ImageList'" :cellList="cellListVar"/>
+    <BlockList v-if="listType === 'BlockList'" :cellList="cellListVar"/>
+
   </div>
 </template>
 
@@ -36,7 +39,7 @@ const cellListVar = props.cellList
   }
 }
 
-@media only screen and (orientation: portrait){
+@media only screen and (orientation: portrait) {
   .cell-list {
     display: flex;
     flex-direction: column;
@@ -46,7 +49,7 @@ const cellListVar = props.cellList
   }
 
   .cell-list > h2 {
-    margin: 0 0 2vh;
+    margin: 0 0 3vh;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import MenuOption from "@/components/MenuOption.vue";
+import MenuOption from "@/components/navbarComponements/MenuOption.vue";
 
 const props = defineProps(
     ['menuOptions', "menuId"]
@@ -43,13 +43,13 @@ function hideMenu() {
 
   .menu-container > div {
     background: var(--bg);
-    border-radius: 24px;
+    border-radius: 16px;
     width: fit-content;
     height: fit-content;
     padding: 16px;
     float: right;
     animation: slidein ease-out 0.25s;
-
+    box-shadow: var(--shadow);
   }
 }
 
@@ -79,7 +79,7 @@ function hideMenu() {
     border-radius: 2vh 2vh 0 0;
     height: fit-content;
     animation: mslidein ease-out 0.25s;
-
+    box-shadow: var(--shadow);
   }
 }
 </style>

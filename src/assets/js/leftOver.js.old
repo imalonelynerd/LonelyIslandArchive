@@ -1,0 +1,11 @@
+let val;
+try {
+    val = document.getElementById("bg");
+} catch {
+    val = null;
+}
+if (val !== null) {
+    val.style.display = "none";
+    document.querySelector('html').dataset.theme = `theme-${theme}`;
+    val.style.display = "block";
+} else {

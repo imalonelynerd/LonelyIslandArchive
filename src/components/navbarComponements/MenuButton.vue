@@ -28,7 +28,7 @@ function showMenu() {
   a {
     margin: 0;
     padding: 16px 24px;
-    border-radius: 999px;
+    border-radius: 64px;
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -38,7 +38,8 @@ function showMenu() {
     cursor: pointer;
     max-width: 200px;
     transition: all 0.25s;
-
+    box-shadow: var(--shadow);
+    z-index: 9;
   }
 
   a:hover {
@@ -79,7 +80,8 @@ function showMenu() {
     justify-content: center;
     cursor: pointer;
     transition: all 0.25s;
-
+    box-shadow: var(--shadow);
+    z-index: 9;
   }
 
   a:active {
@@ -94,6 +96,6 @@ function showMenu() {
 
 .important {
   background: var(--important) !important;
-  color: var(--text2) !important;
+  color: var(--text) !important;
 }
 </style>

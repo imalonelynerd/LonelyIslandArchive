@@ -1,13 +1,14 @@
 <script setup>
 
-import CellCluster from "@/components/CellCluster.vue";
+import CellCluster from "@/components/cellClusters/CellCluster.vue";
 import {ref} from "vue";
 import nestedPath from "@/assets/json/nestedPath.json";
 import Description from "@/components/Description.vue";
+import PublicTitle from "@/components/Titles/PublicTitle.vue";
 
 function copyText(text) {
   navigator.clipboard.writeText(text);
-  alert("Copied successfully !");
+  alert(`"${text}" copied successfully !`);
   return true;
 }
 
@@ -21,24 +22,31 @@ const projects = ref({
       code: "github.com/lonelynerd/Frisk"
     },
     {
-      href: "https://github.com/lonelynerd/Talisman",
+      href: "https://github.com/lonelynerd/TalismanGTK",
       img: `${nestedPath.path}captures/talisman.png`,
       title: "Talisman",
       desc: "A YuGiOh! companion app",
-      code: "github.com/lonelynerd/Talisman"
+      code: "github.com/lonelynerd/TalismanGTK"
     },
     {
       href: "https://github.com/lonelynerd/PrettyHeroes/",
       img: `${nestedPath.path}captures/prettyheroes.png`,
-      title: "Pretty Heroes",
-      desc: "A simple About Me page generator",
+      title: "PrettyHeroes",
+      desc: "An About Me page generator",
       code: "github.com/lonelynerd/PrettyHeroes"
+    },
+    {
+      href: "https://github.com/lonelynerd/EventHorizon",
+      img: `${nestedPath.path}captures/event.png`,
+      title: "EventHorizon",
+      desc: "A grid-like timetable, made in Vue",
+      code: "github.com/lonelynerd/EventHorizon"
     },
     {
       href: "https://github.com/lonelynerd/DeathCount",
       img: `${nestedPath.path}captures/deathcount.png`,
       title: "DeathCount",
-      desc: "A Discord counting bot with added vicious features",
+      desc: "A vicious Discord counting bot",
       code: "github.com/lonelynerd/DeathCount"
     },
     {
@@ -50,13 +58,14 @@ const projects = ref({
     }
   ]
 });
+
 const contrib = ref({
   links: [
     {
       href: "https://invent.kde.org/pinheiro/oxygen2",
       img: `${nestedPath.path}icons/oxygen.png`,
       title: "Oxygen²",
-      desc: "Working on it...",
+      desc: "Currently working on it...",
       code: "invent.kde.org/pinheiro/oxygen2"
     },
     {
@@ -79,50 +88,62 @@ const contrib = ref({
 const contact = ref({
   links: [
     {
-      href: "https://heroes.imalonelynerd.fr/#/lonelynerd",
-      img: `${nestedPath.path}icons/prettyheroes.png`,
-      title: "Nerd",
-      span: "Pretty Heroes"
-    },
-    {
       onc: function () {
         copyText('imalonelynerd')
       },
       img: `${nestedPath.path}icons/discord.png`,
-      title: "imalonelynerd",
-      span: "#0"
+      title: "Discord",
+      span: "imalonelynerd#0"
     },
     {
       href: "mailto:imalonelynerd@gmail.com",
       img: `${nestedPath.path}icons/mail.png`,
-      title: "imalonelynerd",
-      span: "@gmail.com"
+      title: "Mail",
+      span: "imalonelynerd@gmail.com"
     },
     {
       href: "mailto:imalonelynerd@blahaj.land",
       img: `${nestedPath.path}icons/mail.png`,
-      title: "imalonelynerd",
-      span: "@blahaj.land"
+      title: "Mail",
+      span: "imalonelynerd@blahaj.land"
     },
     {
       href: "https://github.com/lonelynerd/",
       img: `${nestedPath.path}icons/github.png`,
-      title: "lonelynerd",
-      span: ".github.io"
+      title: "GitHub",
+      span: "lonelynerd"
     },
     {
       href: "https://mastodon.social/@imalonelynerd/",
       img: `${nestedPath.path}icons/mastodon.png`,
-      title: "@imalonelynerd",
-      span: "@mastodon.social"
+      title: "Mastodon",
+      span: "@imalonelynerd@mastodon.social"
     },
     {
       onc: function () {
         copyText('@imalonelynerd:matrix.org')
       },
       img: `${nestedPath.path}icons/matrix.png`,
-      title: "@imalonelynerd",
-      span: ":matrix.org"
+      title: "Matrix",
+      span: "@imalonelynerd:matrix.org"
+    },
+    {
+      href: "https://reddit.com/u/smpl_deb",
+      img: `${nestedPath.path}icons/reddit.png`,
+      title: "Reddit",
+      span: "u/smpl_deb"
+    },
+    {
+      href: "https://www.figma.com/@imalonelynerd",
+      img: `${nestedPath.path}icons/figma.png`,
+      title: "Figma",
+      span: "@imalonelynerd"
+    },
+    {
+      href: "https://heroes.imalonelynerd.fr/#/lonelynerd",
+      img: `${nestedPath.path}icons/prettyheroes.png`,
+      title: "PrettyHeroes",
+      span: ""
     }
   ]
 });
@@ -130,14 +151,23 @@ const contact = ref({
 </script>
 
 <template>
-  <Description />
+  <PublicTitle/>
+  <Description/>
   <CellCluster shownTitle="Let's get in touch !" id="contact" listType="SmallList" :cellList="contact"/>
   <CellCluster shownTitle="Projects" id="projects" listType="ImageList" :cellList="projects"/>
   <CellCluster shownTitle="Contributions" id="contrib" listType="BigList" :cellList="contrib"/>
 </template>
 
 <style scoped>
-* {
-  animation: Hewwo 0.75s;
+@media screen and (orientation: landscape) {
+  * {
+    animation: Hewwo ease-out 0.75s;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  * {
+    animation: HewwoMobile ease-out 0.75s;
+  }
 }
 </style>

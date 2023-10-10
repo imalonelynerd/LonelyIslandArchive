@@ -3,22 +3,22 @@ defineProps([
   "hrefLink",
   "imgLink",
   "shownTitle",
-  "isImportant"
+  "isImportant",
 ])
 </script>
 
 <template>
-  <a :href="hrefLink" :class="{ important : isImportant }">
+  <router-link class="rlink" :to="hrefLink" :class="{ important : isImportant }">
     <img :src="imgLink" :alt="imgLink">
     <p v-show="shownTitle !== ''">{{ shownTitle }}</p>
-  </a>
+  </router-link>
 </template>
 
 <style scoped>
-a {
+.rlink {
   margin: 0;
   padding: 16px 24px;
-  border-radius: 999px;
+  border-radius: 64px;
   font-size: 1em;
   font-weight: bold;
   background: var(--widget);
@@ -28,41 +28,40 @@ a {
   cursor: pointer;
   max-width: 200px;
   transition: all 0.25s;
-
+  box-shadow: var(--shadow);
 }
 
-a:hover {
+.rlink:hover {
   max-width: 150px;
   filter: var(--effect);
 }
 
-a > img {
+.rlink > img {
   height: 1.25em;
   filter: var(--icon);
 }
 
-a > p {
+.rlink > p {
   margin: 0;
   padding: 0;
   text-overflow: fade;
-  white-space: nowrap;
   text-wrap: none;
   max-width: 0;
   overflow: hidden;
   transition: all 0.25s;
 }
 
-a:hover > p {
+.rlink:hover > p {
   max-width: 999px;
   margin: 0 0 0 12px;
   transition: all 0.25s;
 }
 
-a.important {
+.rlink.important {
   background: var(--important);
 }
 
-a.important > img {
+.rlink.important > img {
   filter: var(--icon-imp)
 }
 </style>

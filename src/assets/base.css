@@ -1,130 +1,56 @@
 :root[data-theme="theme-day"] {
-    --bg: #ffffff;
-    --bg-img: url('/images/day.jpg');
-    --widget: #f3f1ff;
+    --bg: #e0f6ff;
+    --bg-img: url('/images/day.png');
+    --widget: #ffffff;
     --icon: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(4229%) hue-rotate(173deg) brightness(92%) contrast(101%);
     --icon-imp: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(8%) hue-rotate(323deg) brightness(97%) contrast(89%);
     --important: #ffaa2c;
     --text: #202020;
-    --text2: #202020;
-    --code: #00000020;
-    --effect: brightness(97%);
+    --effect: brightness(95%);
 }
 
 :root[data-theme="theme-dawn"] {
     --bg: #161321;
-    --bg-img: url('/images/dawn.jpg');
+    --bg-img: url('/images/dawn.png');
     --widget: #27233f;
     --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --important: #FF5263;
     --text: white;
-    --text2: white;
-    --code: #FFFFFF20;
     --effect: brightness(125%);
 }
 
 :root[data-theme="theme-night"] {
     --bg: #000814;
-    --bg-img: url('/images/night.jpg');
+    --bg-img: url('/images/night.png');
     --widget: #00132a;
     --icon: brightness(0) saturate(100%) invert(54%) sepia(89%) saturate(1041%) hue-rotate(195deg) brightness(100%) contrast(102%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --important: #003566;
     --text: white;
-    --text2: white;
-    --code: #FFFFFF20;
     --effect: brightness(125%);
 }
 
 :root[data-theme="theme-comet"] {
     --bg: #0c2121;
-    --bg-img: url('/images/comet.jpg');
+    --bg-img: url('/images/comet.png');
     --widget: #004346;
     --icon: brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(5811%) hue-rotate(125deg) brightness(95%) contrast(93%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --important: #09bc8a;
     --text: white;
-    --text2: white;
-    --code: #FFFFFF20;
     --effect: brightness(125%);
 }
 
-/*@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
     :root {
-        --shadow: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0));
+        --shadow: 0px 8px 16px #00000010;
     }
 }
 
 @media only screen and (orientation: portrait) {
     :root {
-        --shadow: drop-shadow(0px 0.5vh 0.5vh rgba(0, 0, 0, 0));
-    }
-}*/
-
-@keyframes slidein {
-    from {
-        transform: translateX(60%);
-    }
-
-    to {
-        transform: translateX(0%);
+        --shadow: 0px 0.5vh 2vh #00000010;
     }
 }
 
-@keyframes mslidein {
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0%);
-    }
-}
-
-@keyframes Hewwo {
-    from {
-        opacity: 0;
-        transform: translateX(50%);
-        filter: blur(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-        filter: blur(0);
-    }
-}
-
-@keyframes HewwoRoot {
-    from {
-        opacity: 0;
-        filter: blur(10px);
-    }
-
-    to {
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@keyframes HewwoBar {
-    from {
-        transform: translateY(-200%);
-        filter: blur(10px);
-    }
-
-    to {
-        transform: translateY(0%);
-        filter: blur(0);
-    }
-}
-
-@keyframes blurbg {
-    from {
-        backdrop-filter: blur(0);
-    }
-    to {
-        backdrop-filter: blur(10px);
-    }
-}
