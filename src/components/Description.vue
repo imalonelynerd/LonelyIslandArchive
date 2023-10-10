@@ -15,31 +15,33 @@ import SmallButton from "@/components/SmallButton.vue";
         <b>19</b> y.o. ⬧ <b>they/them</b> ⬧ based in <b>Rouen</b>, France<br>
         <b>Cybesec</b> student, Hobbist <b>graphical/UI designer</b>, <b>C hater</b>
       </p>
-      <div>
-        <h3>Tools & softwares I use</h3>
+      <div class="desc-cluster">
         <div>
-          <SmallButton shown-title="Python" :img-link="nestedPath.path + 'icons/small/python.png'"/>
-          <SmallButton shown-title="JavaScript" :img-link="nestedPath.path + 'icons/small/js.png'"/>
-          <SmallButton shown-title="PHP" :img-link="nestedPath.path + 'icons/small/php.png'"/>
-          <SmallButton shown-title="Java" :img-link="nestedPath.path + 'icons/small/java.png'"/>
-          <SmallButton shown-title="C" :img-link="nestedPath.path + 'icons/small/c.png'"/>
-          <SmallButton shown-title="OCaml" :img-link="nestedPath.path + 'icons/small/ocaml.png'"/>
-          <SmallButton shown-title="NodeJS" :img-link="nestedPath.path + 'icons/small/node.png'"/>
-          <SmallButton shown-title="Electron" :img-link="nestedPath.path + 'icons/small/electron.png'"/>
-          <SmallButton shown-title="VueJS" :img-link="nestedPath.path + 'icons/small/vue.png'"/>
-          <SmallButton shown-title="jQuery" :img-link="nestedPath.path + 'icons/small/jquery.png'"/>
-          <SmallButton shown-title="GTK4/LibAdwaita" :img-link="nestedPath.path + 'icons/small/gtk.png'"/>
-          <SmallButton shown-title="Figma" :img-link="nestedPath.path + 'icons/small/figma.png'"/>
-          <SmallButton shown-title="Inkscape" :img-link="nestedPath.path + 'icons/small/inkscape.png'"/>
-          <SmallButton shown-title="Gimp" :img-link="nestedPath.path + 'icons/small/gimp.png'"/>
-          <SmallButton shown-title="Linux" :img-link="nestedPath.path + 'icons/small/linux.png'"/>
+          <h3>Tools & softwares I use</h3>
+          <div>
+            <SmallButton shown-title="Python" :img-link="nestedPath.path + 'icons/small/python.png'"/>
+            <SmallButton shown-title="JavaScript" :img-link="nestedPath.path + 'icons/small/js.png'"/>
+            <SmallButton shown-title="PHP" :img-link="nestedPath.path + 'icons/small/php.png'"/>
+            <SmallButton shown-title="Java" :img-link="nestedPath.path + 'icons/small/java.png'"/>
+            <SmallButton shown-title="C" :img-link="nestedPath.path + 'icons/small/c.png'"/>
+            <SmallButton shown-title="OCaml" :img-link="nestedPath.path + 'icons/small/ocaml.png'"/>
+            <SmallButton shown-title="NodeJS" :img-link="nestedPath.path + 'icons/small/node.png'"/>
+            <SmallButton shown-title="Electron" :img-link="nestedPath.path + 'icons/small/electron.png'"/>
+            <SmallButton shown-title="VueJS" :img-link="nestedPath.path + 'icons/small/vue.png'"/>
+            <SmallButton shown-title="jQuery" :img-link="nestedPath.path + 'icons/small/jquery.png'"/>
+            <SmallButton shown-title="GTK4" :img-link="nestedPath.path + 'icons/small/gtk.png'"/>
+            <SmallButton shown-title="Figma" :img-link="nestedPath.path + 'icons/small/figma.png'"/>
+            <SmallButton shown-title="Inkscape" :img-link="nestedPath.path + 'icons/small/inkscape.png'"/>
+            <SmallButton shown-title="Gimp" :img-link="nestedPath.path + 'icons/small/gimp.png'"/>
+            <SmallButton shown-title="Linux" :img-link="nestedPath.path + 'icons/small/linux.png'"/>
+          </div>
         </div>
-      </div>
-      <div>
-        <h3>Contacts</h3>
-        <p>If you have a <b>question</b>, an <b>issue</b> with one of my projects, or maybe you want me to <b>do
-          something</b>, I'll be more than happy to help !<br>You can contact me using the <a
-            href="#contact"><b>links</b></a> listed below !</p>
+        <div>
+          <h3>Contacts</h3>
+          <p>If you have a <b>question</b>, an <b>issue</b> with one of my projects, or maybe you want me to <b>do
+            something</b>, I'll be more than happy to help !<br>You can contact me using the <a
+              href="#contact">links</a> listed below !</p>
+        </div>
       </div>
     </div>
     <!--p>From : <a href="https://github.com/lonelynerd"><b>GitHub</b></a></p-->
@@ -67,6 +69,14 @@ import SmallButton from "@/components/SmallButton.vue";
     border-radius: 128px;
   }
 
+  .desc a {
+    font-weight: bold;
+  }
+
+  .desc a:hover {
+    opacity: 0.5;
+  }
+
   .desc > div {
     transition: all 0.25s;
     text-align: center;
@@ -92,10 +102,17 @@ import SmallButton from "@/components/SmallButton.vue";
     margin: 0;
   }
 
-  .desc > div > div {
-    width: 80%;
+  .desc-cluster {
+    width: 90%;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .desc-cluster > div {
     border-radius: 16px;
-    padding: 24px 64px;
+    padding: 24px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,18 +122,17 @@ import SmallButton from "@/components/SmallButton.vue";
     box-shadow: var(--shadow);
   }
 
-  .desc > div > div > * {
+  .desc-cluster > div > * {
     margin: 0;
   }
 
-  .desc > div > div > div {
+  .desc-cluster > div > div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    row-gap: 8px;
-    column-gap: 12px;
+    gap: 8px;
   }
 }
 
@@ -161,6 +177,14 @@ import SmallButton from "@/components/SmallButton.vue";
     opacity: 0.5;
   }
 
+  .desc a {
+    font-weight: bold;
+  }
+
+  .desc a:active {
+    opacity: 0.5;
+  }
+
   /*.desc > p {
     margin: -24px 0 0;
     font-size: 0.9em;
@@ -170,8 +194,16 @@ import SmallButton from "@/components/SmallButton.vue";
     margin: 0;
   }
 
-  .desc > div > div {
-    width: 80%;
+  .desc-cluster {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+  }
+
+  .desc-cluster > div {
     border-radius: 2vh;
     padding: 3vh;
     display: flex;
@@ -179,17 +211,15 @@ import SmallButton from "@/components/SmallButton.vue";
     align-items: center;
     justify-content: center;
     background: var(--widget);
-    gap: 3vh;
+    gap: 2vh;
     box-shadow: var(--shadow);
   }
 
-  .desc > div > div > * {
+  .desc-cluster > div > * {
     margin: 0;
   }
 
-  .desc > div > div > div {
-    height: 20vh;
-    overflow: scroll;
+  .desc-cluster > div > div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

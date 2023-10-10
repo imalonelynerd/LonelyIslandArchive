@@ -12,7 +12,7 @@ const cellListVar = props.cellList.links;
     <a v-for="elem in cellListVar" :href="elem.href" @click="elem.onc" :title="elem.span">
       <img :src="elem.img">
       <h2>{{ elem.title }}</h2>
-      <p>{{ elem.span }}</p>
+      <p v-if="elem.span !== ''">{{ elem.span }}</p>
       <!--p>{{ elem.span === "" ? "> " + elem.title:elem.span }}</p-->
     </a>
   </div>

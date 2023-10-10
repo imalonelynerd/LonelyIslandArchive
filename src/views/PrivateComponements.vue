@@ -12,43 +12,43 @@ const nextcloud = ref({
       href: "https://files.imalonelynerd.fr/apps/files/",
       img: `${nestedPath.path}icons/files.png`,
       title: "Files",
-      span: ".../apps/files/"
+      span: ""
     },
     {
       href: "https://files.imalonelynerd.fr/apps/calendar/",
       img: `${nestedPath.path}icons/calendar.png`,
       title: "Calendar",
-      span: ".../apps/calendar/"
+      span: ""
     },
     {
       href: "https://files.imalonelynerd.fr/apps/music/",
       img: `${nestedPath.path}icons/music.png`,
       title: "Music",
-      span: ".../apps/music/"
+      span: ""
     },
     {
       href: "https://files.imalonelynerd.fr/apps/deck/",
       img: `${nestedPath.path}icons/deck.png`,
       title: "Deck",
-      span: ".../apps/deck/"
+      span: ""
     },
     {
       href: "https://files.imalonelynerd.fr/apps/nextpod/",
       img: `${nestedPath.path}icons/podcast.png`,
       title: "NextPod",
-      span: ".../apps/nextpod/"
+      span: ""
     },
     {
       href: "https://files.imalonelynerd.fr/apps/tasks/",
       img:`${nestedPath.path}icons/tasks.png`,
       title: "Tasks",
-      span: ".../apps/tasks/"
+      span: ""
     },
     {
       href: "https://files.imalonelynerd.fr/apps/news/",
       img: `${nestedPath.path}icons/news.png`,
       title: "News",
-      span: ".../apps/news/"
+      span: ""
     }
   ]
 })
@@ -128,6 +128,12 @@ const misc = ref({
       href: "https://imalonelynerd.fr/yunohost/admin/",
       img: `${nestedPath.path}icons/yuno.png`,
       title: "Admin page",
+      span: "(private)"
+    },
+    {
+      href: "https://imalonelynerd.fr/dash/#/system-status",
+      img: `${nestedPath.path}icons/speed.png`,
+      title: "LinuxDash",
       span: "(private)"
     }
   ]

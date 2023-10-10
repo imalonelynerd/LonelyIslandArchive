@@ -73,7 +73,7 @@ function showMenu() {
   a {
     margin: 0;
     padding: 1.5vh;
-    border-radius: 999px;
+    border-radius: 6vh;
     background: var(--widget);
     display: flex;
     align-items: center;
