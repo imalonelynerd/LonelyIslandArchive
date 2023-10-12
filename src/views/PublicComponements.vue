@@ -93,7 +93,7 @@ const contact = ref({
       },
       img: `${nestedPath.path}icons/discord.png`,
       title: "Discord",
-      span: "imalonelynerd#0"
+      span: "imalonelynerd"
     },
     {
       href: "mailto:imalonelynerd@gmail.com",
