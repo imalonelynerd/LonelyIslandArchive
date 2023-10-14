@@ -16,7 +16,7 @@ defineProps([
 @media screen and (orientation: landscape) {
   .small {
     margin: 0;
-    padding: 8px 24px;
+    padding: 8px 16px;
     border-radius: 64px;
     font-size: 1em;
     background: var(--bg);
