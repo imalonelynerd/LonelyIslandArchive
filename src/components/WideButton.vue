@@ -1,14 +1,15 @@
 <script setup>
 defineProps([
-  "hrefLink",
   "imgLink",
   "shownTitle",
   "isImportant"
 ])
+
+defineEmits(['update:buttonClicked']);
 </script>
 
 <template>
-  <a class="wlink" :href="hrefLink" :class="{ important : isImportant }">
+  <a class="wlink" @click="$emit('update:buttonClicked')" :class="{ important : isImportant }">
     <img :src="imgLink" :alt="imgLink">
     <p v-show="shownTitle !== ''">{{ shownTitle }}</p>
   </a>

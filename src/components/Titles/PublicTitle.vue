@@ -1,19 +1,20 @@
 <script setup>
-
 import nestedPath from "@/assets/json/nestedPath.json";
 import WideButton from "@/components/WideButton.vue";
-import WideRouter from "@/components/WideRouter.vue";
+import {changeLoc} from "@/assets/js/menuUtils";
 </script>
 
 <template>
   <div class="title-cluster">
-    <img id="icon" src="/images/fey2.png">
+    <img id="icon" src="/images/fey3.png">
     <h1>Hello there !</h1>
     <p>I'm Nerd</p>
     <div>
-      <WideButton hrefLink="#projects" :imgLink="nestedPath.path + 'icons/top/projects.png'"
+      <WideButton @update:buttonClicked="changeLoc('#projects')"
+                  :imgLink="nestedPath.path + 'icons/top/projects.png'"
                   shownTitle="See my work"/>
-      <WideRouter :hrefLink="nestedPath.path + 'private'" :imgLink="nestedPath.path + 'icons/top/private.png'"
+      <WideButton @update:buttonClicked="$router.push(nestedPath.path + 'private')"
+                  :imgLink="nestedPath.path + 'icons/top/private.png'"
                   shownTitle="See hosted services"/>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <script setup>
 
 import nestedPath from "@/assets/json/nestedPath.json"
-import SmallButton from "@/components/SmallButton.vue";
+import Bullet from "@/components/Bullet.vue";
 </script>
 
 <template>
@@ -19,21 +19,21 @@ import SmallButton from "@/components/SmallButton.vue";
         <div>
           <h3>Tools & softwares I use</h3>
           <div>
-            <SmallButton shown-title="Python" :img-link="nestedPath.path + 'icons/small/python.png'"/>
-            <SmallButton shown-title="JavaScript" :img-link="nestedPath.path + 'icons/small/js.png'"/>
-            <SmallButton shown-title="PHP" :img-link="nestedPath.path + 'icons/small/php.png'"/>
-            <SmallButton shown-title="Java" :img-link="nestedPath.path + 'icons/small/java.png'"/>
-            <SmallButton shown-title="C" :img-link="nestedPath.path + 'icons/small/c.png'"/>
-            <SmallButton shown-title="OCaml" :img-link="nestedPath.path + 'icons/small/ocaml.png'"/>
-            <SmallButton shown-title="NodeJS" :img-link="nestedPath.path + 'icons/small/node.png'"/>
-            <SmallButton shown-title="Electron" :img-link="nestedPath.path + 'icons/small/electron.png'"/>
-            <SmallButton shown-title="VueJS" :img-link="nestedPath.path + 'icons/small/vue.png'"/>
-            <SmallButton shown-title="jQuery" :img-link="nestedPath.path + 'icons/small/jquery.png'"/>
-            <SmallButton shown-title="GTK4" :img-link="nestedPath.path + 'icons/small/gtk.png'"/>
-            <SmallButton shown-title="Figma" :img-link="nestedPath.path + 'icons/small/figma.png'"/>
-            <SmallButton shown-title="Inkscape" :img-link="nestedPath.path + 'icons/small/inkscape.png'"/>
-            <SmallButton shown-title="Gimp" :img-link="nestedPath.path + 'icons/small/gimp.png'"/>
-            <SmallButton shown-title="Linux" :img-link="nestedPath.path + 'icons/small/linux.png'"/>
+            <Bullet shown-title="Python" :img-link="nestedPath.path + 'icons/small/python.png'"/>
+            <Bullet shown-title="JavaScript" :img-link="nestedPath.path + 'icons/small/js.png'"/>
+            <Bullet shown-title="PHP" :img-link="nestedPath.path + 'icons/small/php.png'"/>
+            <Bullet shown-title="Java" :img-link="nestedPath.path + 'icons/small/java.png'"/>
+            <Bullet shown-title="C" :img-link="nestedPath.path + 'icons/small/c.png'"/>
+            <Bullet shown-title="OCaml" :img-link="nestedPath.path + 'icons/small/ocaml.png'"/>
+            <Bullet shown-title="NodeJS" :img-link="nestedPath.path + 'icons/small/node.png'"/>
+            <Bullet shown-title="Electron" :img-link="nestedPath.path + 'icons/small/electron.png'"/>
+            <Bullet shown-title="VueJS" :img-link="nestedPath.path + 'icons/small/vue.png'"/>
+            <Bullet shown-title="jQuery" :img-link="nestedPath.path + 'icons/small/jquery.png'"/>
+            <Bullet shown-title="GTK4" :img-link="nestedPath.path + 'icons/small/gtk.png'"/>
+            <Bullet shown-title="Figma" :img-link="nestedPath.path + 'icons/small/figma.png'"/>
+            <Bullet shown-title="Inkscape" :img-link="nestedPath.path + 'icons/small/inkscape.png'"/>
+            <Bullet shown-title="Gimp" :img-link="nestedPath.path + 'icons/small/gimp.png'"/>
+            <Bullet shown-title="Linux" :img-link="nestedPath.path + 'icons/small/linux.png'"/>
           </div>
         </div>
         <div>
@@ -64,7 +64,7 @@ import SmallButton from "@/components/SmallButton.vue";
 
   .desc > div > img {
     height: 128px;
-    margin-bottom: -24px !important;
+    margin-bottom: -8px !important;
     box-shadow: var(--shadow);
     border-radius: 128px;
   }
@@ -155,10 +155,8 @@ import SmallButton from "@/components/SmallButton.vue";
 
   .desc > div > img {
     height: 15vh;
-    margin-bottom: -3vh !important;
     box-shadow: var(--shadow);
     border-radius: 15vh;
-
   }
 
   .desc > div {

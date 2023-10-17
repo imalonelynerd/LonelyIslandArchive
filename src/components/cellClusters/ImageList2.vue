@@ -9,7 +9,7 @@ const cellListVar = props.cellList.links;
 
 <template>
   <div class="im-cell">
-    <a v-for="elem in cellListVar" :href="elem.href" @click="elem.onc"
+    <a v-for="elem in cellListVar" @click="elem.onc"
        :style="`background: linear-gradient(180deg, transparent, var(--widget)), url('${elem.img}') no-repeat center center`">
       <h2>{{ elem.title }}</h2>
       <p v-html="elem.desc"></p>

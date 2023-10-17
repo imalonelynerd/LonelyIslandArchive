@@ -1,16 +1,19 @@
 <script setup>
-import LinkButton from "@/components/navbarComponements/LinkButton.vue"
+import NavbarButton from "@/components/navbarComponements/NavbarButton.vue"
 import HiddenMenu from "@/components/navbarComponements/HiddenMenu.vue"
-import MenuButton from "@/components/navbarComponements/MenuButton.vue";
 import {ref} from "vue";
 import {switchTheme} from "@/assets/js/themeMgmt"
 import {currentPage} from "@/assets/js/switchPath";
 import nestedPath from "@/assets/json/nestedPath.json"
-import {showMenuUnusual} from "@/assets/js/menuUtils";
+import {changeLoc} from "@/assets/js/menuUtils";
 
 defineProps([
   "alignRight"
 ])
+
+const isThemeMenuShown = ref(false);
+const isThemeMenu2Shown = ref(false);
+
 
 const themeMenu = ref({
   menuButtons:
@@ -45,7 +48,8 @@ const themeMenu = ref({
         },
         {
           onClick: function () {
-            showMenuUnusual("theme2")
+            isThemeMenuShown.value = false;
+            isThemeMenu2Shown.value = true;
           },
           imgLink: `${nestedPath.path}icons/top/misc.png`,
           shownTitle: "Others"
@@ -79,25 +83,41 @@ const themeMenu2 = ref({
   <div class="navbar-container" :class="{ 'align-right' : alignRight }">
     <div class="navbar">
       <div v-if="currentPage($route) === 'HOME'">
-        <LinkButton hrefLink="#me" :imgLink="nestedPath.path + 'icons/top/me.png'" shownTitle="About me"/>
-        <LinkButton hrefLink="#contact" :imgLink="nestedPath.path + 'icons/top/contact.png'" shownTitle="Contacts"/>
-        <LinkButton hrefLink="#projects" :imgLink="nestedPath.path + 'icons/top/projects.png'"
-                    shownTitle="Projects"/>
-        <LinkButton hrefLink="#contrib" :imgLink="nestedPath.path + 'icons/top/public.png'" shownTitle="Contributions"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#me')"
+                      :imgLink="nestedPath.path + 'icons/top/me.png'"
+                      shownTitle="About me"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#contact')"
+                      :imgLink="nestedPath.path + 'icons/top/contact.png'"
+                      shownTitle="Contacts"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#projects')"
+                      :imgLink="nestedPath.path + 'icons/top/projects.png'"
+                      shownTitle="Projects"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#contrib')"
+                      :imgLink="nestedPath.path + 'icons/top/public.png'"
+                      shownTitle="Contributions"/>
       </div>
       <div v-if="currentPage($route) === 'PRIVATE'">
-        <LinkButton href-link="#next" :imgLink="nestedPath.path + 'icons/top/nextcloud.png'" shown-title="Nextcloud"/>
-        <LinkButton href-link="#yuno" :imgLink="nestedPath.path + 'icons/top/yuno.png'" shown-title="YunoHost"/>
-        <LinkButton href-link="#webapps" :imgLink="nestedPath.path + 'icons/top/webapps.png'" shown-title="Webapps"/>
-        <LinkButton href-link="#misc" :imgLink="nestedPath.path + 'icons/top/misc.png'" shown-title="Miscellaneous"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#next')"
+                      :imgLink="nestedPath.path + 'icons/top/nextcloud.png'"
+                      shown-title="Nextcloud"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#yuno')"
+                      :imgLink="nestedPath.path + 'icons/top/yuno.png'"
+                      shown-title="YunoHost"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#webapps')"
+                      :imgLink="nestedPath.path + 'icons/top/webapps.png'"
+                      shown-title="Webapps"/>
+        <NavbarButton @update:buttonClicked="changeLoc('#webapps')"
+                      :imgLink="nestedPath.path + 'icons/top/misc.png'"
+                      shown-title="Miscellaneous"/>
       </div>
-      <MenuButton buttonId="theme" :imgLink="nestedPath.path + 'icons/top/theme.png'"
-                  shownTitle="Theme"
-                  :isImportant="true"/>
+      <NavbarButton @update:buttonClicked="isThemeMenuShown = true"
+                    :imgLink="nestedPath.path + 'icons/top/theme.png'"
+                    shownTitle="Theme"
+                    :isImportant="true"/>
     </div>
   </div>
-  <HiddenMenu :menuOptions="themeMenu" menuId="theme" id="theme"/>
-  <HiddenMenu :menuOptions="themeMenu2" menuId="theme2" id="theme2"/>
+  <HiddenMenu :menuOptions="themeMenu" v-if="isThemeMenuShown === true" @update:menuHidden="isThemeMenuShown = false"/>
+  <HiddenMenu :menuOptions="themeMenu2" v-if="isThemeMenu2Shown === true" @update:menuHidden="isThemeMenu2Shown = false"/>
 
 </template>
 

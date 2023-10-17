@@ -2,21 +2,15 @@
 defineProps([
   "onClick",
   "imgLink",
-  "shownTitle",
-  "hrefLink",
-  "routerLink"
+  "shownTitle"
 ])
 </script>
 
 <template>
-  <a @click="onClick" :href="hrefLink" v-if="hrefLink !== 'route'">
+  <a @click="onClick">
     <img :src="imgLink" :alt="imgLink">
     <p>{{ shownTitle }}</p>
   </a>
-  <router-link :to="routerLink" v-if="hrefLink === 'route'">
-    <img :src="imgLink" :alt="imgLink">
-    <p>{{ shownTitle }}</p>
-  </router-link>
 </template>
 
 <style scoped>

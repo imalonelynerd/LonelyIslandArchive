@@ -9,7 +9,7 @@ const cellListVar = props.cellList.links;
 
 <template>
   <div class="big-cell">
-    <a v-for="elem in cellListVar" :href="elem.href" @click="elem.onc">
+    <a v-for="elem in cellListVar" @click="elem.onc">
       <div>
         <img :src="elem.img" :alt="elem.img">
         <h2>{{ elem.title }}</h2>

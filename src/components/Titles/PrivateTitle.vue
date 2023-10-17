@@ -2,7 +2,6 @@
 
 import nestedPath from "@/assets/json/nestedPath.json";
 import WideButton from "@/components/WideButton.vue";
-import WideRouter from "@/components/WideRouter.vue";
 </script>
 
 <template>
@@ -11,9 +10,13 @@ import WideRouter from "@/components/WideRouter.vue";
     <h1>Lonely Island</h1>
     <p>Welcome back...</p>
     <div>
-      <WideButton hrefLink="https://imalonelynerd.fr/yunohost/sso/" :imgLink="nestedPath.path + 'icons/top/login.png'"
-                  shownTitle="Log in" is-important="true"/>
-      <WideRouter :hrefLink="nestedPath.path" :imgLink="nestedPath.path + 'icons/top/public.png'"
+      <WideButton @update:buttonClicked="window.location.href = 'https://imalonelynerd.fr/yunohost/sso/'"
+                  :imgLink="nestedPath.path + 'icons/top/login.png'"
+                  shownTitle="Log in"
+                  is-important="true"/>
+      <WideButton @update:buttonClicked="$router.push(nestedPath.path)"
+                  :hrefLink="nestedPath.path"
+                  :imgLink="nestedPath.path + 'icons/top/public.png'"
                   shownTitle="See my portfolio"/>
     </div>
   </div>

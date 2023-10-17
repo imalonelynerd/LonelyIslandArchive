@@ -5,18 +5,22 @@ defineProps([
   "shownTitle",
   "isImportant",
 ])
+
+defineEmits([
+  "update:buttonClicked"
+])
 </script>
 
 <template>
-  <router-link class="wlink" :to="hrefLink" :class="{ important : isImportant }">
+  <a class="link" @click="$emit('update:buttonClicked')" :class="{ important : isImportant }">
     <img :src="imgLink" :alt="imgLink">
     <p v-show="shownTitle !== ''">{{ shownTitle }}</p>
-  </router-link>
+  </a>
 </template>
 
 <style scoped>
 @media screen and (orientation: landscape) {
-  .wlink {
+  .link {
     margin: 0;
     padding: 16px 24px;
     border-radius: 64px;
@@ -27,38 +31,51 @@ defineProps([
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    max-width: 200px;
     transition: all 0.25s;
     box-shadow: var(--shadow);
   }
 
-  .wlink:hover {
+  .link:hover {
+    max-width: 150px;
     filter: var(--effect);
   }
 
-  .wlink > img {
+  .link > img {
     height: 1.25em;
     filter: var(--icon);
   }
 
-  .wlink > p {
+  .link > p {
+    margin: 0;
     padding: 0;
+    text-overflow: fade;
+    white-space: nowrap;
+    text-wrap: none;
+    max-width: 0;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .link:hover > p {
+    max-width: 999px;
     margin: 0 0 0 12px;
     transition: all 0.25s;
   }
 
-  .wlink.important {
+  .link.important {
     background: var(--important);
   }
 
-  .wlink.important > img {
+  .link.important > img {
     filter: var(--icon-imp)
   }
 }
 
 @media screen and (orientation: portrait) {
-  .wlink {
+  .link {
     margin: 0;
-    padding: 2vh 3vh;
+    padding: 2vh 2vh;
     border-radius: 6vh;
     font-size: 1em;
     font-weight: bold;
@@ -71,26 +88,24 @@ defineProps([
     box-shadow: var(--shadow);
   }
 
-  .wlink:hover {
+  .link:hover {
     filter: var(--effect);
   }
 
-  .wlink > img {
-    height: 1.25em;
+  .link > img {
+    height: 1.5em;
     filter: var(--icon);
   }
 
-  .wlink > p {
-    padding: 0;
-    margin: 0 0 0 2vh;
-    transition: all 0.25s;
+  .link > p {
+    display: none;
   }
 
-  .wlink.important {
+  .link.important {
     background: var(--important);
   }
 
-  .wlink.important > img {
+  .link.important > img {
     filter: var(--icon-imp)
   }
 }

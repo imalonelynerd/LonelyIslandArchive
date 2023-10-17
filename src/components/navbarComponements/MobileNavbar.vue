@@ -1,11 +1,15 @@
 <script setup>
-import MenuButton from "@/components/navbarComponements/MenuButton.vue";
 import HiddenMenu from "@/components/navbarComponements/HiddenMenu.vue";
 import {ref} from "vue";
 import {switchTheme} from "@/assets/js/themeMgmt";
 import {currentPage} from "@/assets/js/switchPath";
 import nestedPath from "@/assets/json/nestedPath.json";
-import {showMenuUnusual} from "@/assets/js/menuUtils";
+import {changeLoc} from "@/assets/js/menuUtils";
+import NavbarButton from "@/components/navbarComponements/NavbarButton.vue";
+
+const isThemeMenuShown = ref(false);
+const isThemeMenu2Shown = ref(false);
+const isLinkMenuShown = ref(false);
 
 const themeMenu = ref({
   menuButtons:
@@ -40,7 +44,8 @@ const themeMenu = ref({
         },
         {
           onClick: function () {
-            showMenuUnusual("mtheme2");
+            isThemeMenuShown.value = false;
+            isThemeMenu2Shown.value = true;
           },
           imgLink: `${nestedPath.path}icons/top/misc.png`,
           shownTitle: "Others"
@@ -72,22 +77,30 @@ const publicMenu = ref({
   menuButtons:
       [
         {
-          hrefLink: "#me",
+          onClick: function () {
+            changeLoc('#me')
+          },
           imgLink: `${nestedPath.path}icons/top/me.png`,
           shownTitle: "About me",
         },
         {
-          hrefLink: "#contact",
+          onClick: function () {
+            changeLoc('#contact')
+          },
           imgLink: `${nestedPath.path}icons/top/contact.png`,
           shownTitle: "Contacts",
         },
         {
-          hrefLink: "#projects",
+          onClick: function () {
+            changeLoc('#projects')
+          },
           imgLink: `${nestedPath.path}icons/top/projects.png`,
           shownTitle: "Projects",
         },
         {
-          hrefLink: "#contrib",
+          onClick: function () {
+            changeLoc('#contrib')
+          },
           imgLink: `${nestedPath.path}icons/top/public.png`,
           shownTitle: "Contributions",
         }
@@ -98,22 +111,30 @@ const privateMenu = ref({
   menuButtons:
       [
         {
-          hrefLink: "#next",
+          onClick: function () {
+            changeLoc('#next')
+          },
           imgLink: `${nestedPath.path}icons/top/nextcloud.png`,
           shownTitle: "Nextcloud Apps",
         },
         {
-          hrefLink: "#yuno",
+          onClick: function () {
+            changeLoc('#yuno')
+          },
           imgLink: `${nestedPath.path}icons/top/yuno.png`,
           shownTitle: "YunoHost Apps",
         },
         {
-          hrefLink: "#webapps",
+          onClick: function () {
+            changeLoc('#webapps')
+          },
           imgLink: `${nestedPath.path}icons/top/webapps.png`,
           shownTitle: "Webapps",
         },
         {
-          hrefLink: "#misc",
+          onClick: function () {
+            changeLoc('#misc')
+          },
           imgLink: `${nestedPath.path}icons/top/misc.png`,
           shownTitle: "Miscellaneous",
         }
@@ -123,14 +144,26 @@ const privateMenu = ref({
 </script>
 
 <template>
-  <HiddenMenu :menuOptions="publicMenu" menuId="links" id="links" v-if="currentPage($route) === 'HOME'"/>
-  <HiddenMenu :menuOptions="privateMenu" menuId="links" id="links" v-if="currentPage($route) === 'PRIVATE'"/>
-  <HiddenMenu :menuOptions="themeMenu" menuId="mtheme" id="mtheme"/>
-  <HiddenMenu :menu-options="themeMenu2" menu-id="mtheme2" id="mtheme2"/>
+  <HiddenMenu :menuOptions="publicMenu"
+              v-if="currentPage($route) === 'HOME' && isLinkMenuShown"
+              @update:menuHidden="isLinkMenuShown = false"/>
+  <HiddenMenu :menuOptions="privateMenu"
+              v-if="currentPage($route) === 'PRIVATE' && isLinkMenuShown"
+              @update:menuHidden="isLinkMenuShown = false"/>
+  <HiddenMenu :menuOptions="themeMenu"
+              v-if="isThemeMenuShown"
+              @update:menuHidden="isThemeMenuShown = false"/>
+  <HiddenMenu :menu-options="themeMenu2"
+              v-if="isThemeMenu2Shown"
+              @update:menuHidden="isThemeMenu2Shown = false"/>
 
   <div class="mobile-navbar-container">
-    <MenuButton buttonId="links" :imgLink="nestedPath.path + 'icons/top/list.png'" shownTitle=""/>
-    <MenuButton buttonId="mtheme" :imgLink="nestedPath.path + 'icons/top/theme.png'" shownTitle="" :isImportant="true"/>
+    <NavbarButton @update:buttonClicked="isLinkMenuShown = true"
+                  :imgLink="nestedPath.path + 'icons/top/list.png'"
+                  shownTitle=""/>
+    <NavbarButton @update:buttonClicked="isThemeMenuShown = true"
+                  :imgLink="nestedPath.path + 'icons/top/theme.png'"
+                  shownTitle="" :isImportant="true"/>
   </div>
 </template>
 

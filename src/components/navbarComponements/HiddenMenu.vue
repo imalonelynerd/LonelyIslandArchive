@@ -5,20 +5,21 @@ const props = defineProps(
     ['menuOptions', "menuId"]
 )
 
-const options = props.menuOptions.menuButtons;
+defineEmits([
+  'update:menuHidden'
+])
 
-function hideMenu() {
-  document.getElementById(props.menuId).style.display = 'none';
-}
+const options = props.menuOptions.menuButtons;
 
 </script>
 
 <template>
-  <div class="menu-container" @click="hideMenu">
-    <div>
+  <div class="menu-container" @click="$emit('update:menuHidden')">
+    <div @click="$emit('update:menuHidden')">
       <MenuOption
           v-for="elem in options"
-          v-bind="elem"/>
+          v-bind="elem"
+      />
     </div>
   </div>
 </template>
@@ -35,7 +36,6 @@ function hideMenu() {
     bottom: 0;
     background: #00000080;
     padding: 48px;
-    display: none;
     z-index: 10;
     backdrop-filter: blur(10px);
     animation: blurbg ease-out 0.25s;
@@ -63,7 +63,6 @@ function hideMenu() {
     bottom: 0;
     background: #00000080;
     padding: 1vh;
-    display: none;
     z-index: 10;
     backdrop-filter: blur(10px);
     animation: blurbg ease-out 0.25s;
