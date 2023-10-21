@@ -10,7 +10,7 @@ import {changeLoc, mailTo} from "@/assets/js/menuUtils";
 
 const projects = ref({
   links: [
-    {
+    /*{
       onc: function () {
         changeLoc("https://github.com/lonelynerd/Frisk");
       },
@@ -18,7 +18,7 @@ const projects = ref({
       title: "Frisk",
       desc: "A self-hostable online gallery",
       code: "github.com/lonelynerd/Frisk"
-    },
+    },*/
     {
       onc: function () {
         changeLoc("https://github.com/lonelynerd/TalismanGTK");
@@ -55,7 +55,7 @@ const projects = ref({
       desc: "A vicious Discord counting bot",
       code: "github.com/lonelynerd/DeathCount"
     },
-    {
+    /*{
       onc: function () {
         changeLoc("https://github.com/LunarRat-Dev-Team");
       },
@@ -63,7 +63,7 @@ const projects = ref({
       title: "Lunar Rat",
       desc: "A Windows 9X styled distro",
       code: "github.com/LunarRat-Dev-Team"
-    }
+    }*/
   ]
 });
 

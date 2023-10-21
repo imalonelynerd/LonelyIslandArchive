@@ -2,6 +2,7 @@
 
 import nestedPath from "@/assets/json/nestedPath.json";
 import WideButton from "@/components/WideButton.vue";
+import {changeLoc} from "@/assets/js/menuUtils";
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import WideButton from "@/components/WideButton.vue";
     <h1>Lonely Island</h1>
     <p>Welcome back...</p>
     <div>
-      <WideButton @update:buttonClicked="window.location.href = 'https://imalonelynerd.fr/yunohost/sso/'"
+      <WideButton @update:buttonClicked="changeLoc('https://imalonelynerd.fr/yunohost/sso/')"
                   :imgLink="nestedPath.path + 'icons/top/login.png'"
                   shownTitle="Log in"
                   is-important="true"/>

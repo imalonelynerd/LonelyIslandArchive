@@ -10,7 +10,7 @@ import {changeLoc} from "@/assets/js/menuUtils";
     <h1>Hello there !</h1>
     <p>I'm Nerd</p>
     <div>
-      <WideButton @update:buttonClicked="changeLoc('#projects')"
+      <WideButton @update:buttonClicked="changeLoc('#projects',false)"
                   :imgLink="nestedPath.path + 'icons/top/projects.png'"
                   shownTitle="See my work"/>
       <WideButton @update:buttonClicked="$router.push(nestedPath.path + 'private')"

@@ -78,28 +78,28 @@ const publicMenu = ref({
       [
         {
           onClick: function () {
-            changeLoc('#me')
+            changeLoc('#me', false)
           },
           imgLink: `${nestedPath.path}icons/top/me.png`,
           shownTitle: "About me",
         },
         {
           onClick: function () {
-            changeLoc('#contact')
+            changeLoc('#contact', false)
           },
           imgLink: `${nestedPath.path}icons/top/contact.png`,
           shownTitle: "Contacts",
         },
         {
           onClick: function () {
-            changeLoc('#projects')
+            changeLoc('#projects', false)
           },
           imgLink: `${nestedPath.path}icons/top/projects.png`,
           shownTitle: "Projects",
         },
         {
           onClick: function () {
-            changeLoc('#contrib')
+            changeLoc('#contrib', false)
           },
           imgLink: `${nestedPath.path}icons/top/public.png`,
           shownTitle: "Contributions",
@@ -112,28 +112,28 @@ const privateMenu = ref({
       [
         {
           onClick: function () {
-            changeLoc('#next')
+            changeLoc('#next', false)
           },
           imgLink: `${nestedPath.path}icons/top/nextcloud.png`,
           shownTitle: "Nextcloud Apps",
         },
         {
           onClick: function () {
-            changeLoc('#yuno')
+            changeLoc('#yuno', false)
           },
           imgLink: `${nestedPath.path}icons/top/yuno.png`,
           shownTitle: "YunoHost Apps",
         },
         {
           onClick: function () {
-            changeLoc('#webapps')
+            changeLoc('#webapps', false)
           },
           imgLink: `${nestedPath.path}icons/top/webapps.png`,
           shownTitle: "Webapps",
         },
         {
           onClick: function () {
-            changeLoc('#misc')
+            changeLoc('#misc', false)
           },
           imgLink: `${nestedPath.path}icons/top/misc.png`,
           shownTitle: "Miscellaneous",
