@@ -34,7 +34,7 @@ defineEmits(['update:buttonClicked']);
   }
 
   .wlink:hover {
-    transform: translateY(-16px);
+    transform: translateY(-12px);
     filter: var(--effect);
   }
 

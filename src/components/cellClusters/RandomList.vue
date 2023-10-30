@@ -52,7 +52,7 @@ const cellListVar = props.cellList.links;
 
   .r-cell > a:hover {
     filter: var(--effect);
-    transform: translateY(-16px);
+    transform: translateY(-12px);
   }
 
   .r-cell > a > * {

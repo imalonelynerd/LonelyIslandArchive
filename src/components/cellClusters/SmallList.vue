@@ -28,7 +28,7 @@ const cellListVar = props.cellList.links;
     flex-wrap: wrap;
     align-items: center;
     justify-content: start;
-    gap: 24px 16px;
+    gap: 16px;
   }
 
   .small-cell > a {
@@ -49,7 +49,7 @@ const cellListVar = props.cellList.links;
   }
 
   .small-cell > a:hover {
-    transform: translateY(-16px);
+    transform: translateY(-12px);
     filter: var(--effect);
   }
 

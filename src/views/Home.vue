@@ -60,15 +60,15 @@ import WideButton from "@/components/WideButton.vue";
   }
 
   .title-cluster > div > *:nth-child(1):hover {
-    transform: translate(-16px, 0);
+    transform: translateX(-16px);
   }
 
   .title-cluster > div > *:nth-child(2):hover {
-    transform: translate(0px, 16px);
+    transform: translateY(16px);
   }
 
   .title-cluster > div > *:nth-child(3):hover {
-    transform: translate(16px, 0);
+    transform: translateX(16px);
   }
 }
 

@@ -62,7 +62,7 @@ function getColor(color) {
   }
 
   .block-cell > a:hover {
-    transform: translateY(-16px);
+    transform: translateY(-12px);
     filter: var(--effect);
   }
 

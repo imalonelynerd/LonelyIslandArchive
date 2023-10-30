@@ -55,7 +55,7 @@ const cellListVar = props.cellList.links;
   }
 
   .im-cell > a:hover {
-    transform: translateY(-16px);
+    transform: translateY(-12px);
     filter: var(--effect);
   }
 
