@@ -10,10 +10,10 @@ const cellListVar = props.cellList.links;
 <template>
   <div class="im-cell">
     <a v-for="elem in cellListVar" @click="elem.onc">
-      <img :src="elem.img" :alt="elem.img">
+      <img :src="elem.img">
       <h2>{{ elem.title }}</h2>
       <p v-html="elem.desc"></p>
-      <code>{{ elem.code }}</code>
+      <code v-if="elem.code !== ''">{{ elem.code }}</code>
     </a>
   </div>
 </template>
@@ -21,37 +21,51 @@ const cellListVar = props.cellList.links;
 <style scoped>
 @media only screen and (orientation: landscape) {
   .im-cell {
+    margin: -16px 0 -16px;
+    padding: 16px 0 16px;
     width: 90%;
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: visible;
+    justify-content: start;
+    align-items: stretch;
     gap: 24px;
+    scrollbar-width: none;
+    border-radius: 32px;
+  }
+
+  .im-cell::-webkit-scrollbar {
+    display: none;
   }
 
   .im-cell > a {
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding: 0 0 24px;
+    padding: 0 0 32px;
     background: var(--widget);
-    border-radius: 16px;
+    border-radius: 32px;
     text-align: center;
     transition: all 0.25s;
-    gap: 16px;
+    gap: 12px;
     box-shadow: var(--shadow);
   }
 
   .im-cell > a:hover {
     /*border-radius: 64px;*/
     filter: var(--effect);
+    transform: translateY(-16px);
   }
 
   .im-cell > a > img {
     height: fit-content;
     width: 100%;
-    border-radius: 16px 16px 0 0;
+    border-radius: 32px 32px 0 0;
     transition: all 0.25s;
+    margin-bottom: 16px;
   }
 
   .im-cell > *, .im-cell > a > * {
@@ -100,10 +114,6 @@ const cellListVar = props.cellList.links;
     width: 100%;
     border-radius: 2vh 2vh 0 0;
     margin-bottom: 1.5vh !important;
-  }
-
-  .im-cell > a > h2 {
-    margin: 1vh 0 0 0;
   }
 
   .im-cell > a:active {

@@ -1,0 +1,177 @@
+<script setup>
+
+import CellCluster from "@/components/cellClusters/CellCluster.vue";
+import nestedPath from "@/assets/json/nestedPath.json"
+
+import {ref} from "vue";
+import {changeLoc} from "@/assets/js/menuUtils";
+
+const nextcloud = ref({
+  links: [
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/files/");
+      },
+      img: `${nestedPath.path}icons/files.webp`,
+      title: "Files",
+      span: ".../apps/files"
+    },
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/calendar/");
+      },
+      img: `${nestedPath.path}icons/calendar.webp`,
+      title: "Calendar",
+      span: ".../apps/calendar"
+    },
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/music/");
+      },
+      img: `${nestedPath.path}icons/music.webp`,
+      title: "Music",
+      span: ".../apps/music"
+    },
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/deck/");
+      },
+      img: `${nestedPath.path}icons/deck.webp`,
+      title: "Deck",
+      span: ".../apps/deck"
+    },
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/nextpod/");
+      },
+      img: `${nestedPath.path}icons/podcast.webp`,
+      title: "NextPod",
+      span: ".../apps/nextpod"
+    },
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/tasks/");
+      },
+      img: `${nestedPath.path}icons/tasks.webp`,
+      title: "Tasks",
+      span: ".../apps/tasks"
+    },
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/apps/news/");
+      },
+      img: `${nestedPath.path}icons/news.webp`,
+      title: "News",
+      span: ".../apps/news"
+    }
+  ]
+});
+const yuno = ref({
+  links: [
+    {
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/");
+      },
+      img: `${nestedPath.path}icons/nextcloud.webp`,
+      title: "Nextcloud",
+      desc: "A small personal cloud <b>(private)</b>",
+      code: "files.imalonelynerd.fr"
+    },
+    {
+      onc: function () {
+        changeLoc("https://send.imalonelynerd.fr/");
+      },
+      img: `${nestedPath.path}icons/send.webp`,
+      title: "Send",
+      desc: "Send data to anyone ! <b>(private)</b>",
+      code: "send.imalonelynerd.fr"
+    },
+    {
+      onc: function () {
+        changeLoc("https://mail.imalonelynerd.fr/");
+      },
+      img: `${nestedPath.path}icons/mail.webp`,
+      title: "Roundcube",
+      desc: "Internal (for now) email system <b>(private)</b>",
+      code: "mail.imalonelynerd.fr"
+    },
+    {
+      onc: function () {
+        changeLoc("https://imalonelynerd.fr/speed");
+      }, img: `${nestedPath.path}icons/speed.webp`,
+      title: "LibreSpeed",
+      desc: "A lightweight connection speed tester",
+      code: "imalonelynerd.fr/speed"
+    }
+  ]
+});
+const webapps = ref({
+  links: [
+    {
+      onc: function () {
+        changeLoc("https://imalonelynerd.fr/talisman");
+      }, img: `${nestedPath.path}icons/talisman.webp`,
+      title: "Talisman",
+      desc: "A YuGiOh! companion app",
+      code: "imalonelynerd.fr/talisman"
+    },
+    {
+      onc: function () {
+        changeLoc("https://imalonelynerd.fr/edt");
+      }, img: `${nestedPath.path}icons/calendar.webp`,
+      title: "EventHorizon",
+      desc: "A timetable for university",
+      code: "imalonelynerd.fr/edt"
+    },
+    {
+      onc: function () {
+        changeLoc("https://heroes.imalonelynerd.fr/");
+      }, img: `${nestedPath.path}icons/prettyheroes.webp`,
+      title: "PrettyHeroes",
+      desc: "A simple About Me page generator",
+      code: "heroes.imalonelynerd.fr"
+    }
+  ]
+});
+const misc = ref({
+  links: [
+    {
+      onc: function () {
+        changeLoc("https://imalonelynerd.fr/yunohost");
+      }, img: `${nestedPath.path}icons/yuno.webp`,
+      title: "Yunohost page",
+      span: "(private)"
+    },
+    {
+      onc: function () {
+        changeLoc("https://imalonelynerd.fr/yunohost/admin/");
+      },
+      img: `${nestedPath.path}icons/yuno.webp`,
+      title: "Admin page",
+      span: "(private)"
+    },
+    {
+      onc: function () {
+        changeLoc("https://imalonelynerd.fr/dash/#/system-status");
+      },
+      img: `${nestedPath.path}icons/speed.webp`,
+      title: "LinuxDash",
+      span: "(private)"
+    }
+  ]
+});
+</script>
+
+<template>
+  <CellCluster id="next" :cellList="nextcloud" listType="SmallList" shownTitle="Nextcloud apps"/>
+  <CellCluster id="yuno" :cellList="yuno" listType="BigList" shownTitle="YunoHost apps"/>
+  <CellCluster id="webapps" :cellList="webapps" listType="BigList" shownTitle="Webapps"/>
+  <CellCluster id="misc" :cellList="misc" listType="SmallList" shownTitle="Miscellaneous"/>
+</template>
+
+<style scoped>
+div {
+  animation: Hewwo ease-out 0.75s;
+
+}
+</style>

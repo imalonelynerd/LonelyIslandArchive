@@ -7,7 +7,7 @@ defineProps([
 
 <template>
   <div class="small">
-    <img :src="imgLink" :alt="imgLink">
+    <img :src="imgLink">
     <p v-show="shownTitle !== ''">{{ shownTitle }}</p>
   </div>
 </template>
@@ -19,7 +19,7 @@ defineProps([
     padding: 8px 16px;
     border-radius: 64px;
     font-size: 1em;
-    background: var(--bg);
+    background: var(--widget);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,10 +43,10 @@ defineProps([
 @media screen and (orientation: portrait) {
   .small {
     margin: 0;
-    padding: 1vh 2vh;
-    border-radius: 6vh;
+    padding: 2vw 4vw;
+    border-radius: 12vw;
     font-size: 1em;
-    background: var(--bg);
+    background: var(--widget);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,7 +61,7 @@ defineProps([
   }
 
   .small > p {
-    margin: 0 0 0 0.75vh;
+    margin: 0 0 0 1.5vw;
     padding: 0;
     transition: all 0.25s;
   }

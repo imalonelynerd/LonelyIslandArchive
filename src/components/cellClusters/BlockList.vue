@@ -5,15 +5,25 @@ const props = defineProps([
 ])
 
 const cellListVar = props.cellList.links;
+
+function getColor(color) {
+  console.log(color);
+  if (color === undefined || color === "") {
+    return `background: var(--widget)`
+  }
+  return `background: color-mix(in srgb, var(--widget), ${color} 25%)`
+}
 </script>
 
 <template>
   <div class="block-cell">
-    <a v-for="elem in cellListVar" @click="elem.onc" :title="elem.span">
+    <a v-for="elem in cellListVar"
+       :style="getColor(elem.style)"
+       :title="elem.span"
+       @click="elem.onc">
       <img :src="elem.img">
       <h2>{{ elem.title }}</h2>
       <p>{{ elem.span }}</p>
-      <!--p>{{ elem.span === "" ? "> " + elem.title:elem.span }}</p-->
     </a>
   </div>
 
@@ -23,23 +33,24 @@ const cellListVar = props.cellList.links;
 @media only screen and (orientation: landscape) {
   .block-cell {
     width: 90%;
-    overflow: scroll;
     display: flex !important;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: stretch;
     justify-content: start;
     gap: 16px;
   }
 
   .block-cell > a {
-    flex-basis: 128px;
+    width: 128px;
+    height: 128px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 16px;
     background: var(--widget);
-    border-radius: 16px;
+    border-radius: 32px;
     transition: all 0.25s;
     gap: 8px;
     box-shadow: var(--shadow);
@@ -51,12 +62,13 @@ const cellListVar = props.cellList.links;
   }
 
   .block-cell > a:hover {
+    transform: translateY(-16px);
     filter: var(--effect);
   }
 
   .block-cell > a > img {
-    height: 1.5em;
-    filter: var(--icon);
+    height: 36px;
+    /*filter: var(--icon);*/
   }
 
   .block-cell > a > h2 {
@@ -66,53 +78,62 @@ const cellListVar = props.cellList.links;
   .block-cell > a > p {
     font-size: 0.75em;
     opacity: 0.5;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
 @media only screen and (orientation: portrait) {
   .block-cell {
-    width: 90%;
-    display: grid;
-    grid-auto-rows: 1fr;
+    width: 85%;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
-    gap: 2vh;
+    grid-auto-rows: 1fr;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 4vw;
   }
 
   .block-cell > a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /*start ?*/
-    align-items: center;
-    padding: 1vh 1vh;
-    background: var(--widget);
-    border-radius: 2vh;
-    text-align: center;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
-  }
-
-  .block-cell > a > img {
-    height: 2.5vh;
-    margin-right: 1.5vh;
-    filter: var(--icon);
-  }
-
-  .block-cell > a > h2 {
-    font-weight: normal;
-    font-size: 1.125em;
+    height: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
+    background: var(--widget);
+    border-radius: 6vw;
+    transition: all 0.25s;
+    gap: 2vw;
+    box-shadow: var(--shadow);
   }
 
-  .block-cell > a > h2 > span {
-    font-size: 0.5em;
-    opacity: 50%;
+  .block-cell > a > * {
+    text-align: center;
+    margin: 0;
   }
 
   .block-cell > a:active {
     filter: var(--effect);
+  }
+
+  .block-cell > a > img {
+    height: 8vw;
+    /*filter: var(--icon);*/
+  }
+
+  .block-cell > a > h2 {
+    font-size: 1em;
+  }
+
+  .block-cell > a > p {
+    font-size: 1em;
+    opacity: 0.5;
+    max-width: 25vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 </style>

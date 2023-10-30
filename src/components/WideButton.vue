@@ -9,8 +9,8 @@ defineEmits(['update:buttonClicked']);
 </script>
 
 <template>
-  <a class="wlink" @click="$emit('update:buttonClicked')" :class="{ important : isImportant }">
-    <img :src="imgLink" :alt="imgLink">
+  <a :class="{ important : isImportant }" class="wlink" @click="$emit('update:buttonClicked')">
+    <img v-if="imgLink" :src="imgLink">
     <p v-show="shownTitle !== ''">{{ shownTitle }}</p>
   </a>
 </template>
@@ -30,9 +30,11 @@ defineEmits(['update:buttonClicked']);
     cursor: pointer;
     transition: all 0.25s;
     box-shadow: var(--shadow);
+    gap: 12px;
   }
 
   .wlink:hover {
+    transform: translateY(-16px);
     filter: var(--effect);
   }
 
@@ -43,7 +45,7 @@ defineEmits(['update:buttonClicked']);
 
   .wlink > p {
     padding: 0;
-    margin: 0 0 0 12px;
+    margin: 0;
     transition: all 0.25s;
   }
 
@@ -59,8 +61,8 @@ defineEmits(['update:buttonClicked']);
 @media screen and (orientation: portrait) {
   .wlink {
     margin: 0;
-    padding: 2vh 3vh;
-    border-radius: 6vh;
+    padding: 4vw 6vw;
+    border-radius: 8vw;
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -70,9 +72,10 @@ defineEmits(['update:buttonClicked']);
     cursor: pointer;
     transition: all 0.25s;
     box-shadow: var(--shadow);
+    gap: 12px;
   }
 
-  .wlink:hover {
+  .wlink:active {
     filter: var(--effect);
   }
 
@@ -83,7 +86,7 @@ defineEmits(['update:buttonClicked']);
 
   .wlink > p {
     padding: 0;
-    margin: 0 0 0 2vh;
+    margin: 0;
     transition: all 0.25s;
   }
 

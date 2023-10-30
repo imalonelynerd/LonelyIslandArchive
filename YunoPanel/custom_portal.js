@@ -38,7 +38,7 @@ init_portal_button_and_overlay = function()
         init_portal_original();
         let time = new Date().getHours();
         let portal = document.getElementsByClassName("ynh-user-portal")[0];
-        if (time > 1 && time <= 7) {
+        if (time > 0 && time <= 7) {
             document.querySelector('html').dataset.theme = `theme-comet`;
         } else if (time > 7 && time <= 12) {
             document.querySelector('html').dataset.theme = `theme-day`;

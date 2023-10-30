@@ -2,10 +2,13 @@
 import HiddenMenu from "@/components/navbarComponements/HiddenMenu.vue";
 import {ref} from "vue";
 import {switchTheme} from "@/assets/js/themeMgmt";
-import {currentPage} from "@/assets/js/switchPath";
 import nestedPath from "@/assets/json/nestedPath.json";
-import {changeLoc} from "@/assets/js/menuUtils";
 import NavbarButton from "@/components/navbarComponements/NavbarButton.vue";
+import {useRouter} from "vue-router";
+
+defineProps([
+  "hasScrolled"
+])
 
 const isThemeMenuShown = ref(false);
 const isThemeMenu2Shown = ref(false);
@@ -18,41 +21,39 @@ const themeMenu = ref({
           onClick: function () {
             switchTheme('day')
           },
-          imgLink: `${nestedPath.path}icons/theme/day.png`,
+          imgLink: `${nestedPath.path}icons/theme/day.webp`,
           shownTitle: "Day",
         },
         {
           onClick: function () {
             switchTheme('dawn')
           },
-          imgLink: `${nestedPath.path}icons/theme/dawn.png`,
+          imgLink: `${nestedPath.path}icons/theme/dawn.webp`,
           shownTitle: "Dawn"
         },
         {
           onClick: function () {
             switchTheme('night')
           },
-          imgLink: `${nestedPath.path}icons/theme/night.png`,
+          imgLink: `${nestedPath.path}icons/theme/night.webp`,
           shownTitle: "Night"
         },
         {
           onClick: function () {
             switchTheme('comet')
           },
-          imgLink: `${nestedPath.path}icons/theme/comet.png`,
+          imgLink: `${nestedPath.path}icons/theme/comet.webp`,
           shownTitle: "Asteroid"
         },
         {
           onClick: function () {
-            isThemeMenuShown.value = false;
             isThemeMenu2Shown.value = true;
           },
-          imgLink: `${nestedPath.path}icons/top/misc.png`,
+          imgLink: `${nestedPath.path}icons/misc.webp`,
           shownTitle: "Others"
         }
       ]
 })
-
 const themeMenu2 = ref({
   menuButtons:
       [
@@ -60,110 +61,94 @@ const themeMenu2 = ref({
           onClick: function () {
             switchTheme('system')
           },
-          imgLink: `${nestedPath.path}icons/theme/system.png`,
+          imgLink: `${nestedPath.path}icons/theme/system.webp`,
           shownTitle: "System",
         },
         {
           onClick: function () {
             switchTheme('time')
           },
-          imgLink: `${nestedPath.path}icons/theme/time.png`,
+          imgLink: `${nestedPath.path}icons/theme/time.webp`,
           shownTitle: "Based on time"
+        },
+        {
+          onClick: function () {
+            isThemeMenuShown.value = true;
+          },
+          imgLink: `${nestedPath.path}icons/misc.webp`,
+          shownTitle: "Back"
         }
       ]
 })
-
-const publicMenu = ref({
+const linksMenu = ref({
   menuButtons:
       [
         {
           onClick: function () {
-            changeLoc('#me', false)
+            router.push(nestedPath.path + '')
           },
-          imgLink: `${nestedPath.path}icons/top/me.png`,
+          imgLink: `${nestedPath.path}icons/landing.webp`,
+          shownTitle: "Home",
+        },
+        {
+          onClick: function () {
+            router.push(nestedPath.path + 'about')
+          },
+          imgLink: `${nestedPath.path}icons/me.webp`,
           shownTitle: "About me",
         },
         {
           onClick: function () {
-            changeLoc('#contact', false)
+            router.push(nestedPath.path + 'links')
           },
-          imgLink: `${nestedPath.path}icons/top/contact.png`,
+          imgLink: `${nestedPath.path}icons/contact.webp`,
           shownTitle: "Contacts",
         },
         {
           onClick: function () {
-            changeLoc('#projects', false)
+            router.push(nestedPath.path + 'projects')
           },
-          imgLink: `${nestedPath.path}icons/top/projects.png`,
+          imgLink: `${nestedPath.path}icons/projects.webp`,
           shownTitle: "Projects",
         },
         {
           onClick: function () {
-            changeLoc('#contrib', false)
+            router.push(nestedPath.path + 'private')
           },
-          imgLink: `${nestedPath.path}icons/top/public.png`,
-          shownTitle: "Contributions",
-        }
+          imgLink: `${nestedPath.path}icons/private.webp`,
+          shownTitle: "Private",
+        },
+        /*{
+          onClick: function () {
+            changeLoc("https://imalonelynerd.fr/yunohost/sso/",false)
+          },
+          imgLink: `${nestedPath.path}icons/login.webp`,
+          shownTitle: "Log In",
+        }*/
       ]
 })
 
-const privateMenu = ref({
-  menuButtons:
-      [
-        {
-          onClick: function () {
-            changeLoc('#next', false)
-          },
-          imgLink: `${nestedPath.path}icons/top/nextcloud.png`,
-          shownTitle: "Nextcloud Apps",
-        },
-        {
-          onClick: function () {
-            changeLoc('#yuno', false)
-          },
-          imgLink: `${nestedPath.path}icons/top/yuno.png`,
-          shownTitle: "YunoHost Apps",
-        },
-        {
-          onClick: function () {
-            changeLoc('#webapps', false)
-          },
-          imgLink: `${nestedPath.path}icons/top/webapps.png`,
-          shownTitle: "Webapps",
-        },
-        {
-          onClick: function () {
-            changeLoc('#misc', false)
-          },
-          imgLink: `${nestedPath.path}icons/top/misc.png`,
-          shownTitle: "Miscellaneous",
-        }
-      ]
-})
+const router = useRouter()
 
 </script>
 
 <template>
-  <HiddenMenu :menuOptions="publicMenu"
-              v-if="currentPage($route) === 'HOME' && isLinkMenuShown"
+  <HiddenMenu v-if="isLinkMenuShown" :menuOptions="linksMenu"
               @update:menuHidden="isLinkMenuShown = false"/>
-  <HiddenMenu :menuOptions="privateMenu"
-              v-if="currentPage($route) === 'PRIVATE' && isLinkMenuShown"
-              @update:menuHidden="isLinkMenuShown = false"/>
-  <HiddenMenu :menuOptions="themeMenu"
-              v-if="isThemeMenuShown"
+  <HiddenMenu v-if="isThemeMenuShown"
+              :menuOptions="themeMenu"
               @update:menuHidden="isThemeMenuShown = false"/>
-  <HiddenMenu :menu-options="themeMenu2"
-              v-if="isThemeMenu2Shown"
+  <HiddenMenu v-if="isThemeMenu2Shown"
+              :menu-options="themeMenu2"
               @update:menuHidden="isThemeMenu2Shown = false"/>
 
-  <div class="mobile-navbar-container">
-    <NavbarButton @update:buttonClicked="isLinkMenuShown = true"
-                  :imgLink="nestedPath.path + 'icons/top/list.png'"
-                  shownTitle=""/>
-    <NavbarButton @update:buttonClicked="isThemeMenuShown = true"
-                  :imgLink="nestedPath.path + 'icons/top/theme.png'"
-                  shownTitle="" :isImportant="true"/>
+  <div :class="{'hasbg' : hasScrolled}" class="mobile-navbar-container">
+    <NavbarButton :imgLink="nestedPath.path + 'icons/list.webp'"
+                  shownTitle=""
+                  @update:buttonClicked="isLinkMenuShown = true"/>
+    <NavbarButton :imgLink="nestedPath.path + 'icons/theme.webp'"
+                  :isImportant="true"
+                  shownTitle="" @update:buttonClicked="isThemeMenuShown = true"/>
   </div>
 </template>
 
@@ -180,11 +165,17 @@ const privateMenu = ref({
   top: 0;
   left: 0;
   right: 0;
-  padding: 3vh;
+  padding: 6vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   animation: HewwoBar ease-out 0.75s;
+  transition: all 0.25s;
+  z-index: 5;
+}
+
+.hasbg {
+  background: var(--bg);
 }
 </style>

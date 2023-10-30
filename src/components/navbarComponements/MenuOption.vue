@@ -8,7 +8,7 @@ defineProps([
 
 <template>
   <a @click="onClick">
-    <img :src="imgLink" :alt="imgLink">
+    <img :src="imgLink">
     <p>{{ shownTitle }}</p>
   </a>
 </template>
@@ -20,21 +20,23 @@ defineProps([
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    border-radius: 16px;
+    justify-content: start;
+    border-radius: 32px;
     padding: 16px 32px;
     background: none;
-    animation: all 0.25s;
+    transition: all 0.25s;
     cursor: pointer;
   }
 
   a:hover {
+    border-radius: 0 32px 32px 0;
+    transform: translateX(-16px);
     background: var(--bg);
     filter: var(--effect);
   }
 
   a > img {
-    height: 32px;
+    height: 24px;
     margin-right: 16px;
     filter: var(--icon);
   }
@@ -52,10 +54,10 @@ defineProps([
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-radius: 6vh;
-    padding: 2vh 3vh;
+    border-radius: 12vw;
+    padding: 4vw 6vw;
     background: none;
-    animation: all 0.25s;
+    transition: all 0.25s;
     cursor: pointer;
   }
 
@@ -65,13 +67,13 @@ defineProps([
   }
 
   a > img {
-    height: 2vh;
-    margin-right: 1vh;
+    height: 4vw;
+    margin-right: 2vw;
     filter: var(--icon);
   }
 
   a > p {
-    font-size: 2vh;
+    font-size: 3.5vw;
     margin: 0;
     font-weight: bold;
   }

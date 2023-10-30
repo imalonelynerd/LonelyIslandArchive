@@ -9,7 +9,7 @@ const cellListVar = props.cellList.links;
 
 <template>
   <div class="small-cell">
-    <a v-for="elem in cellListVar" @click="elem.onc" :title="elem.span">
+    <a v-for="elem in cellListVar" :title="elem.span" @click="elem.onc">
       <img :src="elem.img">
       <h2>{{ elem.title }}</h2>
       <p v-if="elem.span !== ''">{{ elem.span }}</p>
@@ -28,7 +28,7 @@ const cellListVar = props.cellList.links;
     flex-wrap: wrap;
     align-items: center;
     justify-content: start;
-    gap: 16px;
+    gap: 24px 16px;
   }
 
   .small-cell > a {
@@ -49,6 +49,7 @@ const cellListVar = props.cellList.links;
   }
 
   .small-cell > a:hover {
+    transform: translateY(-16px);
     filter: var(--effect);
   }
 
@@ -76,7 +77,7 @@ const cellListVar = props.cellList.links;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: start;
-    gap: 2vh;
+    gap: 4vw;
   }
 
   .small-cell > a {
@@ -84,11 +85,11 @@ const cellListVar = props.cellList.links;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2vh 1vh;
+    padding: 6vw 0;
     background: var(--widget);
-    border-radius: 2vh;
+    border-radius: 6vw;
     transition: all 0.25s;
-    gap: 0.5vh;
+    gap: 2vw;
     box-shadow: var(--shadow);
   }
 
@@ -101,7 +102,7 @@ const cellListVar = props.cellList.links;
   }
 
   .small-cell > a > img {
-    height: 1.5em;
+    height: 2em;
     filter: var(--icon);
   }
 

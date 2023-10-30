@@ -14,9 +14,9 @@
 */
 
 #ynh-logo {
-  background-image : url("./cloud2.png");
+  background-image : url("img/cloud2.png");
 }
 
 #ynh-overlay-switch {
-  background-image: url("./cloud2.png") !important;
+  background-image: url("img/cloud2.png") !important;
 }

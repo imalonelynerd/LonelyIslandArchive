@@ -11,7 +11,7 @@ const cellListVar = props.cellList.links;
   <div class="big-cell">
     <a v-for="elem in cellListVar" @click="elem.onc">
       <div>
-        <img :src="elem.img" :alt="elem.img">
+        <img :src="elem.img">
         <h2>{{ elem.title }}</h2>
       </div>
       <p v-html="elem.desc"></p>
@@ -23,21 +23,33 @@ const cellListVar = props.cellList.links;
 <style scoped>
 @media only screen and (orientation: landscape) {
   .big-cell {
+    margin: -16px 0 -16px;
+    padding: 16px 0 16px;
     width: 90%;
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: visible;
+    justify-content: start;
+    align-items: stretch;
     gap: 24px;
+    scrollbar-width: none;
+    border-radius: 32px;
+  }
+
+  .big-cell::-webkit-scrollbar {
+    display: none;
   }
 
   .big-cell > a {
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding: 24px 16px;
+    padding: 32px 16px;
     background: var(--widget);
-    border-radius: 16px;
+    border-radius: 32px;
     text-align: center;
     transition: all 0.25s;
     gap: 16px;
@@ -45,7 +57,7 @@ const cellListVar = props.cellList.links;
   }
 
   .big-cell > a:hover {
-    /*border-radius: 64px;*/
+    transform: translateY(-16px);
     filter: var(--effect);
   }
 
@@ -82,7 +94,7 @@ const cellListVar = props.cellList.links;
   }
 
   .big-cell > *:not(:last-of-type) {
-    margin-bottom: 2vh;
+    margin-bottom: 4vw;
   }
 
   .big-cell > a {
@@ -90,12 +102,12 @@ const cellListVar = props.cellList.links;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3vh 1vh;
+    padding: 6vw 0;
     background: var(--widget);
-    border-radius: 2vh;
+    border-radius: 6vw;
     text-align: center;
     transition: all 0.25s;
-    gap: 1.5vh;
+    gap: 3vw;
     box-shadow: var(--shadow);
   }
 
@@ -111,12 +123,12 @@ const cellListVar = props.cellList.links;
   }
 
   .big-cell > a > div > img {
-    height: 4vh;
+    height: 8vw;
     filter: var(--icon);
   }
 
   .big-cell > a > div > h2 {
-    margin: 1vh 0 0 0;
+    margin: 2vw 0 0 0;
   }
 
   .big-cell > a:active {

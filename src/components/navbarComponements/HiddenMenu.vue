@@ -34,18 +34,18 @@ const options = props.menuOptions.menuButtons;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #00000080;
-    padding: 48px;
+    background: color-mix(in srgb, var(--bg), transparent 25%);
     z-index: 10;
-    backdrop-filter: blur(10px);
     animation: blurbg ease-out 0.25s;
   }
 
   .menu-container > div {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background: var(--bg);
-    border-radius: 16px;
-    width: fit-content;
-    height: fit-content;
+    width: 256px;
     padding: 16px;
     float: right;
     animation: slidein ease-out 0.25s;
@@ -61,10 +61,9 @@ const options = props.menuOptions.menuButtons;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #00000080;
-    padding: 1vh;
+    background: color-mix(in srgb, var(--bg), transparent 25%);
+    padding: 2vw;
     z-index: 10;
-    backdrop-filter: blur(10px);
     animation: blurbg ease-out 0.25s;
   }
 
@@ -73,12 +72,13 @@ const options = props.menuOptions.menuButtons;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 2vh;
+    padding: 4vw;
     background: var(--bg);
-    border-radius: 2vh 2vh 0 0;
+    border-radius: 6vw 6vw 0 0;
     height: fit-content;
     animation: mslidein ease-out 0.25s;
     box-shadow: var(--shadow);
+    gap: 4vw;
   }
 }
 </style>
