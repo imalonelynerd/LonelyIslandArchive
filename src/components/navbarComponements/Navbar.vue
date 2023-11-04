@@ -151,6 +151,7 @@ const themeMenu2 = ref({
 
 .hasbg {
   background: var(--bg);
+  box-shadow: var(--shadow);
 }
 
 </style>

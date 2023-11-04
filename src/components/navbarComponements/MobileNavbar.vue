@@ -177,5 +177,6 @@ const router = useRouter()
 
 .hasbg {
   background: var(--bg);
+  box-shadow: var(--shadow);
 }
 </style>
