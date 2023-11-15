@@ -112,16 +112,16 @@ const webapps = ref({
         changeLoc("https://imalonelynerd.fr/talisman");
       }, img: `${nestedPath.path}icons/talisman.webp`,
       title: "Talisman",
-      desc: "A YuGiOh! companion app",
+      desc: "<b>Deprecated ! </b>A YuGiOh! companion app",
       code: "imalonelynerd.fr/talisman"
     },
     {
       onc: function () {
-        changeLoc("https://imalonelynerd.fr/edt");
+        changeLoc("https://horizon.imalonelynerd.fr/");
       }, img: `${nestedPath.path}icons/calendar.webp`,
       title: "EventHorizon",
       desc: "A timetable for university",
-      code: "imalonelynerd.fr/edt"
+      code: "horizon.imalonelynerd.fr"
     },
     {
       onc: function () {

@@ -26,6 +26,11 @@ import WideButton from "@/components/WideButton.vue";
 @media only screen and (orientation: landscape) {
   .title-cluster {
     animation: HewwoRev ease-out 0.75s;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,6 +86,11 @@ import WideButton from "@/components/WideButton.vue";
     justify-content: center;
     align-items: center;
     gap: 4vw;
+    position: absolute;
+    top: 0;
+    bottom: 8vw;
+    left: 0;
+    right: 0;
   }
 
   .title-cluster > img {

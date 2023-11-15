@@ -11,10 +11,10 @@ const isCreditsDisplayed = ref(false);
     <div v-if="isCreditsDisplayed" class="credits">
       <h3>Credits & License</h3>
       <p>
-        ⬧ The icons used in the <a href="#me">"tools"</a> section are from <a
+        ⬧ The icons used in the <b>"Tools & softwares I use"</b> section are from <a
           href="https://icons8.com"><b>Icons8</b></a><br>
         ⬧ All the other icons are made by <b>me</b><br>
-        ⬧ The background images are all from the game <a
+        ⬧ All the background images are from the game <a
           href="https://store.steampowered.com/app/1310330/Goodbye_Volcano_High">Goodbye Volcano High</a><br>
         ⬧ This website and all of the handmade assets are licensed under <a
           href="https://opensource.org/license/unlicense/">the Unlicense</a>

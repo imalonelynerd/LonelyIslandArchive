@@ -3,7 +3,7 @@ import SmallList from "@/components/cellClusters/SmallList.vue";
 import BigList from "@/components/cellClusters/BigList.vue";
 import ImageList from "@/components/cellClusters/ImageList.vue";
 import BlockList from "@/components/cellClusters/BlockList.vue";
-import RandomList from "@/components/cellClusters/RandomList.vue";
+import GalleryList from "@/components/cellClusters/GalleryList.vue";
 
 const props = defineProps([
   "shownTitle",
@@ -21,7 +21,7 @@ const cellListVar = props.cellList
     <BigList v-if="listType === 'BigList'" :cellList="cellListVar"/>
     <ImageList v-if="listType === 'ImageList'" :cellList="cellListVar"/>
     <BlockList v-if="listType === 'BlockList'" :cellList="cellListVar"/>
-    <RandomList v-if="listType === 'RandomList'" :cellList="cellListVar"/>
+    <GalleryList v-if="listType === 'GalleryList'" :cellList="cellListVar"/>
 
   </div>
 </template>

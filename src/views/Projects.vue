@@ -106,12 +106,12 @@ const images = ref({
       title: "Talisman icon",
     },
     {
-      img: `${nestedPath.path}random/val.webp`,
-      title: "Valent icon",
+      img: `${nestedPath.path}random/tools.webp`,
+      title: "Talisman \"tools\" icons",
     },
     {
-      img: `${nestedPath.path}random/crystalw.webp`,
-      title: "Crystal wallpaper",
+      img: `${nestedPath.path}random/anki.webp`,
+      title: "Anki icons concept",
     },
     {
       img: `${nestedPath.path}random/dol.webp`,
@@ -122,8 +122,16 @@ const images = ref({
       title: "Gaia icon pack",
     },
     {
-      img: `${nestedPath.path}random/flwr.webp`,
-      title: "FLWR wallpapers",
+      img: `${nestedPath.path}random/val.webp`,
+      title: "Valent icon concept",
+    },
+    {
+      img: `${nestedPath.path}random/da.webp`,
+      title: "DeviantArt icon concept",
+    },
+    {
+      img: `${nestedPath.path}random/crystalw.webp`,
+      title: "\"Paper\" wallpaper for Crystal",
     },
     {
       img: `${nestedPath.path}random/desk.webp`,
@@ -138,7 +146,7 @@ const images = ref({
 <template>
   <CellCluster :cellList="projects" listType="ImageList" shownTitle="Projects"/>
   <CellCluster :cellList="contrib" listType="BigList" shownTitle="Contributions"/>
-  <CellCluster :cellList="images" list-type="RandomList" shown-title="Designs & Icons"/>
+  <CellCluster :cellList="images" list-type="GalleryList" shown-title="Designs & Icons"/>
 </template>
 
 <style scoped>

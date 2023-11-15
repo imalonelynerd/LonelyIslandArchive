@@ -13,6 +13,9 @@ const cellListVar = props.cellList.links;
   <div class="r-cell">
     <a v-for="elem in cellListVar" :title="elem.title" @click="changeLoc(elem.img)"> <!--@click="elem.onc"-->
       <img :src="elem.img">
+      <div>
+        <p>{{elem.title}}</p>
+      </div>
     </a>
   </div>
 </template>
@@ -20,8 +23,8 @@ const cellListVar = props.cellList.links;
 <style scoped>
 @media only screen and (orientation: landscape) {
   .r-cell {
-    margin: -16px 0 -16px;
-    padding: 16px 0 16px;
+    margin: -32px 0 -32px;
+    padding: 32px 0 32px;
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -39,8 +42,9 @@ const cellListVar = props.cellList.links;
   }
 
   .r-cell > a {
-    height: 160px;
+    height: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: var(--widget);
@@ -60,10 +64,28 @@ const cellListVar = props.cellList.links;
     transition: all 0.25s;
   }
 
+  .r-cell > a > div {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .r-cell > a > div > p {
+    margin: 0;
+    width: 70%;
+    font-size: 0.9em;
+    opacity: 0.75;
+    height: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .r-cell > a > img {
-    height: 100%;
-    width: fit-content;
-    border-radius: 32px;
+    height: 85%;
+    border-radius: 32px 32px 0 0;
   }
 }
 
@@ -97,6 +119,10 @@ const cellListVar = props.cellList.links;
   .r-cell > a > * {
     margin: 0;
     transition: all 0.25s;
+  }
+
+  .r-cell > a > div {
+    display: none;
   }
 
   .r-cell > a > img {
