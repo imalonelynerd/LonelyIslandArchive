@@ -63,15 +63,6 @@ const contrib = ref({
   links: [
     {
       onc: function () {
-        changeLoc("https://invent.kde.org/pinheiro/oxygen2");
-      },
-      img: `${nestedPath.path}icons/oxygen.webp`,
-      title: "Oxygen²",
-      desc: "I'm currently working on it...",
-      code: "invent.kde.org/pinheiro/oxygen2"
-    },
-    {
-      onc: function () {
         changeLoc("https://blahaj.land");
       },
       img: `${nestedPath.path}icons/blahaj.webp`,
@@ -90,6 +81,15 @@ const contrib = ref({
     },
     {
       onc: function () {
+        changeLoc("https://invent.kde.org/pinheiro/oxygen2");
+      },
+      img: `${nestedPath.path}icons/oxygen.webp`,
+      title: "Oxygen²",
+      desc: "I'm currently working on it...",
+      code: "invent.kde.org/pinheiro/oxygen2"
+    },
+    {
+      onc: function () {
         changeLoc("https://goober.cloud");
       },
       img: `${nestedPath.path}icons/goober.webp`,
@@ -99,46 +99,120 @@ const contrib = ref({
     }
   ]
 });
-const images = ref({
+
+const icons = ref({
   links: [
     {
-      img: `${nestedPath.path}random/tal.webp`,
+      img: `${nestedPath.path}gallery/icons/tal.webp`,
       title: "Talisman icon",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Icons/Talisman/")
+      }
     },
     {
-      img: `${nestedPath.path}random/tools.webp`,
+      img: `${nestedPath.path}gallery/icons/tools.webp`,
       title: "Talisman \"tools\" icons",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Talisman%20tools/")
+      }
     },
     {
-      img: `${nestedPath.path}random/anki.webp`,
+      img: `${nestedPath.path}gallery/icons/anki.webp`,
       title: "Anki icons concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Icons/Anki/")
+      }
     },
     {
-      img: `${nestedPath.path}random/dol.webp`,
+      img: `${nestedPath.path}gallery/icons/dol.webp`,
       title: "KDE icons concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Breeze%20concept%20icons/")
+      }
     },
     {
-      img: `${nestedPath.path}random/gaia.webp`,
+      img: `${nestedPath.path}gallery/icons/gaia.webp`,
       title: "Gaia icon pack",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Gaia%20icons/")
+      }
     },
     {
-      img: `${nestedPath.path}random/val.webp`,
+      img: `${nestedPath.path}gallery/icons/val.webp`,
       title: "Valent icon concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Icons/Valent/" +
+            "")
+      }
     },
     {
-      img: `${nestedPath.path}random/da.webp`,
+      img: `${nestedPath.path}gallery/icons/da.webp`,
       title: "DeviantArt icon concept",
-    },
-    {
-      img: `${nestedPath.path}random/crystalw.webp`,
-      title: "\"Paper\" wallpaper for Crystal",
-    },
-    {
-      img: `${nestedPath.path}random/desk.webp`,
-      title: "Desktop concept",
-    },
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Icons/DeviantArt/")
+      }
+    }
   ]
 });
+const wallpy = ref({
+  links: [
+    {
+      img: `${nestedPath.path}gallery/wallpapers/crystalw.webp`,
+      title: "\"Paper\" wallpaper for Crystal",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/paper/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/wallpapers/crystalw2.webp`,
+      title: "\"Lidar\" wallpaper for Crystal",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/lidar/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/wallpapers/crystalw3.webp`,
+      title: "\"Pride\" wallpaper for Crystal",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/pride/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/wallpapers/clairvoyantw.webp`,
+      title: "\"Blur\" wallpaper",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Blur%20wallpapers/")
+      }
+    }
+  ]
+});
+const concepts = ref({
+  links: [
+    {
+      img: `${nestedPath.path}gallery/concepts/desk.webp`,
+      title: "Desktop concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Desktop%20concept/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/concepts/tel.webp`,
+      title: "Phone volume slider concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Phone%20volume%20slider%20concept/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/concepts/lock1.webp`,
+      title: "Desktop lockscreen concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Lockscreen%20concept/")
+      }
+    }
+  ]
+});
+
+
 
 
 </script>
@@ -146,7 +220,10 @@ const images = ref({
 <template>
   <CellCluster :cellList="projects" listType="ImageList" shownTitle="Projects"/>
   <CellCluster :cellList="contrib" listType="BigList" shownTitle="Contributions"/>
-  <CellCluster :cellList="images" list-type="GalleryList" shown-title="Designs & Icons"/>
+  <CellCluster :cellList="icons" list-type="GalleryList" shown-title="Designs : Icons"/>
+  <CellCluster :cellList="wallpy" list-type="GalleryList" shown-title="Designs : Wallpapers"/>
+  <CellCluster :cellList="concepts" list-type="GalleryList" shown-title="Designs : Concepts"/>
+
 </template>
 
 <style scoped>

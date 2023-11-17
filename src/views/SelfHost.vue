@@ -10,7 +10,7 @@ const nextcloud = ref({
   links: [
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/files/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/files/");
       },
       img: `${nestedPath.path}icons/files.webp`,
       title: "Files",
@@ -18,7 +18,7 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/calendar/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/calendar/");
       },
       img: `${nestedPath.path}icons/calendar.webp`,
       title: "Calendar",
@@ -26,7 +26,7 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/music/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/music/");
       },
       img: `${nestedPath.path}icons/music.webp`,
       title: "Music",
@@ -34,7 +34,7 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/deck/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/deck/");
       },
       img: `${nestedPath.path}icons/deck.webp`,
       title: "Deck",
@@ -42,7 +42,7 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/nextpod/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/nextpod/");
       },
       img: `${nestedPath.path}icons/podcast.webp`,
       title: "NextPod",
@@ -50,7 +50,7 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/tasks/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/tasks/");
       },
       img: `${nestedPath.path}icons/tasks.webp`,
       title: "Tasks",
@@ -58,7 +58,7 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/apps/news/");
+        changeLoc("https://cloud.imalonelynerd.fr/apps/news/");
       },
       img: `${nestedPath.path}icons/news.webp`,
       title: "News",
@@ -70,12 +70,12 @@ const yuno = ref({
   links: [
     {
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/");
+        changeLoc("https://cloud.imalonelynerd.fr/");
       },
       img: `${nestedPath.path}icons/nextcloud.webp`,
       title: "Nextcloud",
       desc: "A small personal cloud <b>(private)</b>",
-      code: "files.imalonelynerd.fr"
+      code: "cloud.imalonelynerd.fr"
     },
     {
       onc: function () {

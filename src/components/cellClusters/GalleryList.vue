@@ -11,7 +11,7 @@ const cellListVar = props.cellList.links;
 
 <template>
   <div class="r-cell">
-    <a v-for="elem in cellListVar" :title="elem.title" @click="changeLoc(elem.img)"> <!--@click="elem.onc"-->
+    <a v-for="elem in cellListVar" :title="elem.title" @click="elem.onc"> <!--@click="elem.onc"-->
       <img :src="elem.img">
       <div>
         <p>{{elem.title}}</p>

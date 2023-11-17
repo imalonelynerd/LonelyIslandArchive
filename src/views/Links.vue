@@ -54,7 +54,7 @@ const contact = ref({
     },
     {
       onc: function () {
-        copyText('@imalonelynerd:matrix.org')
+        changeLoc('https://matrix.to/#/@imalonelynerd:matrix.org')
       },
       img: `${nestedPath.path}icons/socials/matrix.webp`,
       title: "Matrix",

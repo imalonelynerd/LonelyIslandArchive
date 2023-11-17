@@ -36,6 +36,8 @@ defineProps([
   .small > p {
     margin: 0 0 0 8px;
     padding: 0;
+    font-weight: bold;
+    opacity: 0.9;
     transition: all 0.25s;
   }
 }
@@ -63,6 +65,7 @@ defineProps([
   .small > p {
     margin: 0 0 0 1.5vw;
     padding: 0;
+    font-weight: bold;
     transition: all 0.25s;
   }
 }

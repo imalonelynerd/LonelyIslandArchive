@@ -11,7 +11,7 @@ import Bullet from "@/components/Bullet.vue";
     <h2><i>"Special ability : putting too much effort into stupid things"</i></h2>
     <p>
       <b>19</b> y.o. ⬧ <b>they/them</b> ⬧ based in <b>Rouen</b>, France<br><br>
-      <b>Cybesec</b> student, Hobbist <b>graphical/UI designer</b>, <b>C hater</b>
+      <b>Cybesec</b> student, Hobbist <b>graphical/UI designer</b>, On a <b>C redemption</b> arc
     </p>
     <div>
       <h3>Tools & softwares I use</h3>
