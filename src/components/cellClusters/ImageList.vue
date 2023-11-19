@@ -31,12 +31,7 @@ const cellListVar = props.cellList.links;
     justify-content: start;
     align-items: stretch;
     gap: 24px;
-    scrollbar-width: none;
     border-radius: 32px;
-  }
-
-  .im-cell::-webkit-scrollbar {
-    display: none;
   }
 
   .im-cell > a {

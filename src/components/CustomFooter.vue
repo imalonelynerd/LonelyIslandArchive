@@ -116,10 +116,11 @@ const isCreditsDisplayed = ref(false);
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4vw;
+    gap: 2vw;
     color: var(--text);
     opacity: 0.75;
     width: 100%;
+    font-size: 0.8em;
   }
 
   .footer > * {

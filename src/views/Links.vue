@@ -103,7 +103,7 @@ const contact = ref({
 </script>
 
 <template>
-  <CellCluster id="contact" :cellList="contact" listType="BlockList" shownTitle="Let's get in touch !"/>
+  <CellCluster :cellList="contact" listType="BlockList" shownTitle="Let's get in touch !"/>
 </template>
 
 <style scoped>

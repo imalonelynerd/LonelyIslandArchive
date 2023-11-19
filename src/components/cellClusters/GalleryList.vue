@@ -33,12 +33,7 @@ const cellListVar = props.cellList.links;
     justify-content: start;
     align-items: stretch;
     gap: 24px;
-    scrollbar-width: none;
     border-radius: 32px;
-  }
-
-  .r-cell::-webkit-scrollbar {
-    display: none;
   }
 
   .r-cell > a {
@@ -98,10 +93,6 @@ const cellListVar = props.cellList.links;
     justify-content: start;
     align-items: stretch;
     gap: 4vw;
-  }
-
-  .r-cell::-webkit-scrollbar {
-    display: none;
   }
 
   .r-cell > a {

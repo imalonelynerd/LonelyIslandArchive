@@ -38,7 +38,7 @@ defineEmits([
     transform: translateY(8px);
     max-width: 150px;
     padding: 16px 24px;
-    filter: var(--effect);
+    /*filter: var(--effect);*/
   }
 
   .link > img {
@@ -71,7 +71,7 @@ defineEmits([
 
   .link.important:hover {
     background: var(--important);
-    filter: none;
+    filter: var(--effect);
   }
 
   .link.important > img {

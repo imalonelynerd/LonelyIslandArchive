@@ -7,7 +7,7 @@ defineProps([
 </script>
 
 <template>
-  <div id="bg" :class="{ 'isfull' : isFull === 'true' }" class="bg"></div>
+  <div :class="{ 'isfull' : isFull === 'true' }" class="bg"></div>
 </template>
 
 <style scoped>

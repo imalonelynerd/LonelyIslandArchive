@@ -110,17 +110,18 @@ const icons = ref({
       }
     },
     {
-      img: `${nestedPath.path}gallery/icons/tools.webp`,
-      title: "Talisman \"tools\" icons",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Talisman%20tools/")
-      }
-    },
-    {
       img: `${nestedPath.path}gallery/icons/anki.webp`,
       title: "Anki icons concept",
       onc: function () {
         changeLoc("https://files.imalonelynerd.fr/Icons/Anki/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/icons/val.webp`,
+      title: "Valent icon concept",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Icons/Valent/" +
+            "")
       }
     },
     {
@@ -138,11 +139,10 @@ const icons = ref({
       }
     },
     {
-      img: `${nestedPath.path}gallery/icons/val.webp`,
-      title: "Valent icon concept",
+      img: `${nestedPath.path}gallery/icons/tools.webp`,
+      title: "Talisman \"tools\" icons",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Icons/Valent/" +
-            "")
+        changeLoc("https://files.imalonelynerd.fr/Talisman%20tools/")
       }
     },
     {

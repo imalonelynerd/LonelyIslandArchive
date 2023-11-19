@@ -5,10 +5,10 @@ import Bullet from "@/components/Bullet.vue";
 </script>
 
 <template>
-  <div id="me" class="desc">
+  <div class="desc">
     <img :src="nestedPath.path + 'images/fey2.webp'"/>
     <h1>Nerd <span>imalonelynerd</span></h1>
-    <h2><i>"Special ability : putting too much effort into stupid things"</i></h2>
+    <h2>"Special ability : putting too much effort into stupid things"</h2>
     <p>
       <b>19</b> y.o. ⬧ <b>they/them</b> ⬧ based in <b>Rouen</b>, France<br><br>
       <b>Cybesec</b> student, Hobbist <b>graphical/UI designer</b>, On a <b>C redemption</b> arc
@@ -61,6 +61,11 @@ import Bullet from "@/components/Bullet.vue";
 
   .desc > * {
     margin: 0;
+  }
+
+  .desc > h2 {
+    /*font-style: italic;*/
+    color: var(--important);
   }
 
   .desc > img {
@@ -122,6 +127,11 @@ import Bullet from "@/components/Bullet.vue";
   .desc > * {
     margin: 0;
     width: 85%;
+  }
+
+  .desc > h2 {
+    /*font-style: italic;*/
+    color: var(--important);
   }
 
   .desc > img {

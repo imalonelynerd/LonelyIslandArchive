@@ -5,7 +5,7 @@ import WideButton from "@/components/WideButton.vue";
 
 <template>
   <div class="title-cluster">
-    <img id="icon" src="/images/fey.webp">
+    <img src="/images/fey.webp">
     <h1>Hello there !</h1>
     <p>I'm Nerd</p>
     <div>

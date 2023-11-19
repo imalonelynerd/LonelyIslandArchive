@@ -101,7 +101,7 @@ const linksMenu = ref({
           onClick: function () {
             router.push(nestedPath.path + 'links')
           },
-          imgLink: `${nestedPath.path}icons/contact.webp`,
+          imgLink: `${nestedPath.path}icons/mail.webp`,
           shownTitle: "Contacts",
         },
         {

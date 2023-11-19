@@ -163,10 +163,10 @@ const misc = ref({
 </script>
 
 <template>
-  <CellCluster id="next" :cellList="nextcloud" listType="SmallList" shownTitle="Nextcloud apps"/>
-  <CellCluster id="yuno" :cellList="yuno" listType="BigList" shownTitle="YunoHost apps"/>
-  <CellCluster id="webapps" :cellList="webapps" listType="BigList" shownTitle="Webapps"/>
-  <CellCluster id="misc" :cellList="misc" listType="SmallList" shownTitle="Miscellaneous"/>
+  <CellCluster :cellList="nextcloud" listType="SmallList" shownTitle="Nextcloud apps"/>
+  <CellCluster :cellList="yuno" listType="BigList" shownTitle="YunoHost apps"/>
+  <CellCluster :cellList="webapps" listType="BigList" shownTitle="Webapps"/>
+  <CellCluster :cellList="misc" listType="SmallList" shownTitle="Miscellaneous"/>
 </template>
 
 <style scoped>
