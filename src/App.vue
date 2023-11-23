@@ -19,7 +19,7 @@ timeTheme();
 
   <Navbar :has-scrolled="scroll > 8" alignRight="true"/>
   <MobileNavbar :has-scrolled="scroll > 8"/>
-  <Background :is-full="($route.name === 'Home').toString()"/>
+  <Background :is-full="$route.name === 'Home'"/>
   <div class="page">
     <router-view></router-view>
   </div>
