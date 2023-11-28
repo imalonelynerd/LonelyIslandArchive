@@ -154,7 +154,7 @@ const misc = ref({
       onc: function () {
         changeLoc("https://imalonelynerd.fr/dash/#/system-status");
       },
-      img: `${nestedPath.path}icons/speed.webp`,
+      img: `${nestedPath.path}icons/dash.webp`,
       title: "LinuxDash",
       span: "(private)"
     }

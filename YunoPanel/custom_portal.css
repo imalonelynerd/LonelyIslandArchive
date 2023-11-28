@@ -5,8 +5,6 @@
 ===============================================================================
 */
 
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');*/
-
 /* Color vars */
 :root {
     --radius: 999px;
@@ -17,6 +15,8 @@
 :root[data-theme="theme-day"] {
     --bg: #e0f6ff;
     --bg-img: url('img/day.webp');
+    --icon: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(4229%) hue-rotate(173deg) brightness(92%) contrast(101%);
+    --icon-imp: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(8%) hue-rotate(323deg) brightness(97%) contrast(89%);
     --widget: #ffffff;
     --important: #ffaa2c;
     --text: #202020;
@@ -25,6 +25,8 @@
 :root[data-theme="theme-dawn"] {
     --bg: #1b102f;
     --bg-img: url('img/dawn.webp');
+    --icon: brightness(0) saturate(100%) invert(60%) sepia(99%) saturate(2157%) hue-rotate(223deg) brightness(100%) contrast(102%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --widget: #361a50;
     --important: #ff185d;
     --text: white;
@@ -33,6 +35,8 @@
 :root[data-theme="theme-night"] {
     --bg: #000814;
     --bg-img: url('img/night.webp');
+    --icon: brightness(0) saturate(100%) invert(66%) sepia(25%) saturate(5213%) hue-rotate(184deg) brightness(103%) contrast(101%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --widget: #000f34;
     --important: #004686;
     --text: white;
@@ -42,6 +46,8 @@
     --bg: #0c2121;
     --bg-img: url('img/comet.webp');
     --widget: #004346;
+    --icon: brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(5811%) hue-rotate(125deg) brightness(95%) contrast(93%);
+    --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --important: #09bc8a;
     --text: white;
 }
@@ -58,7 +64,8 @@
 }
 
 .ynh-user-portal {
-    background: linear-gradient(180deg, #0000, var(--bg)), var(--bg-img) center center no-repeat;
+    /*background: linear-gradient(180deg, #0000, var(--bg)), var(--bg-img) center center no-repeat;*/
+    background: var(--bg-img) center center no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -184,10 +191,7 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
-.app-tile span:first-of-type {
-    margin-top: -0.25em !important;
+    gap: 32px;
 }
 
 .form-group > input {
@@ -207,4 +211,20 @@
 * {
     /*font-family:  "Noto Sans", Inter, sans-serif !important;
     font-weight: inherit;*/
+}
+
+.app-image {
+    height: 35%;
+    filter: var(--icon);
+    /*transition: all ease-out 0.25s;*/
+}
+
+.app-tile:hover .app-image {
+    filter: var(--icon-imp);
+}
+
+.name {
+    font-size: .225em !important;
+    font-weight: bold !important;
+    font-family: Inter, sans-serif !important;
 }
