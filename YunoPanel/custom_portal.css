@@ -228,3 +228,12 @@
     font-weight: bold !important;
     font-family: Inter, sans-serif !important;
 }
+
+.footer nav {
+    border-top: none;
+    margin: 0;
+    padding: 16px;
+    border-radius: var(--radius);
+    background: var(--bg);
+    box-shadow: var(--shadow);
+}

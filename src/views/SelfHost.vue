@@ -92,7 +92,7 @@ const yuno = ref({
       },
       img: `${nestedPath.path}icons/mail.webp`,
       title: "Roundcube",
-      desc: "Internal (for now) email system <b>(private)</b>",
+      desc: "A (local) email client <b>(private)</b>",
       code: "mail.imalonelynerd.fr"
     },
     {
@@ -152,7 +152,7 @@ const misc = ref({
     },
     {
       onc: function () {
-        changeLoc("https://imalonelynerd.fr/dash/#/system-status");
+        changeLoc("https://imalonelynerd.fr/dash/");
       },
       img: `${nestedPath.path}icons/dash.webp`,
       title: "LinuxDash",

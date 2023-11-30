@@ -102,11 +102,13 @@ function setImagesForApps() {
     for (let e = 0; e < elems.length; e += 1) {
         if (elems[e] !== undefined) {
             let el = elems[e].children[0];
-            el.getElementsByClassName("first-letter")[0].remove();
-            let img = new Image();
-            img.src = apps[el.attributes["data-appname"].nodeValue];
-            img.classList.add("app-image");
-            el.prepend(img);
+            if(apps[el.attributes["data-appname"].nodeValue] !== undefined){
+                el.getElementsByClassName("first-letter")[0].remove();
+                let img = new Image();
+                img.src = apps[el.attributes["data-appname"].nodeValue];
+                img.classList.add("app-image");
+                el.prepend(img);
+            }
         }
     }
     let themebtn = document.createElement("li");
