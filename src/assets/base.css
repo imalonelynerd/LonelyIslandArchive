@@ -9,9 +9,9 @@
     --effect: brightness(95%);
 }
 
-:root[data-theme="theme-dawn"] {
+:root[data-theme="theme-twilight"] {
     --bg: #1b102f;
-    --bg-img: url('/images/dawn.webp');
+    --bg-img: url('/images/twilight.webp');
     --widget: #361a50;
     --icon: brightness(0) saturate(100%) invert(60%) sepia(99%) saturate(2157%) hue-rotate(223deg) brightness(100%) contrast(102%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
@@ -40,6 +40,10 @@
     --important: #09bc8a;
     --text: white;
     --effect: brightness(125%);
+}
+
+:root {
+    --bg-filter: color-mix(in srgb, transparent 25%, var(--bg));
 }
 
 @media only screen and (orientation: landscape) {

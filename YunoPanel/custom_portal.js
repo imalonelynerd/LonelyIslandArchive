@@ -65,7 +65,7 @@ function setThemeAccordingToTime() {
         document.querySelector('html').dataset.theme = `theme-day`;
         theme = 0;
     } else if (time > 12 && time <= 17) {
-        document.querySelector('html').dataset.theme = `theme-dawn`;
+        document.querySelector('html').dataset.theme = `theme-twilight`;
         theme = 1;
     } else {
         document.querySelector('html').dataset.theme = `theme-night`;
@@ -79,10 +79,10 @@ function switchTheme() {
     switch (theme) {
         case 0:
             document.querySelector('html').dataset.theme = `theme-day`;
-            img.src = "https://www.imalonelynerd.fr/icons/theme/dawn.webp"
+            img.src = "https://www.imalonelynerd.fr/icons/theme/twilight.webp"
             break;
         case 1:
-            document.querySelector('html').dataset.theme = `theme-dawn`;
+            document.querySelector('html').dataset.theme = `theme-twilight`;
             img.src = "https://www.imalonelynerd.fr/icons/theme/night.webp"
             break;
         case 2:

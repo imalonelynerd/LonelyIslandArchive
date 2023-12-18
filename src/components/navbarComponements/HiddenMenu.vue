@@ -44,12 +44,17 @@ const options = props.menuOptions.menuButtons;
     right: 0;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
     background: var(--widget);
     width: 256px;
     padding: 16px;
     float: right;
     animation: slidein ease-out 0.25s;
     box-shadow: var(--shadow);
+    gap: 4px;
   }
 }
 

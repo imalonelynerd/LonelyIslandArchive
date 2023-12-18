@@ -10,43 +10,39 @@ const projects = ref({
   links: [
     {
       onc: function () {
-        changeLoc("https://github.com/lonelynerd/TalismanGTK");
+        changeLoc("https://github.com/imalonelynerd/TalismanGTK");
       },
       img: `${nestedPath.path}captures/talisman.webp`,
       title: "Talisman",
       desc: "A YuGiOh! companion app",
       code: ""
-      /*code: "github.com/lonelynerd/TalismanGTK"*/
     },
     {
       onc: function () {
-        changeLoc("https://github.com/lonelynerd/PrettyHeroes");
+        changeLoc("https://github.com/imalonelynerd/PrettyHeroes");
       },
       img: `${nestedPath.path}captures/prettyheroes.webp`,
       title: "PrettyHeroes",
       desc: "An About Me page generator",
       code: ""
-      /*code: "github.com/lonelynerd/PrettyHeroes"*/
     },
     {
       onc: function () {
-        changeLoc("https://github.com/lonelynerd/EventHorizon");
+        changeLoc("https://github.com/imalonelynerd/EventHorizon");
       },
       img: `${nestedPath.path}captures/event.webp`,
       title: "EventHorizon",
       desc: "A grid-like timetable, made in Vue",
       code: ""
-      /*code: "github.com/lonelynerd/EventHorizon"*/
     },
     {
       onc: function () {
-        changeLoc("https://github.com/lonelynerd/DeathCount");
+        changeLoc("https://github.com/imalonelynerd/DeathCount");
       },
       img: `${nestedPath.path}captures/deathcount.webp`,
       title: "DeathCount",
       desc: "A vicious Discord counting bot",
       code: ""
-      /*code: "github.com/lonelynerd/DeathCount"*/
     },
     /*{
       onc: function () {
@@ -94,7 +90,7 @@ const contrib = ref({
       },
       img: `${nestedPath.path}icons/goober.webp`,
       title: "GooberCloud",
-      desc: "I made this website too !",
+      desc: "I made this website",
       code: "goober.cloud"
     }
   ]
@@ -156,7 +152,7 @@ const icons = ref({
 });
 const wallpy = ref({
   links: [
-    {
+    /*{
       img: `${nestedPath.path}gallery/wallpapers/crystalw.webp`,
       title: "\"Paper\" wallpaper for Crystal",
       onc: function () {
@@ -176,7 +172,7 @@ const wallpy = ref({
       onc: function () {
         changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/pride/")
       }
-    },
+    },*/
     {
       img: `${nestedPath.path}gallery/wallpapers/clairvoyantw.webp`,
       title: "\"Blur\" wallpaper",
@@ -219,7 +215,7 @@ const concepts = ref({
 
 <template>
   <CellCluster :cellList="projects" listType="ImageList" shownTitle="Projects"/>
-  <CellCluster :cellList="contrib" listType="BigList" shownTitle="Contributions"/>
+  <!--CellCluster :cellList="contrib" listType="BigList" shownTitle="Contributions"/-->
   <CellCluster :cellList="icons" list-type="GalleryList" shown-title="Designs : Icons"/>
   <CellCluster :cellList="wallpy" list-type="GalleryList" shown-title="Designs : Wallpapers"/>
   <CellCluster :cellList="concepts" list-type="GalleryList" shown-title="Designs : Concepts"/>

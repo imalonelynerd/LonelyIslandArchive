@@ -25,10 +25,10 @@ const themeMenu = ref({
         },
         {
           onClick: function () {
-            switchTheme('dawn')
+            switchTheme('twilight')
           },
-          imgLink: `${nestedPath.path}icons/theme/dawn.webp`,
-          shownTitle: "Dawn"
+          imgLink: `${nestedPath.path}icons/theme/twilight.webp`,
+          shownTitle: "Twilight"
         },
         {
           onClick: function () {

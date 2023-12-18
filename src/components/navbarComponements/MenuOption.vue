@@ -22,15 +22,15 @@ defineProps([
     align-items: center;
     justify-content: start;
     border-radius: 32px;
-    padding: 16px 32px;
+    padding: 16px;
     background: none;
     transition: all 0.25s;
     cursor: pointer;
   }
 
   a:hover {
-    border-radius: 0 32px 32px 0;
-    transform: translateX(-16px);
+    border-radius: 32px;
+    padding: 16px 32px;
     background: var(--bg);
     filter: var(--effect);
   }

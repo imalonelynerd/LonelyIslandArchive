@@ -18,7 +18,7 @@ export function timeTheme() {
     } else if (time > 7 && time <= 12) {
         switchTheme(`day`);
     } else if (time > 12 && time <= 17) {
-        switchTheme(`dawn`);
+        switchTheme(`twilight`);
     } else {
         switchTheme(`night`);
     }

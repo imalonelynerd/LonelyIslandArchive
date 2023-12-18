@@ -7,12 +7,13 @@ import SelfHost from "@/views/SelfHost.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Links from "@/views/Links.vue";
+import Credits from "@/views/Credits.vue";
 
 export const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: `${nestedPath.path}`,
+            path: `${nestedPath.path}:pathMatch(.*)*`,
             name: 'Home',
             component: Home
         },
@@ -35,6 +36,11 @@ export const router = createRouter({
             path: `${nestedPath.path}private`,
             name: 'Private',
             component: SelfHost
+        },
+        {
+            path: `${nestedPath.path}credits`,
+            name: 'Credits',
+            component: Credits
         }
     ]
 })
