@@ -19,6 +19,15 @@ const projects = ref({
     },
     {
       onc: function () {
+        changeLoc("https://github.com/imalonelynerd/Talisman");
+      },
+      img: `${nestedPath.path}captures/talismanweb.webp`,
+      title: "Talisman Web",
+      desc: "The web version of Talisman, made with VueJS",
+      code: ""
+    },
+    {
+      onc: function () {
         changeLoc("https://github.com/imalonelynerd/PrettyHeroes");
       },
       img: `${nestedPath.path}captures/prettyheroes.webp`,
@@ -32,7 +41,7 @@ const projects = ref({
       },
       img: `${nestedPath.path}captures/event.webp`,
       title: "EventHorizon",
-      desc: "A grid-like timetable, made in Vue",
+      desc: "A grid-like timetable, made with VueJS",
       code: ""
     },
     {

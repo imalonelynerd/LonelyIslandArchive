@@ -112,7 +112,7 @@ const webapps = ref({
         changeLoc("https://imalonelynerd.fr/talisman");
       }, img: `${nestedPath.path}icons/talisman.webp`,
       title: "Talisman",
-      desc: "<b>Deprecated ! </b>A YuGiOh! companion app",
+      desc: "<b>New version ! </b>A YuGiOh! companion app",
       code: "imalonelynerd.fr/talisman"
     },
     {
