@@ -9,30 +9,30 @@ const wallpy = ref({
   links: [
     {
       img: `${nestedPath.path}images/day.webp`,
-      title: "By CHUTTERSNAP",
+      title: "Day, by Nerd",
       onc: function () {
-        changeLoc("https://unsplash.com/fr/photos/nuages-pendant-la-journee-M2-_GRvWWg0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/day.jpg")
       }
     },
     {
       img: `${nestedPath.path}images/twilight.webp`,
-      title: "By Julien Maculan",
+      title: "Twilight, by Nerd",
       onc: function () {
-        changeLoc("https://unsplash.com/fr/photos/ciel-nuageux-KjBqVYNANOs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/twilight.jpg")
       }
     },
     {
       img: `${nestedPath.path}images/night.webp`,
-      title: "By Adelin Preda",
+      title: "Night, by Nerd",
       onc: function () {
-        changeLoc("https://unsplash.com/fr/photos/une-vue-de-la-nuit-montrant-des-etoiles--tOr_T4qTpQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/noght.jpg")
       }
     },
     {
       img: `${nestedPath.path}images/comet.webp`,
-      title: "By Federico Bottos",
+      title: "Comet, by Nerd",
       onc: function () {
-        changeLoc("https://unsplash.com/fr/photos/fond-decran-numerique-vert-_f7mBDzXIKw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/comet.jpg")
       }
     },
   ]

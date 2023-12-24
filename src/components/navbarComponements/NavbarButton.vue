@@ -38,7 +38,6 @@ defineEmits([
     transform: translateY(8px);
     max-width: 150px;
     padding: 16px 24px;
-    /*filter: var(--effect);*/
   }
 
   .link > img {
@@ -66,12 +65,10 @@ defineEmits([
 
   .link.important {
     padding: 16px 24px;
-    background: var(--important);
   }
 
   .link.important:hover {
-    background: var(--important);
-    filter: var(--effect);
+    background: var(--widget);
   }
 
   .link.important > img {
@@ -111,6 +108,7 @@ defineEmits([
     justify-content: center;
     cursor: pointer;
     transition: all 0.25s;
+    box-shadow: var(--shadow);
   }
 
   .link:active {

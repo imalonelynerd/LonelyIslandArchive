@@ -109,11 +109,11 @@ const webapps = ref({
   links: [
     {
       onc: function () {
-        changeLoc("https://imalonelynerd.fr/talisman");
+        changeLoc("https://talisman.imalonelynerd.fr");
       }, img: `${nestedPath.path}icons/talisman.webp`,
       title: "Talisman",
       desc: "<b>New version ! </b>A YuGiOh! companion app",
-      code: "imalonelynerd.fr/talisman"
+      code: "talisman.imalonelynerd.fr"
     },
     {
       onc: function () {
@@ -130,7 +130,15 @@ const webapps = ref({
       title: "PrettyHeroes",
       desc: "A simple About Me page generator",
       code: "heroes.imalonelynerd.fr"
-    }
+    },
+    {
+      onc: function () {
+        changeLoc("https://talisman.imalonelynerd.fr/legacy");
+      }, img: `${nestedPath.path}icons/talisman.webp`,
+      title: "Talisman (legacy)",
+      desc: "A YuGiOh! companion app",
+      code: "talisman.imalonelynerd.fr/legacy"
+    },
   ]
 });
 const misc = ref({

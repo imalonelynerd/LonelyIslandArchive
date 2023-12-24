@@ -22,13 +22,11 @@
     from {
         opacity: 0;
         transform: translateY(10vh);
-        /*filter: blur(20px);*/
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
-        /*filter: blur(0);*/
     }
 }
 
@@ -36,53 +34,44 @@
     from {
         opacity: 0;
         transform: translateY(-10vh);
-        /*filter: blur(20px);*/
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
-        /*filter: blur(0);*/
     }
 }
 
 @keyframes HewwoBar {
     from {
         transform: translateY(-200%);
-        /*filter: blur(10px);*/
     }
 
     to {
         transform: translateY(0%);
-        /*filter: blur(0);*/
     }
 }
 
 @keyframes HewwoBg {
     0% {
         opacity: 0;
-        /*filter: blur(10px);*/
     }
 
     75% {
         opacity: 0;
-        /*filter: blur(10px);*/
     }
 
     100% {
         opacity: initial;
-        /*filter: blur(0);*/
     }
 }
 
 @keyframes blurbg {
     from {
         opacity: 0;
-        /*backdrop-filter: blur(0);*/
     }
     to {
         opacity: 1;
-        /*backdrop-filter: blur(25px);*/
     }
 }
 

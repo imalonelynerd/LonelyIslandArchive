@@ -49,7 +49,6 @@ import WideButton from "@/components/WideButton.vue";
 
   .title-cluster > img {
     height: 256px;
-    /*filter: var(--icon-imp);*/
   }
 
   .title-cluster > div {

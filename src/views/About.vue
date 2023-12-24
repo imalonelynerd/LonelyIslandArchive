@@ -64,7 +64,6 @@ import Bullet from "@/components/Bullet.vue";
   }
 
   .desc > h2 {
-    /*font-style: italic;*/
     color: var(--important);
   }
 
@@ -130,7 +129,6 @@ import Bullet from "@/components/Bullet.vue";
   }
 
   .desc > h2 {
-    /*font-style: italic;*/
     color: var(--important);
   }
 

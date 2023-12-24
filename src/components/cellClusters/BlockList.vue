@@ -68,7 +68,6 @@ function getColor(color) {
 
   .block-cell > a > img {
     height: 36px;
-    /*filter: var(--icon);*/
   }
 
   .block-cell > a > h2 {
@@ -120,7 +119,6 @@ function getColor(color) {
 
   .block-cell > a > img {
     height: 8vw;
-    /*filter: var(--icon);*/
   }
 
   .block-cell > a > h2 {

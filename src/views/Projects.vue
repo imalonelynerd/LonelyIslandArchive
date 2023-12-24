@@ -53,15 +53,6 @@ const projects = ref({
       desc: "A vicious Discord counting bot",
       code: ""
     },
-    /*{
-      onc: function () {
-        changeLoc("https://github.com/LunarRat-Dev-Team");
-      },
-      img: `${nestedPath.path}captures/lunarrat.webp`,
-      title: "Lunar Rat",
-      desc: "A Windows 9X styled distro",
-      code: "github.com/LunarRat-Dev-Team"
-    }*/
   ]
 });
 const contrib = ref({
@@ -161,27 +152,6 @@ const icons = ref({
 });
 const wallpy = ref({
   links: [
-    /*{
-      img: `${nestedPath.path}gallery/wallpapers/crystalw.webp`,
-      title: "\"Paper\" wallpaper for Crystal",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/paper/")
-      }
-    },
-    {
-      img: `${nestedPath.path}gallery/wallpapers/crystalw2.webp`,
-      title: "\"Lidar\" wallpaper for Crystal",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/lidar/")
-      }
-    },
-    {
-      img: `${nestedPath.path}gallery/wallpapers/crystalw3.webp`,
-      title: "\"Pride\" wallpaper for Crystal",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Crystal%20wallpapers/pride/")
-      }
-    },*/
     {
       img: `${nestedPath.path}gallery/wallpapers/clairvoyantw.webp`,
       title: "\"Blur\" wallpaper",

@@ -64,8 +64,6 @@
 }
 
 .ynh-user-portal {
-    /*background: linear-gradient(180deg, #0000, var(--bg)), var(--bg-img) center center no-repeat;*/
-    /*background: linear-gradient(180deg, transparent 0%, var(--bg) 100%), var(--bg-img) center top no-repeat;*/
     background: var(--bg);
     background-size: cover;
     width: 100%;
@@ -98,11 +96,16 @@
     background: #002FBB00 !important;
 }
 
+.login-form .form-group {
+    background: transparent !important;
+}
+
 .form-text {
     box-shadow: var(--shadow);
     background: var(--widget);
     border-radius: var(--radius);
     color: var(--text) !important;
+    border: none;
 }
 
 .form-text:hover {
@@ -135,21 +138,28 @@
 .messages.info {
     box-shadow: var(--shadow);
     background: var(--widget) !important;
-    border-radius: var(--radius);
+    border-radius: var(--smol-radius);
     color: var(--text) !important;
 }
 
 .messages.danger {
     box-shadow: var(--shadow);
     background-color: var(--widget) !important;
-    border-radius: var(--radius);
+    border-radius: var(--smol-radius);
+    color: var(--text) !important;
+}
+
+.messages.warning {
+    box-shadow: var(--shadow);
+    background-color: var(--widget) !important;
+    border-radius: var(--smol-radius);
     color: var(--text) !important;
 }
 
 .control-label {
     box-shadow: var(--shadow);
     margin: 4px 0;
-    background: var(--bg);
+    background: var(--widget);
     border-radius: var(--radius);
     color: var(--text) !important;
 }
@@ -196,7 +206,7 @@
 }
 
 .form-group > input {
-    background-color: var(--bg) !important;
+    background-color: var(--widget) !important;
     padding: 0.8em !important;
 }
 
@@ -209,15 +219,9 @@
     color: var(--text) !important;
 }
 
-* {
-    /*font-family:  "Noto Sans", Inter, sans-serif !important;
-    font-weight: inherit;*/
-}
-
 .app-image {
     height: 35%;
     filter: var(--icon);
-    /*transition: all ease-out 0.25s;*/
 }
 
 .app-tile:hover .app-image {

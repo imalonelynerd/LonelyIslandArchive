@@ -118,13 +118,6 @@ const linksMenu = ref({
           imgLink: `${nestedPath.path}icons/private.webp`,
           shownTitle: "Private",
         },
-        /*{
-          onClick: function () {
-            changeLoc("https://imalonelynerd.fr/yunohost/sso/",false)
-          },
-          imgLink: `${nestedPath.path}icons/login.webp`,
-          shownTitle: "Log In",
-        }*/
       ]
 })
 

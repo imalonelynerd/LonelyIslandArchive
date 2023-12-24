@@ -50,7 +50,6 @@ const cellListVar = props.cellList.links;
   }
 
   .im-cell > a:hover {
-    /*border-radius: 64px;*/
     filter: var(--effect);
     transform: translateY(-12px);
   }
@@ -89,7 +88,7 @@ const cellListVar = props.cellList.links;
   .im-cell > a {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /*start ?*/
+    justify-content: space-between;
     align-items: center;
     padding: 0 0 3vh;
     background: var(--widget);

@@ -23,16 +23,7 @@ const contact = ref({
       img: `${nestedPath.path}icons/socials/mail.webp`,
       title: "Mail",
       span: "imalonelynerd@gmail.com",
-      /*style: "#7FCCFF"*/
     },
-    /*{
-      onc: function () {
-        mailTo("mailto:imalonelynerd@blahaj.land");
-      },
-      img: `${nestedPath.path}icons/socials/mail.webp`,
-      title: "Mail",
-      span: "imalonelynerd@blahaj.land",
-    },*/
     {
       onc: function () {
         changeLoc("https://github.com/imalonelynerd/");
@@ -51,15 +42,6 @@ const contact = ref({
       span: "@imalonelynerd@mastodon.social",
       style: "#6364FF"
     },
-    /*{
-      onc: function () {
-        changeLoc('https://matrix.to/#/@imalonelynerd:matrix.org')
-      },
-      img: `${nestedPath.path}icons/socials/matrix.webp`,
-      title: "Matrix",
-      span: "@imalonelynerd:matrix.org",
-      style: "#52BAFF"
-    },*/
     {
       onc: function () {
         changeLoc("https://reddit.com/u/smpl_deb");
