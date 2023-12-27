@@ -11,28 +11,28 @@ const wallpy = ref({
       img: `${nestedPath.path}images/day.webp`,
       title: "Day, by Nerd",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/day.jpg")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/day.jpg")
       }
     },
     {
       img: `${nestedPath.path}images/twilight.webp`,
       title: "Twilight, by Nerd",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/twilight.jpg")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/twilight.jpg")
       }
     },
     {
       img: `${nestedPath.path}images/night.webp`,
       title: "Night, by Nerd",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/noght.jpg")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/noght.jpg")
       }
     },
     {
       img: `${nestedPath.path}images/comet.webp`,
       title: "Comet, by Nerd",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland%20backgrounds/comet.jpg")
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/comet.jpg")
       }
     },
   ]
@@ -47,7 +47,7 @@ const wallpy = ref({
       ⬧ The icons used in the <b>"About me"</b> section are from <a
         href="https://icons8.com">Icons8</a>.</p>
     <p>
-      ⬧ All the other icons are made by <b>me</b>.
+      ⬧ All the other icons are made by <b>me</b>, you can download them <a href="https://files.imalonelynerd.fr/LonelyIsland/Icons/">here</a>.
     </p>
   </div>
   <div>

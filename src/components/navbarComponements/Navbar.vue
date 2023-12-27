@@ -7,7 +7,7 @@ import nestedPath from "@/assets/json/nestedPath.json"
 
 defineProps([
   "alignRight",
-  "hasScrolled"
+  "hasScrolled",
 ])
 
 const isThemeMenuShown = ref(false);
@@ -100,12 +100,9 @@ const themeMenu2 = ref({
       <NavbarButton img-link=""
                     shownTitle="Private"
                     @update:buttonClicked="$router.push(nestedPath.path + 'private')"/>
-      <!--NavbarButton imgLink=""
-                    shownTitle="Log in"
-                    @update:buttonClicked="changeLoc('https://imalonelynerd.fr/yunohost/sso/',false)"
-                    v-if="$route.name === 'Private'"/-->
       <NavbarButton :imgLink="nestedPath.path + 'icons/theme.webp'"
-                    :isImportant="true"
+                    :isImportant="$route.name !== 'Home'"
+                    :isTransparent="$route.name === 'Home'"
                     shownTitle="Theme"
                     @update:buttonClicked="isThemeMenuShown = true"/>
     </div>

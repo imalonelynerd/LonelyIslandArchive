@@ -4,6 +4,7 @@ defineProps([
   "imgLink",
   "shownTitle",
   "isImportant",
+  "isTransparent"
 ])
 
 defineEmits([
@@ -12,7 +13,8 @@ defineEmits([
 </script>
 
 <template>
-  <a :class="{ important : isImportant, noimage : imgLink === '' }" class="link" @click="$emit('update:buttonClicked')">
+  <a :class="{ 'important' : isImportant, 'noimage' : imgLink === '', 'transparent' : isTransparent }" class="link"
+     @click="$emit('update:buttonClicked')">
     <img :src="imgLink">
     <p v-show="shownTitle !== ''">{{ shownTitle }}</p>
   </a>
@@ -64,11 +66,12 @@ defineEmits([
   }
 
   .link.important {
+    background: var(--important);
     padding: 16px 24px;
   }
 
   .link.important:hover {
-    background: var(--widget);
+    filter: var(--effect);
   }
 
   .link.important > img {
@@ -92,6 +95,19 @@ defineEmits([
     margin: 0;
     background: var(--widget);
     max-width: none;
+  }
+
+  .link.transparent {
+    padding: 16px 24px;
+    background: transparent;
+  }
+
+  .link.transparent > img {
+    filter: var(--icon-imp) !important;
+  }
+
+  .link.transparent:hover {
+    background: var(--widget);
   }
 }
 

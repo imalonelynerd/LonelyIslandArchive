@@ -14,7 +14,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/files.webp`,
       title: "Files",
-      span: ".../apps/files"
+      span: ""
     },
     {
       onc: function () {
@@ -22,7 +22,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/calendar.webp`,
       title: "Calendar",
-      span: ".../apps/calendar"
+      span: ""
     },
     {
       onc: function () {
@@ -30,7 +30,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/music.webp`,
       title: "Music",
-      span: ".../apps/music"
+      span: ""
     },
     {
       onc: function () {
@@ -38,7 +38,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/deck.webp`,
       title: "Deck",
-      span: ".../apps/deck"
+      span: ""
     },
     {
       onc: function () {
@@ -46,7 +46,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/podcast.webp`,
       title: "NextPod",
-      span: ".../apps/nextpod"
+      span: ""
     },
     {
       onc: function () {
@@ -54,7 +54,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/tasks.webp`,
       title: "Tasks",
-      span: ".../apps/tasks"
+      span: ""
     },
     {
       onc: function () {
@@ -62,7 +62,7 @@ const nextcloud = ref({
       },
       img: `${nestedPath.path}icons/news.webp`,
       title: "News",
-      span: ".../apps/news"
+      span: ""
     }
   ]
 });
