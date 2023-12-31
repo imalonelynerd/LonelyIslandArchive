@@ -124,21 +124,21 @@ const icons = ref({
       img: `${nestedPath.path}gallery/icons/dol.webp`,
       title: "KDE icons concept",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Breeze%20concept%20icons/")
+        changeLoc("https://files.imalonelynerd.fr/Icons/Breeze%20concept%20icons/")
       }
     },
     {
       img: `${nestedPath.path}gallery/icons/gaia.webp`,
       title: "Gaia icon pack",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Gaia%20icons/")
+        changeLoc("https://files.imalonelynerd.fr/Icons/Gaia%20icons/")
       }
     },
     {
       img: `${nestedPath.path}gallery/icons/tools.webp`,
       title: "Talisman \"tools\" icons",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Talisman%20tools/")
+        changeLoc("https://files.imalonelynerd.fr/Icons/Talisman%20tools/")
       }
     },
     {
@@ -150,13 +150,21 @@ const icons = ref({
     }
   ]
 });
+
 const wallpy = ref({
   links: [
     {
       img: `${nestedPath.path}gallery/wallpapers/clairvoyantw.webp`,
       title: "\"Blur\" wallpaper",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Blur%20wallpapers/")
+        changeLoc("https://files.imalonelynerd.fr/Wallpapers/Blur%20wallpapers/")
+      }
+    },
+    {
+      img: `${nestedPath.path}gallery/wallpapers/playground.webp`,
+      title: "\"Playground\" wallpaper",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/Wallpapers/Playground/")
       }
     }
   ]
@@ -167,21 +175,21 @@ const concepts = ref({
       img: `${nestedPath.path}gallery/concepts/desk.webp`,
       title: "Desktop concept",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Desktop%20concept/")
+        changeLoc("https://files.imalonelynerd.fr/Concepts/Desktop%20concept/")
       }
     },
     {
       img: `${nestedPath.path}gallery/concepts/tel.webp`,
       title: "Phone volume slider concept",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Phone%20volume%20slider%20concept/")
+        changeLoc("https://files.imalonelynerd.fr/Concepts/Phone%20concept/")
       }
     },
     {
       img: `${nestedPath.path}gallery/concepts/lock1.webp`,
       title: "Desktop lockscreen concept",
       onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/Lockscreen%20concept/")
+        changeLoc("https://files.imalonelynerd.fr/Concepts/Lockscreen%20concept/")
       }
     }
   ]

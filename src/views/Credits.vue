@@ -84,6 +84,10 @@ const wallpy = ref({
     font-weight: bold;
   }
 
+  .page > div:not(.cell-list) a:hover {
+    opacity: 0.5;
+  }
+
   .cell-list {
     margin-top: 0;
   }
@@ -110,6 +114,10 @@ const wallpy = ref({
 
   .page > div:not(.cell-list) a {
     font-weight: bold;
+  }
+
+  .page > div:not(.cell-list) a:active {
+    opacity: 0.5;
   }
 
   .cell-list {
