@@ -135,6 +135,13 @@ const icons = ref({
       }
     },
     {
+      img: `${nestedPath.path}gallery/icons/island.webp`,
+      title: "LonelyIsland icons",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Icons/")
+      }
+    },
+    {
       img: `${nestedPath.path}gallery/icons/tools.webp`,
       title: "Talisman \"tools\" icons",
       onc: function () {
@@ -158,6 +165,13 @@ const wallpy = ref({
       title: "\"Blur\" wallpaper",
       onc: function () {
         changeLoc("https://files.imalonelynerd.fr/Wallpapers/Blur%20wallpapers/")
+      }
+    },
+    {
+      img: `${nestedPath.path}images/day.webp`,
+      title: "LonelyIsland wallpapers",
+      onc: function () {
+        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/")
       }
     },
     {

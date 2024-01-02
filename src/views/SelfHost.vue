@@ -26,14 +26,6 @@ const nextcloud = ref({
     },
     {
       onc: function () {
-        changeLoc("https://cloud.imalonelynerd.fr/apps/music/");
-      },
-      img: `${nestedPath.path}icons/music.webp`,
-      title: "Music",
-      span: ""
-    },
-    {
-      onc: function () {
         changeLoc("https://cloud.imalonelynerd.fr/apps/deck/");
       },
       img: `${nestedPath.path}icons/deck.webp`,
@@ -76,6 +68,15 @@ const yuno = ref({
       title: "Nextcloud",
       desc: "A small personal cloud <b>(private)</b>",
       code: "cloud.imalonelynerd.fr"
+    },
+    {
+      onc: function () {
+        changeLoc("https://jukebox.imalonelynerd.fr/");
+      },
+      img: `${nestedPath.path}icons/navidrome.webp`,
+      title: "Navidrome",
+      desc: "A streaming service <b>(private)</b>",
+      code: "jukebox.imalonelynerd.fr"
     },
     {
       onc: function () {

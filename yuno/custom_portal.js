@@ -50,7 +50,8 @@ let apps = {
     "PrettyHeroes": "https://www.imalonelynerd.fr/icons/prettyheroes.webp",
     "Roundcube": "https://www.imalonelynerd.fr/icons/mail.webp",
     "Send": "https://www.imalonelynerd.fr/icons/send.webp",
-    "Talisman": "https://www.imalonelynerd.fr/icons/talisman.webp"
+    "Talisman": "https://www.imalonelynerd.fr/icons/talisman.webp",
+    "Navidrome": "https://www.imalonelynerd.fr/icons/navidrome.webp"
 }
 
 let theme;

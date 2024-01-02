@@ -6,7 +6,7 @@ import WideButton from "@/components/WideButton.vue";
 <template>
   <div class="title-cluster">
     <img src="/images/fey.webp">
-    <h1>Hello there !</h1>
+    <h1>Happy new year !</h1>
     <p>I'm Nerd</p>
     <div>
       <WideButton :imgLink="nestedPath.path + 'icons/me.webp'"

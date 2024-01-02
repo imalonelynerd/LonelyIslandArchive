@@ -11,8 +11,8 @@ const isCreditsDisplayed = ref(false);
     <div class="footer">
       <p>©️ 2023 <a href="https://github.com/imalonelynerd">Nerd</a></p>
       <p>⬧</p>
-      <p>🇷🇴 ❤️ 🇩🇪 ❤️ 🇫🇷</p>
-      <p>⬧</p>
+      <!--p>🇷🇴 ❤️ 🇩🇪 ❤️ 🇫🇷</p>
+      <p>⬧</p-->
       <a @click="$route.name === 'Credits' ? $router.go(-1) : $router.push('/credits')">Credits</a>
     </div>
   </footer>
