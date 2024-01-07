@@ -162,7 +162,7 @@ const wallpy = ref({
   links: [
     {
       img: `${nestedPath.path}gallery/wallpapers/clairvoyantw.webp`,
-      title: "\"Blur\" wallpaper",
+      title: "\"Blur\" wallpapers",
       onc: function () {
         changeLoc("https://files.imalonelynerd.fr/Wallpapers/Blur%20wallpapers/")
       }
@@ -176,7 +176,7 @@ const wallpy = ref({
     },
     {
       img: `${nestedPath.path}gallery/wallpapers/playground.webp`,
-      title: "\"Playground\" wallpaper",
+      title: "\"Playground\" wallpapers",
       onc: function () {
         changeLoc("https://files.imalonelynerd.fr/Wallpapers/Playground/")
       }

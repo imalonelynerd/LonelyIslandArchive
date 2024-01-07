@@ -62,6 +62,15 @@ const contact = ref({
     },
     {
       onc: function () {
+        changeLoc("https://www.tumblr.com/imalonelynerd");
+      },
+      img: `${nestedPath.path}icons/socials/tumblr.webp`,
+      title: "Tumblr",
+      span: "imalonelynerd",
+      style: "#266CBE"
+    },
+    {
+      onc: function () {
         changeLoc("https://twitter.com/wormdramaVEVO");
       },
       img: `${nestedPath.path}icons/socials/twitter.webp`,

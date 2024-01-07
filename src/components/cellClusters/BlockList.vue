@@ -7,7 +7,6 @@ const props = defineProps([
 const cellListVar = props.cellList.links;
 
 function getColor(color) {
-  console.log(color);
   if (color === undefined || color === "") {
     return `background: var(--widget)`
   }

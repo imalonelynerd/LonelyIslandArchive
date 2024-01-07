@@ -30,3 +30,4 @@ coverage
 .vscode
 src/assets/json/leftOver.js.old
 src/assets/js/leftOver.js.old
+public/pretty.mp3
