@@ -6,7 +6,7 @@ import nestedPath from "@/assets/json/nestedPath.json"
 import {ref} from "vue";
 import {changeLoc} from "@/assets/js/menuUtils";
 
-const nextcloud = ref({
+/*const nextcloud = ref({
   links: [
     {
       onc: function () {
@@ -57,7 +57,7 @@ const nextcloud = ref({
       span: ""
     }
   ]
-});
+});*/
 const yuno = ref({
   links: [
     {
@@ -68,7 +68,7 @@ const yuno = ref({
       title: "Nextcloud",
       desc: "A small personal cloud <b>(private)</b>",
       code: "cloud.imalonelynerd.fr"
-    },
+    },/*
     {
       onc: function () {
         changeLoc("https://jukebox.imalonelynerd.fr/");
@@ -77,7 +77,7 @@ const yuno = ref({
       title: "Navidrome",
       desc: "A streaming service <b>(private)</b>",
       code: "jukebox.imalonelynerd.fr"
-    },
+    },*/
     {
       onc: function () {
         changeLoc("https://send.imalonelynerd.fr/");
@@ -172,7 +172,7 @@ const misc = ref({
 </script>
 
 <template>
-  <CellCluster :cellList="nextcloud" listType="SmallList" shownTitle="Nextcloud apps"/>
+  <!--CellCluster :cellList="nextcloud" listType="SmallList" shownTitle="Nextcloud apps"/-->
   <CellCluster :cellList="yuno" listType="BigList" shownTitle="YunoHost apps"/>
   <CellCluster :cellList="webapps" listType="BigList" shownTitle="Webapps"/>
   <CellCluster :cellList="misc" listType="SmallList" shownTitle="Miscellaneous"/>
