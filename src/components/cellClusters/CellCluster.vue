@@ -1,40 +1,28 @@
 <script setup>
-import SmallList from "@/components/cellClusters/SmallList.vue";
-import BigList from "@/components/cellClusters/BigList.vue";
-import ImageList from "@/components/cellClusters/ImageList.vue";
-import BlockList from "@/components/cellClusters/BlockList.vue";
-import GalleryList from "@/components/cellClusters/GalleryList.vue";
 
 const props = defineProps([
   "shownTitle",
-  "listType",
-  "cellList"
 ])
 
-const cellListVar = props.cellList
 </script>
 
 <template>
   <div class="cell-list">
     <h2>{{ shownTitle }}</h2>
-    <SmallList v-if="listType === 'SmallList'" :cellList="cellListVar"/>
-    <BigList v-if="listType === 'BigList'" :cellList="cellListVar"/>
-    <ImageList v-if="listType === 'ImageList'" :cellList="cellListVar"/>
-    <BlockList v-if="listType === 'BlockList'" :cellList="cellListVar"/>
-    <GalleryList v-if="listType === 'GalleryList'" :cellList="cellListVar"/>
-
+    <slot>
+    </slot>
   </div>
 </template>
 
 <style scoped>
-@media only screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .cell-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 64px 0;
-    gap: 32px;
+    gap: var(--big-gap);
   }
 
   .cell-list > h2 {
@@ -42,7 +30,7 @@ const cellListVar = props.cellList
   }
 }
 
-@media only screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .cell-list {
     display: flex;
     flex-direction: column;

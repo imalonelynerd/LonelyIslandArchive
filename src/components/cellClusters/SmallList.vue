@@ -1,15 +1,14 @@
 <script setup>
 
-const props = defineProps([
+defineProps([
   "cellList"
 ])
 
-const cellListVar = props.cellList.links;
 </script>
 
 <template>
   <div class="small-cell">
-    <a v-for="elem in cellListVar" :title="elem.span" @click="elem.onc">
+    <a v-for="elem in cellList" :title="elem.span" @click="elem.onc">
       <img :src="elem.img">
       <h2>{{ elem.title }}</h2>
       <p v-if="elem.span !== ''">{{ elem.span }}</p>
@@ -20,7 +19,7 @@ const cellListVar = props.cellList.links;
 </template>
 
 <style scoped>
-@media only screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .small-cell {
     width: 90%;
     display: flex !important;
@@ -28,7 +27,7 @@ const cellListVar = props.cellList.links;
     flex-wrap: wrap;
     align-items: center;
     justify-content: start;
-    gap: 16px;
+    gap: var(--small-gap);
   }
 
   .small-cell > a {
@@ -38,10 +37,10 @@ const cellListVar = props.cellList.links;
     align-items: center;
     padding: 16px 32px;
     background: var(--widget);
-    border-radius: 64px;
-    transition: all 0.25s;
-    gap: 8px;
-    box-shadow: var(--shadow);
+    border-radius: var(--widget-radius);
+    transition: var(--transition);
+    gap: var(--text-gap);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .small-cell > a > * {
@@ -56,7 +55,7 @@ const cellListVar = props.cellList.links;
   .small-cell > a > img {
     height: 1.5em;
     margin-right: 8px;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .small-cell > a > h2 {
@@ -69,7 +68,7 @@ const cellListVar = props.cellList.links;
   }
 }
 
-@media only screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .small-cell {
     width: 85%;
     display: grid !important;
@@ -87,10 +86,10 @@ const cellListVar = props.cellList.links;
     align-items: center;
     padding: 6vw 0;
     background: var(--widget);
-    border-radius: 6vw;
-    transition: all 0.25s;
+    border-radius: var(--widget-radius);
+    transition: var(--transition);
     gap: 2vw;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .small-cell > a > * {
@@ -103,7 +102,7 @@ const cellListVar = props.cellList.links;
 
   .small-cell > a > img {
     height: 2em;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .small-cell > a > h2 {

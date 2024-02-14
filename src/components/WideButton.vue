@@ -20,7 +20,7 @@ defineEmits(['update:buttonClicked']);
   .wlink {
     margin: 0;
     padding: 16px 24px;
-    border-radius: 64px;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -28,9 +28,9 @@ defineEmits(['update:buttonClicked']);
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
-    gap: 12px;
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
+    gap: var(--small-gap);
   }
 
   .wlink:hover {
@@ -39,22 +39,18 @@ defineEmits(['update:buttonClicked']);
   }
 
   .wlink > img {
-    height: 1.25em;
-    filter: var(--icon);
+    height: 1.5em;
+    /*filter: var(--icon);*/
   }
 
   .wlink > p {
     padding: 0;
     margin: 0;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .wlink.important {
     background: var(--important);
-  }
-
-  .wlink.important > img {
-    filter: var(--icon-imp)
   }
 }
 
@@ -62,7 +58,7 @@ defineEmits(['update:buttonClicked']);
   .wlink {
     margin: 0;
     padding: 4vw 6vw;
-    border-radius: 8vw;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -70,8 +66,8 @@ defineEmits(['update:buttonClicked']);
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
     gap: 2vw;
   }
 
@@ -81,22 +77,19 @@ defineEmits(['update:buttonClicked']);
 
   .wlink > img {
     height: 1.25em;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .wlink > p {
     padding: 0;
     margin: 0;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .wlink.important {
     background: var(--important);
   }
 
-  .wlink.important > img {
-    filter: var(--icon-imp)
-  }
 }
 
 </style>

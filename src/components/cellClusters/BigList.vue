@@ -1,15 +1,13 @@
 <script setup>
 
-const props = defineProps([
+defineProps([
   "cellList"
 ])
-
-const cellListVar = props.cellList.links;
 </script>
 
 <template>
   <div class="big-cell">
-    <a v-for="elem in cellListVar" @click="elem.onc">
+    <a v-for="elem in cellList" @click="elem.onc">
       <div>
         <img :src="elem.img">
         <h2>{{ elem.title }}</h2>
@@ -21,7 +19,7 @@ const cellListVar = props.cellList.links;
 </template>
 
 <style scoped>
-@media only screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .big-cell {
     margin: -32px 0 -32px;
     padding: 32px 0 32px;
@@ -32,8 +30,8 @@ const cellListVar = props.cellList.links;
     overflow-y: visible;
     justify-content: start;
     align-items: stretch;
-    gap: 24px;
-    border-radius: 32px;
+    gap: var(--med-gap);
+    border-radius: var(--widget-radius);
   }
 
   .big-cell > a {
@@ -44,11 +42,11 @@ const cellListVar = props.cellList.links;
     align-items: center;
     padding: 32px 16px;
     background: var(--widget);
-    border-radius: 32px;
+    border-radius: var(--widget-radius);
     text-align: center;
-    transition: all 0.25s;
-    gap: 16px;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    gap: var(--small-gap);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .big-cell > a:hover {
@@ -70,16 +68,20 @@ const cellListVar = props.cellList.links;
   .big-cell > a > div > img {
     height: 40px;
     margin: 0 16px 0 0;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .big-cell > a > div > h2 {
     font-size: 1.15em;
     margin: 0;
   }
+
+  .big-cell::-webkit-scrollbar-thumb {
+    background: none;
+  }
 }
 
-@media only screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .big-cell {
     width: 85%;
     display: flex;
@@ -99,11 +101,11 @@ const cellListVar = props.cellList.links;
     align-items: center;
     padding: 6vw 0;
     background: var(--widget);
-    border-radius: 6vw;
+    border-radius: var(--widget-radius);
     text-align: center;
-    transition: all 0.25s;
-    gap: 3vw;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    gap: 4vw;
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .big-cell > a > div {
@@ -118,8 +120,8 @@ const cellListVar = props.cellList.links;
   }
 
   .big-cell > a > div > img {
-    height: 8vw;
-    filter: var(--icon);
+    height: 12vw;
+    /*filter: var(--icon);*/
   }
 
   .big-cell > a > div > h2 {

@@ -8,7 +8,7 @@ switchTheme('comet')
 
 <template>
   <a class="pbtn" @click="$emit('update:buttonClicked')">
-    <img src="/icons/pretty.webp"/>
+    <img src="/icons/pretty.png"/>
     <p>Pretty Heroes</p>
   </a>
 </template>
@@ -21,7 +21,7 @@ switchTheme('comet')
     bottom: 32px;
     right: 32px;
     padding: 24px 24px;
-    border-radius: 64px;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -29,9 +29,9 @@ switchTheme('comet')
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
-    gap: 12px;
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
+    gap: var(--small-gap);
     animation: Hewwo ease-out 0.75s;
   }
 
@@ -41,13 +41,13 @@ switchTheme('comet')
 
   .pbtn > img {
     height: 1.25em;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .pbtn > p {
     padding: 0;
     margin: 0;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 }
 
@@ -60,7 +60,7 @@ switchTheme('comet')
     left: 20vw;
     margin: 0;
     padding: 4vw 4vw;
-    border-radius: 8vw;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -68,8 +68,8 @@ switchTheme('comet')
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
     gap: 2vw;
     animation: Hewwo ease-out 0.75s;
   }
@@ -80,13 +80,13 @@ switchTheme('comet')
 
   .pbtn > img {
     height: 1.25em;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .pbtn > p {
     padding: 0;
     margin: 0;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .pbtn.important {

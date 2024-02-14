@@ -42,16 +42,16 @@ init_portal_button_and_overlay = function()
 }
 
 let apps = {
-    "EventHorizon": "https://www.imalonelynerd.fr/icons/calendar.webp",
-    "LibreSpeed": "https://www.imalonelynerd.fr/icons/speed.webp",
-    "LinuxDash": "https://www.imalonelynerd.fr/icons/dash.webp",
-    "LonelyIsland": "https://www.imalonelynerd.fr/icons/landing.webp",
-    "Nextcloud": "https://www.imalonelynerd.fr/icons/nextcloud.webp",
-    "PrettyHeroes": "https://www.imalonelynerd.fr/icons/prettyheroes.webp",
-    "Roundcube": "https://www.imalonelynerd.fr/icons/mail.webp",
-    "Send": "https://www.imalonelynerd.fr/icons/send.webp",
-    "Talisman": "https://www.imalonelynerd.fr/icons/talisman.webp",
-    "Navidrome": "https://www.imalonelynerd.fr/icons/navidrome.webp"
+    "EventHorizon": "https://www.imalonelynerd.fr/icons/calendar.png",
+    "LibreSpeed": "https://www.imalonelynerd.fr/icons/speed.png",
+    "LinuxDash": "https://www.imalonelynerd.fr/icons/dash.png",
+    "LonelyIsland": "https://www.imalonelynerd.fr/icons/landing.png",
+    "Nextcloud": "https://www.imalonelynerd.fr/icons/nextcloud.png",
+    "PrettyHeroes": "https://www.imalonelynerd.fr/icons/prettyheroes.png",
+    "Roundcube": "https://www.imalonelynerd.fr/icons/mail.png",
+    "Send": "https://www.imalonelynerd.fr/icons/send.png",
+    "Talisman": "https://www.imalonelynerd.fr/icons/talisman.png",
+    "Navidrome": "https://www.imalonelynerd.fr/icons/navidrome.png"
 }
 
 let theme;
@@ -60,16 +60,16 @@ function setThemeAccordingToTime() {
     let time = new Date().getHours();
     let portal = document.getElementsByClassName("ynh-user-portal")[0];
     if (time > 0 && time <= 7) {
-        document.querySelector('html').dataset.theme = `theme-comet`;
+        document.querySelector('html').dataset.theme = `comet`;
         theme = 3;
     } else if (time > 7 && time <= 12) {
-        document.querySelector('html').dataset.theme = `theme-day`;
+        document.querySelector('html').dataset.theme = `day`;
         theme = 0;
     } else if (time > 12 && time <= 17) {
-        document.querySelector('html').dataset.theme = `theme-twilight`;
+        document.querySelector('html').dataset.theme = `twilight`;
         theme = 1;
     } else {
-        document.querySelector('html').dataset.theme = `theme-night`;
+        document.querySelector('html').dataset.theme = `night`;
         theme = 2;
     }
 }
@@ -80,19 +80,19 @@ function switchTheme() {
     switch (theme) {
         case 0:
             document.querySelector('html').dataset.theme = `theme-day`;
-            img.src = "https://www.imalonelynerd.fr/icons/theme/twilight.webp"
+            img.src = "https://www.imalonelynerd.fr/icons/theme/twilight.png"
             break;
         case 1:
             document.querySelector('html').dataset.theme = `theme-twilight`;
-            img.src = "https://www.imalonelynerd.fr/icons/theme/night.webp"
+            img.src = "https://www.imalonelynerd.fr/icons/theme/night.png"
             break;
         case 2:
             document.querySelector('html').dataset.theme = `theme-night`;
-            img.src = "https://www.imalonelynerd.fr/icons/theme/comet.webp"
+            img.src = "https://www.imalonelynerd.fr/icons/theme/comet.png"
             break;
         default:
             document.querySelector('html').dataset.theme = `theme-comet`;
-            img.src = "https://www.imalonelynerd.fr/icons/theme/day.webp"
+            img.src = "https://www.imalonelynerd.fr/icons/theme/day.png"
             break;
     }
 }
@@ -113,7 +113,7 @@ function setImagesForApps() {
         }
     }
     let themebtn = document.createElement("li");
-    themebtn.innerHTML = `<a class="app-tile" onclick="switchTheme()" data-appname="Theme"><img src="https://www.imalonelynerd.fr/icons/theme.webp" class="app-image" id="theme-sw"><span class="name">Switch theme</span></a>`
+    themebtn.innerHTML = `<a class="app-tile" onclick="switchTheme()" data-appname="Theme"><img src="https://www.imalonelynerd.fr/icons/theme.png" class="app-image" id="theme-sw"><span class="name">Switch theme</span></a>`
     elem.appendChild(themebtn)
 }
 

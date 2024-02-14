@@ -1,43 +1,8 @@
 <script setup>
 
 import CellCluster from "@/components/cellClusters/CellCluster.vue";
-import {ref} from "vue";
-import nestedPath from "@/assets/json/nestedPath.json";
-import {changeLoc} from "@/assets/js/menuUtils";
-
-const wallpy = ref({
-  links: [
-    {
-      img: `${nestedPath.path}images/day.webp`,
-      title: "Day, by Nerd",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/day.jpg")
-      }
-    },
-    {
-      img: `${nestedPath.path}images/twilight.webp`,
-      title: "Twilight, by Nerd",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/twilight.jpg")
-      }
-    },
-    {
-      img: `${nestedPath.path}images/night.webp`,
-      title: "Night, by Nerd",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/noght.jpg")
-      }
-    },
-    {
-      img: `${nestedPath.path}images/comet.webp`,
-      title: "Comet, by Nerd",
-      onc: function () {
-        changeLoc("https://files.imalonelynerd.fr/LonelyIsland/Backgrounds/comet.jpg")
-      }
-    },
-  ]
-});
-
+import {wallpyli} from "@/assets/js/categories";
+import GalleryList from "@/components/cellClusters/GalleryList.vue";
 </script>
 
 <template>
@@ -47,7 +12,8 @@ const wallpy = ref({
       ⬧ The icons used in the <b>"About me"</b> section are from <a
         href="https://icons8.com">Icons8</a>.</p>
     <p>
-      ⬧ All the other icons are made by <b>me</b>, you can download them <a href="https://files.imalonelynerd.fr/LonelyIsland/Icons/">here</a>.
+      ⬧ All the other icons are made by <b>me</b>, you can download them <a
+        href="https://files.imalonelynerd.fr/LonelyIsland/Icons/">here</a>.
     </p>
   </div>
   <div>
@@ -57,7 +23,9 @@ const wallpy = ref({
         href="https://opensource.org/license/unlicense/">Unlicense</a>.
     </p>
   </div>
-  <CellCluster :cellList="wallpy" list-type="GalleryList" shown-title="Wallpaper sources"/>
+  <CellCluster shown-title="Wallpaper sources">
+    <GalleryList :cellList="wallpyli"/>
+  </CellCluster>
 </template>
 
 <style scoped>
@@ -73,7 +41,7 @@ const wallpy = ref({
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: var(--big-gap);
   }
 
   .page > div:not(.cell-list) > * {

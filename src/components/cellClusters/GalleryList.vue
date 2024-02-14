@@ -1,27 +1,24 @@
 <script setup>
 
-import {changeLoc} from "@/assets/js/menuUtils";
-
-const props = defineProps([
+defineProps([
   "cellList"
 ])
 
-const cellListVar = props.cellList.links;
 </script>
 
 <template>
   <div class="r-cell">
-    <a v-for="elem in cellListVar" :title="elem.title" @click="elem.onc"> <!--@click="elem.onc"-->
+    <a v-for="elem in cellList" :title="elem.title" @click="elem.onc"> <!--@click="elem.onc"-->
       <img :src="elem.img">
       <div>
-        <p>{{elem.title}}</p>
+        <p>{{ elem.title }}</p>
       </div>
     </a>
   </div>
 </template>
 
 <style scoped>
-@media only screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .r-cell {
     margin: -32px 0 -32px;
     padding: 32px 0 32px;
@@ -32,8 +29,8 @@ const cellListVar = props.cellList.links;
     overflow-y: visible;
     justify-content: start;
     align-items: stretch;
-    gap: 24px;
-    border-radius: 32px;
+    gap: var(--med-gap);
+    border-radius: var(--widget-radius);
   }
 
   .r-cell > a {
@@ -43,10 +40,10 @@ const cellListVar = props.cellList.links;
     justify-content: center;
     align-items: center;
     background: var(--widget);
-    border-radius: 32px;
+    border-radius: var(--widget-radius);
     text-align: center;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .r-cell > a:hover {
@@ -56,7 +53,7 @@ const cellListVar = props.cellList.links;
 
   .r-cell > a > * {
     margin: 0;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .r-cell > a > div {
@@ -80,11 +77,15 @@ const cellListVar = props.cellList.links;
 
   .r-cell > a > img {
     height: 85%;
-    border-radius: 32px 32px 0 0;
+    border-radius: var(--widget-radius) var(--widget-radius) 0 0;
+  }
+
+  .r-cell::-webkit-scrollbar-thumb {
+    background: none;
   }
 }
 
-@media only screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .r-cell {
     width: 85%;
     display: grid;
@@ -101,15 +102,15 @@ const cellListVar = props.cellList.links;
     justify-content: center;
     align-items: center;
     background: var(--widget);
-    border-radius: 6vw;
+    border-radius: var(--widget-radius);
     text-align: center;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .r-cell > a > * {
     margin: 0;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .r-cell > a > div {
@@ -120,7 +121,7 @@ const cellListVar = props.cellList.links;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 6vw;
+    border-radius: var(--widget-radius);
   }
 }
 </style>

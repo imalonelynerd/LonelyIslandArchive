@@ -14,7 +14,7 @@
 
 :root[data-theme="theme-day"] {
     --bg: #e0f6ff;
-    --bg-img: url('images/day.webp');
+    --bg-img: url('images/day.png');
     --icon: brightness(0) saturate(100%) invert(18%) sepia(68%) saturate(4229%) hue-rotate(173deg) brightness(92%) contrast(101%);
     --icon-imp: brightness(0) saturate(100%) invert(8%) sepia(4%) saturate(8%) hue-rotate(323deg) brightness(97%) contrast(89%);
     --widget: #ffffff;
@@ -24,7 +24,7 @@
 
 :root[data-theme="theme-twilight"] {
     --bg: #1b102f;
-    --bg-img: url('images/twilight.webp');
+    --bg-img: url('images/twilight.png');
     --icon: brightness(0) saturate(100%) invert(60%) sepia(99%) saturate(2157%) hue-rotate(223deg) brightness(100%) contrast(102%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --widget: #361a50;
@@ -34,7 +34,7 @@
 
 :root[data-theme="theme-night"] {
     --bg: #000814;
-    --bg-img: url('images/night.webp');
+    --bg-img: url('images/night.png');
     --icon: brightness(0) saturate(100%) invert(66%) sepia(25%) saturate(5213%) hue-rotate(184deg) brightness(103%) contrast(101%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
     --widget: #000f34;
@@ -44,7 +44,7 @@
 
 :root[data-theme="theme-comet"] {
     --bg: #0c2121;
-    --bg-img: url('images/comet.webp');
+    --bg-img: url('images/comet.png');
     --widget: #004346;
     --icon: brightness(0) saturate(100%) invert(75%) sepia(64%) saturate(5811%) hue-rotate(125deg) brightness(95%) contrast(93%);
     --icon-imp: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(74deg) brightness(104%) contrast(101%);
@@ -221,11 +221,11 @@
 
 .app-image {
     height: 35%;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
 }
 
 .app-tile:hover .app-image {
-    filter: var(--icon-imp);
+    /*filter: var(--icon-imp);*/
 }
 
 .name {

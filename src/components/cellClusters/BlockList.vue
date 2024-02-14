@@ -1,22 +1,20 @@
 <script setup>
 
-const props = defineProps([
+defineProps([
   "cellList"
 ])
-
-const cellListVar = props.cellList.links;
 
 function getColor(color) {
   if (color === undefined || color === "") {
     return `background: var(--widget)`
   }
-  return `background: color-mix(in srgb, var(--widget), ${color} 25%)`
+  return `background: color-mix(in srgb, var(--widget), ${color} 33%)`
 }
 </script>
 
 <template>
   <div class="block-cell">
-    <a v-for="elem in cellListVar"
+    <a v-for="elem in cellList"
        :style="getColor(elem.style)"
        :title="elem.span"
        @click="elem.onc">
@@ -29,7 +27,7 @@ function getColor(color) {
 </template>
 
 <style scoped>
-@media only screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .block-cell {
     width: 90%;
     display: flex !important;
@@ -37,7 +35,7 @@ function getColor(color) {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: start;
-    gap: 16px;
+    gap: var(--small-gap);
   }
 
   .block-cell > a {
@@ -49,10 +47,10 @@ function getColor(color) {
     align-items: center;
     padding: 16px;
     background: var(--widget);
-    border-radius: 32px;
-    transition: all 0.25s;
-    gap: 8px;
-    box-shadow: var(--shadow);
+    border-radius: var(--widget-radius);
+    transition: var(--transition);
+    gap: var(--text-gap);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .block-cell > a > * {
@@ -83,7 +81,7 @@ function getColor(color) {
   }
 }
 
-@media only screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .block-cell {
     width: 85%;
     display: grid !important;
@@ -101,10 +99,10 @@ function getColor(color) {
     justify-content: center;
     align-items: center;
     background: var(--widget);
-    border-radius: 6vw;
-    transition: all 0.25s;
+    border-radius: var(--widget-radius);
+    transition: var(--transition);
     gap: 2vw;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .block-cell > a > * {

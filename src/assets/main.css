@@ -2,14 +2,14 @@
 @import "animations.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 
-@media only screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
     html {
         font-size: 3vw;
         scroll-behavior: smooth;
     }
 }
 
-@media only screen and (orientation: landscape) {
+@media screen and (orientation: landscape) {
     html {
         font-size: 0.9em;
         scroll-behavior: smooth;
@@ -21,7 +21,7 @@ body {
     background: var(--bg);
     font-family: "Montserrat", Inter, sans-serif;
     color: var(--text);
-    transition: all 0.25s;
+    //transition: var(--transition);
     margin: 0;
     overflow-x: hidden;
     overflow-y: visible;
@@ -30,13 +30,28 @@ body {
 a {
     color: inherit !important;
     text-decoration: none !important;
-    transition: all 0.25s ease-out;
+    //transition: var(--transition);
     cursor: pointer;
 }
 
 code {
     padding: 1em 1.5em !important;
-    border-radius: 3em !important;
+    border-radius: var(--button-radius) !important;
     background: var(--bg) !important;
     font-size: 0.95em;
+}
+
+*::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: var(--button-radius);
+    background: var(--important);
+    border: 2px solid transparent;
 }

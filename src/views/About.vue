@@ -6,31 +6,31 @@ import Bullet from "@/components/Bullet.vue";
 
 <template>
   <div class="desc">
-    <img :src="nestedPath.path + 'images/fey2.webp'"/>
+    <img :src="nestedPath.path + 'images/fey-pebble.png'"/>
     <h1>Nerd <span>imalonelynerd</span></h1>
     <h2>"Special ability : putting too much effort into stupid things"</h2>
     <p>
-      <b>19</b> y.o. ⬧ <b>they/them</b> ⬧ based in <b>Rouen</b>, France<br><br>
+      <b>{{ new Date().getFullYear() - 2004 }}</b> y.o. ⬧ <b>they/them</b> ⬧ based in <b>Rouen</b>, France<br><br>
       <b>Cybesec</b> student, Hobbist <b>graphical/UI designer</b>, On a <b>C redemption</b> arc
     </p>
     <div>
       <h3>Tools & softwares I use</h3>
       <div class="bullets">
-        <Bullet :img-link="nestedPath.path + 'icons/small/python.webp'" shown-title="Python"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/js.webp'" shown-title="JavaScript"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/php.webp'" shown-title="PHP"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/java.webp'" shown-title="Java"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/c.webp'" shown-title="C"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/ocaml.webp'" shown-title="OCaml"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/node.webp'" shown-title="NodeJS"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/electron.webp'" shown-title="Electron"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/vue.webp'" shown-title="VueJS"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/jquery.webp'" shown-title="jQuery"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/gtk.webp'" shown-title="GTK4"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/figma.webp'" shown-title="Figma"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/inkscape.webp'" shown-title="Inkscape"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/gimp.webp'" shown-title="Gimp"/>
-        <Bullet :img-link="nestedPath.path + 'icons/small/linux.webp'" shown-title="Linux"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/python.png'" shown-title="Python"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/js.png'" shown-title="JavaScript"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/php.png'" shown-title="PHP"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/java.png'" shown-title="Java"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/c.png'" shown-title="C"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/ocaml.png'" shown-title="OCaml"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/node.png'" shown-title="NodeJS"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/electron.png'" shown-title="Electron"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/vue.png'" shown-title="VueJS"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/jquery.png'" shown-title="jQuery"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/gtk.png'" shown-title="GTK4"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/figma.png'" shown-title="Figma"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/inkscape.png'" shown-title="Inkscape"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/gimp.png'" shown-title="Gimp"/>
+        <Bullet :img-link="nestedPath.path + 'icons/small/linux.png'" shown-title="Linux"/>
       </div>
     </div>
     <div>
@@ -49,13 +49,13 @@ import Bullet from "@/components/Bullet.vue";
 <style scoped>
 @media screen and (orientation: landscape) {
   .desc {
-    transition: all 0.25s;
+    transition: var(--transition);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    gap: 48px;
+    gap: var(--big-gap);
     animation: Hewwo ease-out 0.75s;
   }
 
@@ -69,9 +69,9 @@ import Bullet from "@/components/Bullet.vue";
 
   .desc > img {
     height: 128px;
-    margin-bottom: -32px !important;
-    box-shadow: var(--shadow);
-    border-radius: 128px;
+    margin-bottom: -24px;
+    box-shadow: var(--shadow), var(--pebble);
+    border-radius: var(--widget-radius);
   }
 
   .desc a {
@@ -94,7 +94,7 @@ import Bullet from "@/components/Bullet.vue";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: var(--med-gap);
   }
 
   .desc > div > * {
@@ -107,13 +107,13 @@ import Bullet from "@/components/Bullet.vue";
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: var(--text-gap);
   }
 }
 
 @media screen and (orientation: portrait) {
   .desc {
-    transition: all 0.25s;
+    transition: var(--transition);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -135,9 +135,9 @@ import Bullet from "@/components/Bullet.vue";
   .desc > img {
     height: 30vw;
     width: 30vw;
-    margin-bottom: -6vw !important;
-    box-shadow: var(--shadow);
-    border-radius: 40vw;
+    margin-bottom: -8vw;
+    box-shadow: var(--shadow), var(--pebble);
+    border-radius: var(--widget-radius);
   }
 
   .desc a {

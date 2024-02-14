@@ -1,14 +1,13 @@
-@keyframes slidein {
+@keyframes Menu {
     from {
-        transform: translateX(60%);
+        transform: translate(-50%,100%);
     }
 
     to {
-        transform: translateX(0%);
+        transform: translate(-50%,0%);
     }
 }
-
-@keyframes mslidein {
+@keyframes MobileMenu {
     from {
         transform: translateY(100%);
     }
@@ -52,21 +51,7 @@
     }
 }
 
-@keyframes HewwoBg {
-    0% {
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: initial;
-    }
-}
-
-@keyframes blurbg {
+@keyframes Background {
     from {
         opacity: 0;
     }

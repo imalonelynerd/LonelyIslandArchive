@@ -17,7 +17,7 @@ defineProps([
   .small {
     margin: 0;
     padding: 8px 16px;
-    border-radius: 64px;
+    border-radius: var(--button-radius);
     font-size: 1em;
     background: var(--widget);
     display: flex;
@@ -25,7 +25,8 @@ defineProps([
     align-items: center;
     justify-content: center;
     cursor: default;
-    transition: all 0.25s;
+    transition: var(--transition);
+    box-shadow: var(--pebble), var(--shadow);
   }
 
   .small > img {
@@ -38,7 +39,7 @@ defineProps([
     padding: 0;
     font-weight: bold;
     opacity: 0.9;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 }
 
@@ -46,7 +47,7 @@ defineProps([
   .small {
     margin: 0;
     padding: 2vw 4vw;
-    border-radius: 12vw;
+    border-radius: var(--button-radius);
     font-size: 1em;
     background: var(--widget);
     display: flex;
@@ -54,7 +55,8 @@ defineProps([
     align-items: center;
     justify-content: center;
     cursor: default;
-    transition: all 0.25s;
+    transition: var(--transition);
+    box-shadow: var(--pebble), var(--shadow);
   }
 
   .small > img {
@@ -66,7 +68,7 @@ defineProps([
     margin: 0 0 0 1.5vw;
     padding: 0;
     font-weight: bold;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 }
 

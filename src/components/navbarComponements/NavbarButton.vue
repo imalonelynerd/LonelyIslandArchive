@@ -25,7 +25,7 @@ defineEmits([
   .link {
     margin: 0;
     padding: 16px;
-    border-radius: 64px;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-weight: bold;
     display: flex;
@@ -33,17 +33,18 @@ defineEmits([
     justify-content: center;
     cursor: pointer;
     max-width: 200px;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .link:hover {
     transform: translateY(8px);
     max-width: 150px;
+    box-shadow: var(--shadow), var(--pebble);
     padding: 16px 24px;
   }
 
   .link > img {
-    filter: var(--icon);
+    /*filter: var(--icon);*/
     height: 1.25em;
   }
 
@@ -55,27 +56,24 @@ defineEmits([
     text-wrap: none;
     max-width: 0;
     overflow: hidden;
-    transition: all 0.25s;
+    transition: var(--transition);
   }
 
   .link:hover > p {
     max-width: 999px;
     margin: 0 0 0 12px;
-    transition: all 0.25s;
+    transition: var(--transition);
     opacity: 1;
   }
 
   .link.important {
     background: var(--important);
+    box-shadow: var(--shadow), var(--pebble);
     padding: 16px 24px;
   }
 
   .link.important:hover {
     filter: var(--effect);
-  }
-
-  .link.important > img {
-    filter: var(--icon-imp);
   }
 
   .link.noimage {
@@ -102,10 +100,6 @@ defineEmits([
     background: transparent;
   }
 
-  .link.transparent > img {
-    filter: var(--icon-imp) !important;
-  }
-
   .link.transparent:hover {
     background: var(--widget);
   }
@@ -115,7 +109,7 @@ defineEmits([
   .link {
     margin: 0;
     padding: 4vw 4vw;
-    border-radius: 12vw;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-weight: bold;
     background: var(--widget);
@@ -123,8 +117,8 @@ defineEmits([
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.25s;
-    box-shadow: var(--shadow);
+    transition: var(--transition);
+    box-shadow: var(--shadow), var(--pebble);
   }
 
   .link:active {
@@ -133,7 +127,7 @@ defineEmits([
 
   .link > img {
     height: 1.5em;
-    filter: var(--icon);
+    /*filter: var(--icon);*/
   }
 
   .link > p {
@@ -142,10 +136,6 @@ defineEmits([
 
   .link.important {
     background: var(--important);
-  }
-
-  .link.important > img {
-    filter: var(--icon-imp);
   }
 }
 </style>

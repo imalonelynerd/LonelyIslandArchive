@@ -1,105 +1,84 @@
 <script setup>
-
-import {ref} from "vue";
-
-const isCreditsDisplayed = ref(false);
-
 </script>
 
 <template>
-  <footer>
-    <div class="footer">
-      <p>©️ 2023 <a href="https://github.com/imalonelynerd">Nerd</a></p>
-      <p>⬧</p>
-      <!--p>🇷🇴 ❤️ 🇩🇪 ❤️ 🇫🇷</p>
-      <p>⬧</p-->
-      <a @click="$route.name === 'Credits' ? $router.go(-1) : $router.push('/credits')">Credits</a>
-    </div>
-  </footer>
+  <div class="footer">
+    <p>©️ {{ new Date().getFullYear() }} <a href="https://github.com/imalonelynerd">Nerd</a></p>
+    <a @click="$route.name === 'Credits' ? $router.go(-1) : $router.push('/credits')">Credits</a>
+  </div>
 </template>
 
 <style scoped>
-@media only screen and (orientation: landscape) {
-  footer {
-    opacity: 0;
-    background: var(--bg);
+@media screen and (orientation: landscape) {
+  .footer {
     position: fixed;
     bottom: 0;
-    left: 0;
     right: 0;
-    padding: 16px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    animation: Hewwo ease-out 0.25s;
-    transition: all 0.25s;
-  }
-
-  footer:hover {
-    opacity: 1;
-  }
-
-  .footer {
+    left: 0;
+    border-radius: var(--widget-radius) var(--widget-radius) 0 0;
+    padding: 12px 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: var(--small-gap);
+    background: transparent;
+    opacity: 0.33;
     color: var(--text);
+    transition: var(--transition);
+  }
+
+  .footer:hover {
+    padding: 12px 32px;
+    opacity: 1;
   }
 
   .footer > * {
     margin: 0;
   }
 
-  footer a {
+  .footer a {
     font-weight: bold;
   }
 
-  footer a:hover {
+  .footer a:hover {
     opacity: 0.5;
   }
 }
 
-@media only screen and (orientation: portrait) {
-  footer {
-    background: var(--bg);
+@media screen and (orientation: portrait) {
+  .footer {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2vw 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4vw;
-  }
-
-  .footer {
+    right: 4vw;
+    left: 4vw;
+    border-radius: var(--widget-radius) var(--widget-radius) 0 0;
+    padding: 4vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2vw;
+    background: transparent;
+    opacity: 0.33;
     color: var(--text);
-    opacity: 0.75;
-    width: 100%;
-    font-size: 0.8em;
+    transition: var(--transition);
+  }
+
+  .footer:active {
+    opacity: 1;
   }
 
   .footer > * {
     margin: 0;
   }
 
-  footer a {
-    font-weight: bold;
+  .footer > a {
+    display: none;
   }
 
-  footer a:active {
-    opacity: 0.5;
+  .footer a {
+    font-weight: bold;
   }
 }
 </style>
