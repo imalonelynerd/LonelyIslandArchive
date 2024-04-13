@@ -1,0 +1,192 @@
+@import "base.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+===============================================================================
+ This file contain extra CSS rules to customize the YunoHost user portal and
+ can be used to customize app tiles, buttons, etc...
+===============================================================================
+*/
+
+/* Make page texts black */
+.user-container h2,
+.user-container small,
+.user-container .user-mail,
+.user-container .user-mail,
+.footer a,
+#ynh-logout {
+    color: var(--text) !important;
+    border-radius: var(--radius-inf);
+}
+
+.ynh-user-portal {
+    background: var(--bg-img) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#ynh-logout:hover {
+    background-color: var(--color4) !important;
+    color: var(--text) !important;
+}
+
+/* Apps colors */
+.app-tile {
+    background-color: color-mix(in srgb, transparent var(--alpha), var(--color2)) !important;
+    border-radius: var(--radius-big);
+    color: var(--text) !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: end !important;
+    align-items: start !important;
+    gap: 12px !important
+}
+
+.name {
+    font-family: Montserrat, sans-serif !important;
+    font-size: var(--font-regular) !important;
+    font-weight: 900 !important;
+    margin: 0 !important;
+}
+
+.app-tile:hover {
+    background-color: color-mix(in srgb, transparent var(--alpha), var(--color4)) !important;
+    border-radius: var(--radius-big);
+    color: var(--text) !important;
+}
+
+.app-tile:hover:after,
+.app-tile:focus:after,
+.app-tile:hover:before,
+.app-tile:focus:before {
+    background: #002FBB00 !important;
+}
+
+.login-form .form-group {
+    background: transparent !important;
+}
+
+.form-text {
+    background: color-mix(in srgb, transparent var(--alpha), var(--color1)) !important;
+    border-radius: var(--radius-inf);
+    color: var(--text) !important;
+    border: none;
+}
+
+.form-text:hover {
+    background: var(--color4) !important;
+}
+
+.btn, .classic-btn, .large-btn {
+    background: color-mix(in srgb, transparent var(--alpha), var(--color2));
+    border-radius: var(--radius-inf);
+    color: var(--text) !important;
+}
+
+.classic-btn:hover, .large-btn:hover {
+    background-color: var(--color4) !important;
+    color: var(--text) !important;
+    text-decoration: none;
+}
+
+.validate-btn:hover {
+    background-color: var(--color3) !important;
+    color: var(--text) !important;
+}
+
+.link-btn:hover {
+    background-color: var(--color4) !important;
+    border-radius: var(--radius-inf);
+}
+
+.info {
+    background: var(--color2) !important;
+    border-radius: var(--radius-small);
+    color: var(--text) !important;
+}
+
+.danger {
+    background-color: var(--color3) !important;
+    border-radius: var(--radius-small);
+    color: var(--text) !important;
+}
+
+.warning {
+    background-color: var(--color3) !important;
+    border-radius: var(--radius-small);
+    color: var(--text) !important;
+}
+
+.success {
+    background-color: var(--color3) !important;
+    border-radius: var(--radius-small);
+    color: var(--text) !important;
+}
+
+.control-label {
+    margin: 4px 0;
+    background: color-mix(in srgb, transparent var(--alpha), var(--color2));
+    border-radius: var(--radius-inf);
+    color: var(--text) !important;
+}
+
+.form-text::placeholder {
+    color: var(--text);
+}
+
+/* Use a custom logo image */
+#ynh-logo {
+    z-index: 10;
+    background-image: url("island.png");
+}
+
+.listing-apps {
+    color: var(--text) !important;
+}
+
+/* Custom stuff */
+.listing-apps li,
+.listing-apps a::after,
+.listing-apps a::before {
+    box-shadow: none;
+}
+
+.login-form label::before {
+    background: transparent;
+}
+
+.login-form .form-group {
+    border-radius: var(--radius-inf);
+}
+
+.ynh-logo {
+    opacity: 1;
+}
+
+.form-group > input {
+    background: color-mix(in srgb, transparent var(--alpha), var(--color1));
+    padding: 0.8em !important;
+}
+
+.form-group > label {
+    display: none;
+}
+
+.form-group > input::placeholder {
+    opacity: 0.75 !important;
+    color: var(--text) !important;
+}
+
+.app-image {
+    height: 35%;
+}
+
+.footer nav {
+    border-top: none;
+    margin: 0;
+    padding: 16px;
+    border-radius: var(--radius-small);
+    background: color-mix(in srgb, transparent var(--alpha), var(--color2));
+}

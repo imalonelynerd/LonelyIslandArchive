@@ -1,0 +1,20 @@
+{
+  "name": "Lonely Island",
+  "id": "lonelyisland",
+  "packaging_format": 1,
+  "description": {
+    "fr": "Le thème officiel du site LonelyIsland.",
+    "en": "The official LonelyIsland theme."
+  },
+  "version": "2.0",
+  "url": "",
+  "license": "AGPL-3.0",
+  "maintainer": {
+    "name": "Nerd",
+    "email": "imalonelynerd@gmail.com"
+  },
+  "requirements": {
+    "yunohost": ">= 3.5.2",
+    "ssowat": ">= 3.5.2"
+  }
+}

@@ -1,0 +1,79 @@
+:root {
+    --font-big: 36px;
+    --font-medium: 20px;
+    --font-regular: 16px;
+    --font-menu: 14px;
+    --font-small: 12px;
+    --radius-inf: 9999px;
+    --radius-big: 32px;
+    --radius-small: 24px;
+    --imp: var(--text);
+    --alpha: 50%;
+    --alpha2: 80%;
+
+    --switch: all ease-out 0.2s;
+}
+
+:root[data-theme="day"] {
+    --color1: #e0f6ff;
+    --color2: #ffffff;
+    --color3: #ffaa2c;
+    --color4: #ffc77b;
+    --text: #202020;
+    --imp: #FFFFFF;
+    --filter: brightness(0) saturate(100%) invert(7%) sepia(0%) saturate(21%) hue-rotate(284deg) brightness(103%) contrast(88%);
+    --bg-img: url("/images/backgrounds/day.png");
+    --bg-blur: url("/images/backgrounds/blur/day.png");
+}
+
+:root[data-theme="twilight"] {
+    --color1: #1b102f;
+    --color2: #361a50;
+    --color3: #ff185d;
+    --color4: #602198;
+    --text: #FFFFFF;
+    --filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(134%) hue-rotate(302deg) brightness(114%) contrast(100%);
+    --bg-img: url("/images/backgrounds/twilight.png");
+    --bg-blur: url("/images/backgrounds/blur/twilight.png");
+
+}
+
+:root[data-theme="night"] {
+    --color1: #000d1f;
+    --color2: #000f34;
+    --color3: #004686;
+    --color4: #001a56;
+    --text: #FFFFFF;
+    --filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(134%) hue-rotate(302deg) brightness(114%) contrast(100%);
+    --bg-img: url("/images/backgrounds/night.png");
+    --bg-blur: url("/images/backgrounds/blur/night.png");
+
+}
+
+:root[data-theme^="comet"] {
+    --color1: #0c2121;
+    --color2: #004346;
+    --color3: #09bc8a;
+    --color4: #016165;
+    --text: #FFFFFF;
+    --filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(134%) hue-rotate(302deg) brightness(114%) contrast(100%);
+    --bg-img: url("/images/backgrounds/comet.png");
+    --bg-blur: url("/images/backgrounds/blur/comet.png");
+}
+
+:root[data-theme="cometp"] {
+    --bg-img: url("/images/backgrounds/pretty.png");
+    --bg-blur: url("/images/backgrounds/blur/pretty.png");
+}
+
+:root[data-theme="oled"] {
+    --color1: #000000;
+    --color2: #101010;
+    --color3: #404040;
+    --color4: #606060;
+    --text: #FFFFFF;
+    --filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(134%) hue-rotate(302deg) brightness(114%) contrast(100%);
+    --bg-img: url("/images/backgrounds/oled.png");
+    --bg-blur: url("/images/backgrounds/blur/oled.png");
+    --blur: blur(0);
+}

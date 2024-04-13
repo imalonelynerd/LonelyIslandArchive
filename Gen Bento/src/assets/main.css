@@ -1,0 +1,48 @@
+@import "base.css";
+@import "animation.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    color: var(--text);
+    font-family: Montserrat, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--bg-blur) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    animation: Root ease-out 1s;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    position: fixed;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--color3); /* color of the scroll thumb */
+    border-radius: var(--radius-inf); /* roundness of the scroll thumb */
+    border: 8px solid transparent; /* creates padding around scroll thumb */
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 192px;
+}
+
+#app > * {
+    animation: Root 0.5s;
+}
