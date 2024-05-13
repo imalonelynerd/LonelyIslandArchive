@@ -1,0 +1,40 @@
+@keyframes HideMenu {
+    0% {
+        translate: 0;
+        position: static;
+    }
+
+    50% {
+        translate: 0;
+        padding-right: 72px;
+        padding-left: 72px;
+        position: static;
+    }
+
+    51% {
+        position: absolute;
+    }
+
+    100% {
+        position: absolute;
+        translate: -100%;
+    }
+}
+
+@keyframes ShowMenu {
+    0% {
+        position: static;
+        translate: -100%;
+    }
+
+    50% {
+        translate: 0;
+        padding-right: 72px;
+        padding-left: 72px;
+    }
+
+    100% {
+        position: static;
+        translate: 0;
+    }
+}

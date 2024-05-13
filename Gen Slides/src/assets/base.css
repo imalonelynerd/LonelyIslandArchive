@@ -1,0 +1,31 @@
+:root {
+    --radius-inf: 9999px;
+    --radius-big: 32px;
+    --radius-small: 24px;
+    --imp: var(--text);
+    --alpha: 50%;
+    --alpha2: 80%;
+
+    --switch: all ease-out 0.2s;
+    --switch-c: all ease-out;
+    --card-padding: 32px;
+    --avatar: #FF596480;
+}
+
+:root {
+    --backgroud: #190822;
+    --widget: #361047;
+    --button1: #D83AFF;
+    --button2: #8500C3;
+    --highlight1: #F1D2FF;
+    --highlight2: #C549FF;
+    --text : #FFFFFF
+}
+
+:root[data-theme=""] {
+    --backgroud: #361047;
+    --button1: #D83AFF;
+    --button2: #8500C3;
+    --highlight1: #F1D2FF;
+    --highlight2: #C549FF;
+}

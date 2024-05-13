@@ -1,0 +1,15 @@
+function hideMenu() {
+  TopMenu.value.classList.add('hiddenAnimation')
+  setTimeout(() => {
+    isHidden.value = true
+    TopMenu.value.classList.remove('hiddenAnimation')
+  }, 1000)
+}
+
+function showMenu() {
+  isHidden.value = false
+  TopMenu.value.classList.remove('hiddenAnimation')
+}
+
+const isHidden = ref(false)
+const TopMenu = ref(null)
